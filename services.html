@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Vizor Solutions | Selected Projects</title>
+<meta name="description" content="Vizor — selected work in architectural visualization, VR experiences and interactive sales platforms for real estate developments.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vizor Solutions">
+<meta property="og:url" content="https://vizor-solutions.com/services.html">
+<meta property="og:title" content="Work — Vizor Solutions | Selected Projects">
+<meta property="og:description" content="Selected work in architectural visualization, VR experiences and interactive sales platforms for real estate developments.">
+<meta property="og:image" content="https://vizor-solutions.com/assets/img/hero-render.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Work — Vizor Solutions">
+<meta name="twitter:description" content="Selected work in architectural visualization, VR experiences and interactive sales platforms for real estate developments.">
+<meta name="twitter:image" content="https://vizor-solutions.com/assets/img/hero-render.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/vizor.css">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<style>
+/* ── WORK-SPECIFIC ── */
+a{color:inherit}
+
+/* HERO */
+.work-hero{position:relative;overflow:hidden;padding:170px 48px 64px;background:var(--black)}
+.work-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
+.work-hero-inner{max-width:1280px;margin:0 auto;position:relative;z-index:1}
+.work-hero h1{font-family:var(--fd);font-size:clamp(64px,11vw,140px);line-height:.9;letter-spacing:2px;margin-bottom:28px;animation:fadeUp .8s .15s ease both}
+.work-hero h1 .accent{color:var(--orange)}
+.work-hero p{font-size:17px;font-weight:300;color:var(--muted);line-height:1.75;max-width:620px;animation:fadeUp .8s .3s ease both}
+
+/* FILTERS + GRID */
+.work-section{padding:48px 48px 100px;background:var(--black)}
+.work-filters{max-width:1280px;margin:0 auto 32px;display:flex;gap:10px;flex-wrap:wrap}
+.work-filter{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--border-b);padding:9px 18px;border-radius:2px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.work-filter:hover{color:var(--white)}
+.work-filter.active{border-color:var(--orange);color:var(--orange);background:rgba(232,87,30,.08)}
+.work-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+.work-card{position:relative;overflow:hidden;aspect-ratio:4/5;background:var(--surface);display:block}
+.work-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease,filter .5s ease}
+.work-card:hover img{transform:scale(1.05);filter:brightness(.55)}
+.work-card-grad{position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.15) 55%,transparent 100%)}
+.work-card-body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:30px 28px}
+.work-card-cat{font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.work-card-cat::before{content:'';width:14px;height:1px;background:var(--orange)}
+.work-card-name{font-family:var(--fd);font-size:clamp(30px,3vw,40px);letter-spacing:.5px;line-height:.95;margin-bottom:8px}
+.work-card-meta{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.work-card-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--muted2)}
+.work-card.is-hidden{display:none}
+.work-empty{max-width:1280px;margin:0 auto;color:var(--muted);font-size:14px;padding:40px 0;display:none}
+
+/* CAPABILITIES */
+.cap-section{padding:100px 48px;background:var(--surface)}
+.cap-header{max-width:1280px;margin:0 auto 56px}
+.cap-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border)}
+.cap-card{background:var(--black);padding:36px 30px;display:flex;flex-direction:column;gap:12px;transition:background .3s}
+.cap-card:hover{background:var(--surface2)}
+.cap-num{font-family:var(--fm);font-size:11px;color:var(--orange);letter-spacing:.12em}
+.cap-title{font-family:var(--fd);font-size:26px;letter-spacing:.5px;line-height:1}
+.cap-text{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* CTA STRIP */
+.cta-strip{background:var(--black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:72px 48px}
+.cta-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap}
+.cta-text h2{font-family:var(--fd);font-size:clamp(32px,4.5vw,56px);line-height:1;letter-spacing:1px;margin-bottom:14px}
+.cta-text p{font-size:15px;color:var(--muted);max-width:480px;line-height:1.7}
+
+@media(max-width:900px){
+  .work-hero{padding:140px 20px 48px}
+  .work-section{padding:32px 20px 64px}
+  .work-grid{grid-template-columns:1fr 1fr}
+  .cap-section{padding:64px 20px}
+  .cap-grid{grid-template-columns:1fr 1fr}
+  .cta-strip{padding:56px 20px}
+}
+@media(max-width:560px){
+  .work-grid{grid-template-columns:1fr}
+  .cap-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="Vizor Solutions" width="235" height="38" style="height:38px;width:auto;display:block"></a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+    <li><a href="vz-credits.html">VZ Credits</a></li>
+    <li><a href="sales-tool.html">Sales Tool</a></li>
+    <li><a href="services.html" class="active" data-en="Work" data-es="Trabajo">Work</a></li>
+    <li><a href="process.html" data-en="Process" data-es="Proceso">Process</a></li>
+    <li><a href="about.html" data-en="About" data-es="Nosotros">About</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta" data-en="Contact" data-es="Contacto">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="work-hero">
+  <div class="work-hero-inner">
+    <div class="hero-tag" data-en="Selected Projects" data-es="Proyectos Seleccionados">Selected Projects</div>
+    <h1 data-en="OUR <span class='accent'>WORK</span>." data-es="NUESTRO <span class='accent'>TRABAJO</span>.">OUR <span class="accent">WORK</span>.</h1>
+    <p data-en="A selection of residential, mixed-use and commercial developments — visualized from concept to launch with renders, immersive VR and interactive sales platforms."
+       data-es="Una selección de desarrollos residenciales, de usos mixtos y comerciales — visualizados desde el concepto hasta el lanzamiento con renders, VR inmersivo y plataformas de venta interactivas.">A selection of residential, mixed-use and commercial developments — visualized from concept to launch with renders, immersive VR and interactive sales platforms.</p>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<!-- NOTE: sample projects using placeholder render assets. Swap image/name/location
+     per real project. Keep data-cat in sync with the filter buttons. -->
+<section class="work-section">
+  <div class="work-filters reveal" id="workFilters">
+    <button class="work-filter active" data-filter="all" data-en="All" data-es="Todos">All</button>
+    <button class="work-filter" data-filter="residential" data-en="Residential" data-es="Residencial">Residential</button>
+    <button class="work-filter" data-filter="mixed" data-en="Mixed-use" data-es="Usos mixtos">Mixed-use</button>
+    <button class="work-filter" data-filter="commercial" data-en="Commercial" data-es="Comercial">Commercial</button>
+    <button class="work-filter" data-filter="interiors" data-en="Interiors" data-es="Interiores">Interiors</button>
+  </div>
+
+  <div class="work-grid" id="workGrid">
+
+    <article class="work-card reveal" data-cat="mixed">
+      <img src="assets/img/hero-render.jpg" alt="Red Maple Tower" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Mixed-use" data-es="Usos mixtos">Mixed-use</div>
+        <div class="work-card-name">RED MAPLE TOWER</div>
+        <div class="work-card-meta"><span>New York, US</span><span class="dot"></span><span data-en="Renders · VR" data-es="Renders · VR">Renders · VR</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="residential">
+      <img src="assets/img/hero-bg.jpg" alt="Parque Central" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Residential" data-es="Residencial">Residential</div>
+        <div class="work-card-name">PARQUE CENTRAL</div>
+        <div class="work-card-meta"><span>Nordelta, AR</span><span class="dot"></span><span data-en="Renders · Sales Tool" data-es="Renders · Sales Tool">Renders · Sales Tool</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="commercial">
+      <img src="assets/img/service-vr.jpg" alt="Glass Pavilion" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Commercial" data-es="Comercial">Commercial</div>
+        <div class="work-card-name">GLASS PAVILION</div>
+        <div class="work-card-meta"><span>Bariloche, AR</span><span class="dot"></span><span data-en="Renders · Animation" data-es="Renders · Animación">Renders · Animation</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="residential">
+      <img src="assets/img/vz-hero-bg.jpg" alt="Casa Magnolia" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Residential" data-es="Residencial">Residential</div>
+        <div class="work-card-name">CASA MAGNOLIA</div>
+        <div class="work-card-meta"><span>Pilar, AR</span><span class="dot"></span><span data-en="Exterior renders" data-es="Renders de exterior">Exterior renders</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="interiors">
+      <img src="assets/img/about-vz.jpg" alt="Loft Roble" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Interiors" data-es="Interiores">Interiors</div>
+        <div class="work-card-name">LOFT ROBLE</div>
+        <div class="work-card-meta"><span>Buenos Aires, AR</span><span class="dot"></span><span data-en="Interior renders · VR" data-es="Renders de interior · VR">Interior renders · VR</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="residential">
+      <img src="assets/img/product-sales-tool.jpg" alt="Rivera Residences" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Residential" data-es="Residencial">Residential</div>
+        <div class="work-card-name">RIVERA RESIDENCES</div>
+        <div class="work-card-meta"><span>Montevideo, UY</span><span class="dot"></span><span data-en="Renders · Sales Tool" data-es="Renders · Sales Tool">Renders · Sales Tool</span></div>
+      </div>
+    </article>
+
+  </div>
+  <div class="work-empty" id="workEmpty" data-en="No projects in this category yet." data-es="Todavía no hay proyectos en esta categoría.">No projects in this category yet.</div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="cap-section">
+  <div class="cap-header reveal">
+    <div class="section-label" data-en="What We Deliver" data-es="Qué Entregamos">What We Deliver</div>
+    <h2 class="section-title" data-en="EVERY VISUAL,<br>ONE STUDIO." data-es="TODO EL VISUAL,<br>UN SOLO ESTUDIO.">EVERY VISUAL,<br>ONE STUDIO.</h2>
+  </div>
+  <div class="cap-grid">
+    <div class="cap-card reveal">
+      <div class="cap-num">01</div>
+      <div class="cap-title" data-en="Still Images" data-es="Imágenes Fijas">Still Images</div>
+      <div class="cap-text" data-en="Interior, exterior and AI aerial views, crafted for each project's exact location." data-es="Interiores, exteriores y vistas aéreas con IA, hechas para la ubicación exacta de cada proyecto.">Interior, exterior and AI aerial views, crafted for each project's exact location.</div>
+    </div>
+    <div class="cap-card reveal">
+      <div class="cap-num">02</div>
+      <div class="cap-title" data-en="Animations" data-es="Animaciones">Animations</div>
+      <div class="cap-text" data-en="5 to 15-second cinematic pieces for launches and presentation campaigns." data-es="Piezas cinematográficas de 5 a 15 segundos para lanzamientos y campañas de presentación.">5 to 15-second cinematic pieces for launches and presentation campaigns.</div>
+    </div>
+    <div class="cap-card reveal">
+      <div class="cap-num">03</div>
+      <div class="cap-title" data-en="VR Tours" data-es="Tours VR">VR Tours</div>
+      <div class="cap-text" data-en="Immersive 360° experiences that let buyers walk a space before it's built." data-es="Experiencias 360° inmersivas para que los compradores recorran el espacio antes de construirlo.">Immersive 360° experiences that let buyers walk a space before it's built.</div>
+    </div>
+    <div class="cap-card reveal">
+      <div class="cap-num">04</div>
+      <div class="cap-title" data-en="Sales Tool" data-es="Sales Tool">Sales Tool</div>
+      <div class="cap-text" data-en="Interactive web platform with floor plans, filters and 360° tours in a single URL." data-es="Plataforma web interactiva con plantas, filtros y tours 360° en una sola URL.">Interactive web platform with floor plans, filters and 360° tours in a single URL.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip reveal" id="contact">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2 data-en="WANT TO SEE<br>THE FULL PORTFOLIO?" data-es="¿QUERÉS VER<br>EL PORTFOLIO COMPLETO?">WANT TO SEE<br>THE FULL PORTFOLIO?</h2>
+      <p data-en="Tell us about your development and we'll send you the projects most relevant to it." data-es="Contanos sobre tu desarrollo y te mandamos los proyectos más relevantes para vos.">Tell us about your development and we'll send you the projects most relevant to it.</p>
+    </div>
+    <div class="hero-actions" style="display:flex;gap:14px;flex-wrap:wrap">
+      <a href="mailto:info@vizor-solutions.com?subject=Portfolio%20request" class="btn-primary" data-en="Request the portfolio" data-es="Pedir el portfolio">Request the portfolio</a>
+      <a href="https://wa.me/5491160029154" target="_blank" class="btn-ghost">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:var(--surface);border-top:1px solid var(--border)">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo"><img src="assets/img/logo.png" alt="Vizor Solutions" width="197" height="32" loading="lazy" style="height:32px;width:auto;display:block;margin-bottom:12px"></div>
+      <p data-en="Creating visual experiences that connect projects and people. Architecture, real estate and beyond." data-es="Creamos experiencias visuales que conectan proyectos y personas. Arquitectura, real estate y más allá.">Creating visual experiences that connect projects and people. Architecture, real estate and beyond.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/vizorsolutions" target="_blank" title="Instagram">IG</a>
+        <a href="https://www.linkedin.com/company/vizorsol/" target="_blank" title="LinkedIn">IN</a>
+        <a href="https://www.behance.net/Vizorsolutions" target="_blank" rel="noopener" title="Behance">Be</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Products" data-es="Productos">Products</div>
+      <ul class="footer-links">
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="vz-credits.html">VZ Credits <span class="tag">Visual</span></a></li>
+        <li><a href="vz-credits.html#plans" data-en="Plans" data-es="Planes">Plans</a></li>
+        <li><a href="vz-credits.html#calculator" data-en="Calculator" data-es="Calculadora">Calculator</a></li>
+        <li><a href="vz-credits.html#pilot">VZ Pilot</a></li>
+        <li><a href="sales-tool.html">Sales Tool <span class="tag">Platform</span></a></li>
+        <li><a href="https://app.vizor-solutions.com" target="_blank" data-en="Live demo ↗" data-es="Demo en vivo ↗">Live demo ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Company" data-es="Compañía">Company</div>
+      <ul class="footer-links">
+        <li><a href="services.html" data-en="Work" data-es="Trabajo">Work</a></li>
+        <li><a href="process.html" data-en="Process" data-es="Proceso">Process</a></li>
+        <li><a href="about.html" data-en="About" data-es="Nosotros">About</a></li>
+        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Contact" data-es="Contacto">Contact</div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Email</span>
+        <span class="footer-contact-val"><a href="mailto:info@vizor-solutions.com">info@vizor-solutions.com</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">WhatsApp</span>
+        <span class="footer-contact-val"><a href="https://wa.me/5491160029154" target="_blank">+54 9 11 6002-9154</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label" data-en="Coverage" data-es="Cobertura">Coverage</span>
+        <span class="footer-contact-val" style="font-size:12px" data-en="Latin America · North America · Europe · Global" data-es="Latinoamérica · Norteamérica · Europa · Global">Latin America · North America · Europe · Global</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy" data-en="© 2026 Vizor Solutions. All rights reserved." data-es="© 2026 Vizor Solutions. Todos los derechos reservados.">© 2026 Vizor Solutions. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+      <a href="vz-credits.html">VZ Credits</a>
+      <a href="sales-tool.html">Sales Tool</a>
+      <a href="https://vizor-solutions.com">vizor-solutions.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Portfolio filter
+(function(){
+  const filters = document.querySelectorAll('.work-filter');
+  const cards = document.querySelectorAll('.work-card');
+  const empty = document.getElementById('workEmpty');
+  filters.forEach(btn => btn.addEventListener('click', () => {
+    filters.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.getAttribute('data-filter');
+    let shown = 0;
+    cards.forEach(c => {
+      const match = f === 'all' || c.getAttribute('data-cat') === f;
+      c.classList.toggle('is-hidden', !match);
+      if(match) shown++;
+    });
+    if(empty) empty.style.display = shown ? 'none' : 'block';
+  }));
+})();
+</script>
+<script src="assets/js/vizor-nav.js" defer></script>
+<script src="assets/js/vizor-lang.js" defer></script>
+</body>
+</html>

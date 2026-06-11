@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Process — Vizor Solutions | From Brief to Final Render</title>
+<meta name="description" content="How Vizor works: step-by-step clarity from concept to final render. Brief, 3D modeling, real-time review and approval — a structured process for architectural visualization and real estate sales tools.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vizor Solutions">
+<meta property="og:url" content="https://vizor-solutions.com/process.html">
+<meta property="og:title" content="Process — Vizor Solutions | From Brief to Final Render">
+<meta property="og:description" content="Step-by-step clarity from concept to final render: brief, 3D modeling, real-time review and approval — powered by the flexible VZ Credits model.">
+<meta property="og:image" content="https://vizor-solutions.com/assets/img/service-vr.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Process — Vizor Solutions">
+<meta name="twitter:description" content="Step-by-step clarity from concept to final render: brief, 3D modeling, real-time review and approval — powered by the flexible VZ Credits model.">
+<meta name="twitter:image" content="https://vizor-solutions.com/assets/img/service-vr.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/vizor.css">
+<link rel="preload" as="image" href="assets/img/service-vr.jpg" fetchpriority="high">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<style>
+/* ── PROCESS-SPECIFIC ── */
+a{color:inherit}
+
+/* HERO */
+.hero{min-height:78vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 80px;padding-top:160px}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('assets/img/service-vr.jpg');background-size:cover;background-position:center;background-attachment:fixed}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,1) 0%,rgba(10,10,10,.72) 45%,rgba(10,10,10,.35) 100%)}
+.hero-grid{position:absolute;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px}
+.hero-content{position:relative;z-index:2;max-width:860px}
+.hero-h1{font-family:var(--fd);font-size:clamp(60px,10vw,128px);line-height:.9;letter-spacing:2px;margin-bottom:32px;animation:fadeUp .8s .2s ease both}
+.hero-h1 .accent{color:var(--orange)}
+.hero-sub{font-size:17px;font-weight:300;color:var(--muted);line-height:1.75;max-width:600px;margin-bottom:48px;animation:fadeUp .8s .35s ease both}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .8s .45s ease both}
+
+/* INTRO STRIP */
+.vision-strip{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 48px}
+.vision-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1px 1fr;gap:0;align-items:center}
+.vision-divider{background:var(--border);height:120px;align-self:center}
+.vision-left{padding-right:64px}
+.vision-label{font-family:var(--fm);font-size:11px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.vision-label::before{content:'';width:20px;height:1px;background:var(--orange)}
+.vision-title{font-family:var(--fd);font-size:clamp(32px,4vw,52px);line-height:1;letter-spacing:1px;margin-bottom:16px}
+.vision-desc{font-size:14px;color:var(--muted);line-height:1.8;max-width:480px}
+.vision-right{padding-left:64px;display:flex;flex-direction:column;gap:28px}
+.vision-stat{display:flex;align-items:baseline;gap:14px}
+.vision-stat-num{font-family:var(--fd);font-size:46px;color:var(--orange);line-height:1;white-space:nowrap}
+.vision-stat-text{font-size:13px;color:var(--muted);line-height:1.45}
+
+/* PROCESS STEPS — vertical timeline */
+.process-section{padding:100px 48px;background:var(--black)}
+.process-header{max-width:1280px;margin:0 auto 64px}
+.timeline{max-width:1080px;margin:0 auto;position:relative}
+.timeline::before{content:'';position:absolute;left:31px;top:32px;bottom:32px;width:2px;background:linear-gradient(180deg,var(--orange) 0%,rgba(255,106,0,.35) 60%,var(--border) 100%)}
+.tl-item{position:relative;display:grid;grid-template-columns:64px 1fr;gap:36px;padding-bottom:14px}
+.tl-item:last-child{padding-bottom:0}
+.tl-node{width:64px;height:64px;border-radius:50%;border:2px solid var(--orange);background:var(--black);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:28px;color:var(--orange);position:relative;z-index:1;transition:background .3s,color .3s}
+.tl-item:hover .tl-node{background:var(--orange);color:var(--black)}
+.tl-card{border:1px solid var(--border);border-radius:3px;padding:30px 34px 34px;margin-bottom:32px;background:linear-gradient(180deg,var(--surface) 0%,rgba(22,22,26,.4) 100%);transition:border-color .3s,transform .3s}
+.tl-item:hover .tl-card{border-color:rgba(255,106,0,.4);transform:translateX(4px)}
+.tl-phase{font-family:var(--fm);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted2);margin-bottom:10px}
+.tl-title{font-family:var(--fd);font-size:32px;letter-spacing:.5px;line-height:1;margin-bottom:14px}
+.tl-desc{font-size:15px;color:var(--muted);line-height:1.75;max-width:600px;margin-bottom:22px}
+.tl-meta{display:inline-flex;flex-direction:column;gap:6px;border-left:2px solid var(--orange);padding-left:16px}
+.tl-meta-label{font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted2)}
+.tl-meta-val{font-size:13px;color:var(--white);line-height:1.5}
+
+/* VZ CREDITS MODEL */
+.vzc-section{padding:100px 48px;background:var(--surface);border-top:1px solid var(--border)}
+.vzc-header{max-width:1280px;margin:0 auto 48px}
+.vzc-flow{max-width:1280px;margin:0 auto 56px;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+.vzc-step{background:var(--black);padding:36px 32px;display:flex;flex-direction:column;gap:10px;transition:background .3s}
+.vzc-step:hover{background:var(--surface2)}
+.vzc-step-num{font-family:var(--fm);font-size:11px;color:var(--orange);letter-spacing:.12em}
+.vzc-step-title{font-family:var(--fd);font-size:26px;letter-spacing:.5px;line-height:1}
+.vzc-step-text{font-size:14px;color:var(--muted);line-height:1.7}
+.vzc-costs{max-width:1280px;margin:0 auto}
+.vzc-costs-label{font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted2);display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.vzc-costs-label::before{content:'';width:20px;height:1px;background:var(--orange)}
+.vzc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+.vzc-item{background:var(--black);padding:24px 26px;display:flex;align-items:center;justify-content:space-between;gap:16px;transition:background .3s}
+.vzc-item:hover{background:var(--surface2)}
+.vzc-item-name{font-size:14px;color:var(--white);line-height:1.4}
+.vzc-item-val{font-family:var(--fd);font-size:26px;color:var(--orange);line-height:1;white-space:nowrap}
+.vzc-item-val span{font-family:var(--fm);font-size:11px;color:var(--muted2);margin-left:5px;letter-spacing:.06em}
+.vzc-foot{max-width:1280px;margin:36px auto 0;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.vzc-disc{font-size:12px;color:var(--muted2);max-width:520px;line-height:1.6}
+
+/* PRINCIPLES */
+.principles-section{padding:100px 48px;background:var(--surface)}
+.principles-header{max-width:1280px;margin:0 auto 56px}
+.principles-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.principle-item{display:flex;flex-direction:column;gap:12px}
+.principle-mark{font-family:var(--fd);font-size:40px;color:var(--orange);line-height:1}
+.principle-name{font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--white)}
+.principle-text{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* TOOLS STRIP */
+.tools-strip{padding:80px 48px;background:var(--black);border-top:1px solid var(--border)}
+.tools-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center}
+.tools-list{list-style:none;border-top:1px solid var(--border)}
+.tools-list li{display:flex;align-items:center;gap:18px;padding:20px 0;border-bottom:1px solid var(--border)}
+.tools-list li .n{font-family:var(--fm);font-size:11px;color:var(--muted2);letter-spacing:.1em;width:28px}
+.tools-list li .l{font-family:var(--fd);font-size:24px;letter-spacing:.5px}
+.tools-list li:hover .l{color:var(--orange)}
+
+/* CTA STRIP */
+.cta-strip{background:var(--black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:72px 48px}
+.cta-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap}
+.cta-text h2{font-family:var(--fd);font-size:clamp(32px,4.5vw,56px);line-height:1;letter-spacing:1px;margin-bottom:14px}
+.cta-text p{font-size:15px;color:var(--muted);max-width:480px;line-height:1.7}
+
+/* FOOTER (max-width centered) */
+.footer-top{max-width:1280px;margin:0 auto 32px}
+.footer-bottom{max-width:1280px;margin:0 auto}
+
+@media(max-width:900px){
+  .hero{padding:140px 20px 64px}
+  .vision-strip{padding:48px 20px}
+  .vision-inner{grid-template-columns:1fr;gap:40px}
+  .vision-divider{display:none}
+  .vision-left{padding-right:0}
+  .vision-right{padding-left:0}
+  .process-section,.principles-section,.tools-strip,.vzc-section{padding:64px 20px}
+  .timeline::before{left:23px}
+  .tl-item{grid-template-columns:48px 1fr;gap:20px}
+  .tl-node{width:48px;height:48px;font-size:21px}
+  .tl-card{padding:24px 22px 26px}
+  .tl-title{font-size:27px}
+  .vzc-flow{grid-template-columns:1fr}
+  .vzc-grid{grid-template-columns:1fr}
+  .principles-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .tools-inner{grid-template-columns:1fr;gap:40px}
+  .cta-strip{padding:56px 20px}
+}
+@media(max-width:560px){
+  .principles-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="Vizor Solutions" width="235" height="38" style="height:38px;width:auto;display:block"></a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+    <li><a href="vz-credits.html">VZ Credits</a></li>
+    <li><a href="sales-tool.html">Sales Tool</a></li>
+    <li><a href="services.html" data-en="Work" data-es="Trabajo">Work</a></li>
+    <li><a href="process.html" class="active" data-en="Process" data-es="Proceso">Process</a></li>
+    <li><a href="about.html" data-en="About" data-es="Nosotros">About</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta" data-en="Contact" data-es="Contacto">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag" data-en="How We Work" data-es="Cómo Trabajamos">How We Work</div>
+    <h1 class="hero-h1"
+        data-en="OUR <span class='accent'>PROCESS</span>."
+        data-es="NUESTRO <span class='accent'>PROCESO</span>.">OUR <span class="accent">PROCESS</span>.</h1>
+    <p class="hero-sub"
+       data-en="Step-by-step clarity from concept to final render. A structured way of working that keeps you in the loop at every stage — so what you approve is exactly what you get."
+       data-es="Claridad paso a paso, del concepto al render final. Una forma de trabajo estructurada que te mantiene al tanto en cada etapa — para que lo que aprobás sea exactamente lo que recibís.">Step-by-step clarity from concept to final render. A structured way of working that keeps you in the loop at every stage — so what you approve is exactly what you get.</p>
+    <div class="hero-actions">
+      <a href="#process" class="btn-primary" data-en="See the steps" data-es="Ver los pasos">See the steps</a>
+      <a href="#contact" class="btn-ghost" data-en="Start a project" data-es="Iniciar un proyecto">Start a project</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO STRIP -->
+<div class="vision-strip">
+  <div class="vision-inner">
+    <div class="vision-left reveal">
+      <div class="vision-label" data-en="Our Approach" data-es="Nuestro Enfoque">Our Approach</div>
+      <h2 class="vision-title"
+          data-en="A PROCESS BUILT<br>ON CLARITY."
+          data-es="UN PROCESO HECHO<br>DE CLARIDAD.">A PROCESS BUILT<br>ON CLARITY.</h2>
+      <p class="vision-desc"
+         data-en="No black boxes, no surprises. From the first brief to the final delivery, every project follows the same clear path — with constant communication and real-time feedback. You always know where your project stands and what comes next."
+         data-es="Sin cajas negras ni sorpresas. Desde el primer brief hasta la entrega final, cada proyecto sigue el mismo camino claro — con comunicación constante y feedback en tiempo real. Siempre sabés en qué etapa está tu proyecto y qué viene después.">No black boxes, no surprises. From the first brief to the final delivery, every project follows the same clear path — with constant communication and real-time feedback. You always know where your project stands and what comes next.</p>
+    </div>
+    <div class="vision-divider"></div>
+    <div class="vision-right reveal">
+      <div class="vision-stat">
+        <div class="vision-stat-num">4</div>
+        <div class="vision-stat-text" data-en="Clear steps, from<br>brief to delivery" data-es="Pasos claros, del<br>brief a la entrega">Clear steps, from<br>brief to delivery</div>
+      </div>
+      <div class="vision-stat">
+        <div class="vision-stat-num">Real-time</div>
+        <div class="vision-stat-text" data-en="Constant feedback<br>through Miro" data-es="Feedback constante<br>a través de Miro">Constant feedback<br>through Miro</div>
+      </div>
+      <div class="vision-stat">
+        <div class="vision-stat-num">100%</div>
+        <div class="vision-stat-text" data-en="You approve before<br>we deliver" data-es="Aprobás antes<br>de la entrega">You approve before<br>we deliver</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROCESS STEPS -->
+<section class="process-section" id="process">
+  <div class="process-header reveal">
+    <div class="section-label" data-en="The Workflow" data-es="El Flujo de Trabajo">The Workflow</div>
+    <h2 class="section-title" data-en="FROM BRIEF<br>TO FINAL RENDER." data-es="DEL BRIEF<br>AL RENDER FINAL.">FROM BRIEF<br>TO FINAL RENDER.</h2>
+    <p class="section-sub"
+       data-en="Four steps that take a project from idea to delivery — structured, transparent and collaborative from end to end."
+       data-es="Cuatro pasos que llevan un proyecto de la idea a la entrega — estructurado, transparente y colaborativo de punta a punta.">Four steps that take a project from idea to delivery — structured, transparent and collaborative from end to end.</p>
+  </div>
+
+  <div class="timeline">
+
+    <div class="tl-item reveal">
+      <div class="tl-node">01</div>
+      <div class="tl-card">
+        <div class="tl-phase" data-en="Input · You" data-es="Input · Vos">Input · You</div>
+        <div class="tl-title" data-en="Initial Brief" data-es="Brief Inicial">Initial Brief</div>
+        <div class="tl-desc"
+             data-en="Send us a completed brief along with the materials we need to estimate the project and get started — plans, references, 3D models and any information about the look and feel you're after. The clearer the input, the sharper the result."
+             data-es="Nos enviás un brief completo junto con los materiales que necesitamos para presupuestar el proyecto y arrancar — planos, referencias, modelos 3D y cualquier información sobre el estilo que buscás. Cuanto más claro el input, más afilado el resultado.">Send us a completed brief along with the materials we need to estimate the project and get started — plans, references, 3D models and any information about the look and feel you're after. The clearer the input, the sharper the result.</div>
+        <div class="tl-meta">
+          <span class="tl-meta-label" data-en="You provide" data-es="Aportás">You provide</span>
+          <span class="tl-meta-val" data-en="Plans · references · 3D models · project brief" data-es="Planos · referencias · modelos 3D · brief del proyecto">Plans · references · 3D models · project brief</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-node">02</div>
+      <div class="tl-card">
+        <div class="tl-phase" data-en="Production · Vizor" data-es="Producción · Vizor">Production · Vizor</div>
+        <div class="tl-title" data-en="3D Process" data-es="Proceso 3D">3D Process</div>
+        <div class="tl-desc"
+             data-en="Our team crafts detailed models that bring your architecture to life. Modeling, materials, lighting and art direction come together to build the scene — every frame produced by hand by our artists: AI-enhanced, never AI-generated."
+             data-es="Nuestro equipo crea modelos detallados que dan vida a tu arquitectura. Modelado, materiales, iluminación y dirección de arte se combinan para construir la escena — cada imagen hecha a mano por nuestros artistas: potenciada por IA, nunca generada por IA.">Our team crafts detailed models that bring your architecture to life. Modeling, materials, lighting and art direction come together to build the scene — every frame produced by hand by our artists: AI-enhanced, never AI-generated.</div>
+        <div class="tl-meta">
+          <span class="tl-meta-label" data-en="We craft" data-es="Producimos">We craft</span>
+          <span class="tl-meta-val" data-en="Modeling · materials · lighting · art direction" data-es="Modelado · materiales · iluminación · dirección de arte">Modeling · materials · lighting · art direction</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-node">03</div>
+      <div class="tl-card">
+        <div class="tl-phase" data-en="Collaboration · Together" data-es="Colaboración · Juntos">Collaboration · Together</div>
+        <div class="tl-title" data-en="Stay in Touch" data-es="Seguimiento">Stay in Touch</div>
+        <div class="tl-desc"
+             data-en="Fluid, constant interaction through the Miro platform in real time. You follow progress, leave comments and request changes at every stage — no long waits, no guessing. Revisions are part of the process, not an afterthought."
+             data-es="Interacción fluida y constante a través de la plataforma Miro en tiempo real. Seguís el avance, dejás comentarios y pedís cambios en cada etapa — sin esperas largas ni adivinanzas. Las revisiones son parte del proceso, no un agregado.">Fluid, constant interaction through the Miro platform in real time. You follow progress, leave comments and request changes at every stage — no long waits, no guessing. Revisions are part of the process, not an afterthought.</div>
+        <div class="tl-meta">
+          <span class="tl-meta-label" data-en="In real time" data-es="En tiempo real">In real time</span>
+          <span class="tl-meta-val" data-en="Miro board · live feedback · revisions included" data-es="Tablero Miro · feedback en vivo · revisiones incluidas">Miro board · live feedback · revisions included</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-node">04</div>
+      <div class="tl-card">
+        <div class="tl-phase" data-en="Delivery · You" data-es="Entrega · Vos">Delivery · You</div>
+        <div class="tl-title" data-en="Approve &amp; Deliver" data-es="Aprobás y Entregamos">Approve &amp; Deliver</div>
+        <div class="tl-desc"
+             data-en="Approve the draft version you want us to deliver and we finalize it in full resolution. You receive the final material ready to present, sell and launch — stills, animations, VR tours or a complete interactive sales experience."
+             data-es="Aprobás la versión preliminar que querés que entreguemos y la finalizamos en máxima resolución. Recibís el material final listo para presentar, vender y lanzar — imágenes, animaciones, tours VR o una experiencia de ventas interactiva completa.">Approve the draft version you want us to deliver and we finalize it in full resolution. You receive the final material ready to present, sell and launch — stills, animations, VR tours or a complete interactive sales experience.</div>
+        <div class="tl-meta">
+          <span class="tl-meta-label" data-en="You receive" data-es="Recibís">You receive</span>
+          <span class="tl-meta-val" data-en="Final renders · animations · VR · sales tools" data-es="Renders finales · animaciones · VR · sales tools">Final renders · animations · VR · sales tools</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VZ CREDITS MODEL -->
+<section class="vzc-section">
+  <div class="vzc-header reveal">
+    <div class="section-label" data-en="The Pricing Model" data-es="El Modelo de Precios">The Pricing Model</div>
+    <h2 class="section-title" data-en="ONE BALANCE,<br>ANY DELIVERABLE." data-es="UN BALANCE,<br>CUALQUIER ENTREGABLE.">ONE BALANCE,<br>ANY DELIVERABLE.</h2>
+    <p class="section-sub"
+       data-en="The same process is powered by VZ Credits — a flexible balance you distribute freely across the deliverables each project needs."
+       data-es="El mismo proceso funciona con VZ Credits — un balance flexible que distribuís libremente entre los entregables que necesite cada proyecto.">The same process is powered by VZ Credits — a flexible balance you distribute freely across the deliverables each project needs.</p>
+  </div>
+
+  <div class="vzc-flow reveal">
+    <div class="vzc-step">
+      <div class="vzc-step-num">01</div>
+      <div class="vzc-step-title" data-en="Choose a plan" data-es="Elegí un plan">Choose a plan</div>
+      <div class="vzc-step-text" data-en="Pick a credit balance — Starter, Pro or Partner. Each plan is a pool of VZ Credits with its own validity period." data-es="Elegí un balance de créditos — Starter, Pro o Partner. Cada plan es un pool de VZ Credits con su propia vigencia.">Pick a credit balance — Starter, Pro or Partner. Each plan is a pool of VZ Credits with its own validity period.</div>
+    </div>
+    <div class="vzc-step">
+      <div class="vzc-step-num">02</div>
+      <div class="vzc-step-title" data-en="Allocate your credits" data-es="Distribuí tus créditos">Allocate your credits</div>
+      <div class="vzc-step-text" data-en="Spend them however your project needs — still images, animations, aerial views or VR tours. No fixed packages." data-es="Gastalos como tu proyecto necesite — imágenes, animaciones, vistas aéreas o tours VR. Sin paquetes fijos.">Spend them however your project needs — still images, animations, aerial views or VR tours. No fixed packages.</div>
+    </div>
+    <div class="vzc-step">
+      <div class="vzc-step-num">03</div>
+      <div class="vzc-step-title" data-en="We produce &amp; deliver" data-es="Producimos y entregamos">We produce &amp; deliver</div>
+      <div class="vzc-step-text" data-en="Every deliverable runs through the same four-step process above — brief, 3D, real-time review and approval." data-es="Cada entregable pasa por el mismo proceso de cuatro pasos de arriba — brief, 3D, revisión en vivo y aprobación.">Every deliverable runs through the same four-step process above — brief, 3D, real-time review and approval.</div>
+    </div>
+  </div>
+
+  <div class="vzc-costs reveal">
+    <div class="vzc-costs-label" data-en="Credits per deliverable" data-es="Créditos por entregable">Credits per deliverable</div>
+    <div class="vzc-grid">
+      <div class="vzc-item">
+        <span class="vzc-item-name" data-en="Interior render" data-es="Render de interior">Interior render</span>
+        <span class="vzc-item-val">10 <span>VZ</span></span>
+      </div>
+      <div class="vzc-item">
+        <span class="vzc-item-name" data-en="Exterior render" data-es="Render exterior">Exterior render</span>
+        <span class="vzc-item-val">12 <span>VZ</span></span>
+      </div>
+      <div class="vzc-item">
+        <span class="vzc-item-name" data-en="Aerial view" data-es="Vista aérea">Aerial view</span>
+        <span class="vzc-item-val">15 <span>VZ</span></span>
+      </div>
+      <div class="vzc-item">
+        <span class="vzc-item-name" data-en="Short animation 5–8 sec" data-es="Animación corta 5–8 seg">Short animation 5–8 sec</span>
+        <span class="vzc-item-val">20 <span>VZ</span></span>
+      </div>
+      <div class="vzc-item">
+        <span class="vzc-item-name" data-en="Animation 10–15 sec" data-es="Animación 10–15 seg">Animation 10–15 sec</span>
+        <span class="vzc-item-val">35 <span>VZ</span></span>
+      </div>
+      <div class="vzc-item">
+        <span class="vzc-item-name" data-en="VR tour / panoramic point" data-es="Tour VR / punto panorámico">VR tour / panoramic point</span>
+        <span class="vzc-item-val">25 <span>VZ</span></span>
+      </div>
+    </div>
+    <div class="vzc-foot">
+      <p class="vzc-disc" data-en="Credits cover production. Each deliverable has an estimated cost that may vary with scope and complexity. 3D modeling is the foundation of every deliverable and is quoted per project." data-es="Los créditos cubren la producción. Cada entregable tiene un costo estimado que puede variar según alcance y complejidad. El modelado 3D es la base de cada entregable y se cotiza por proyecto.">Credits cover production. Each deliverable has an estimated cost that may vary with scope and complexity. 3D modeling is the foundation of every deliverable and is quoted per project.</p>
+      <a href="vz-credits.html" class="btn-ghost" data-en="Explore VZ Credits →" data-es="Explorar VZ Credits →">Explore VZ Credits →</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRINCIPLES -->
+<section class="principles-section">
+  <div class="principles-header reveal">
+    <div class="section-label" data-en="What Guides Us" data-es="Lo Que Nos Guía">What Guides Us</div>
+    <h2 class="section-title" data-en="HOW WE KEEP IT<br>ON TRACK." data-es="CÓMO LO MANTENEMOS<br>EN CURSO.">HOW WE KEEP IT<br>ON TRACK.</h2>
+  </div>
+  <div class="principles-grid">
+    <div class="principle-item reveal">
+      <div class="principle-mark">01</div>
+      <div class="principle-name" data-en="Transparency" data-es="Transparencia">Transparency</div>
+      <div class="principle-text" data-en="You always know where your project stands and what the next step is." data-es="Siempre sabés en qué etapa está tu proyecto y cuál es el próximo paso.">You always know where your project stands and what the next step is.</div>
+    </div>
+    <div class="principle-item reveal">
+      <div class="principle-mark">02</div>
+      <div class="principle-name" data-en="Collaboration" data-es="Colaboración">Collaboration</div>
+      <div class="principle-text" data-en="We work alongside you in real time, not behind closed doors." data-es="Trabajamos a tu lado en tiempo real, no a puertas cerradas.">We work alongside you in real time, not behind closed doors.</div>
+    </div>
+    <div class="principle-item reveal">
+      <div class="principle-mark">03</div>
+      <div class="principle-name" data-en="Precision" data-es="Precisión">Precision</div>
+      <div class="principle-text" data-en="Visuals stay true to the project, so what you sell is what gets built." data-es="Los visuales son fieles al proyecto: lo que vendés es lo que se construye.">Visuals stay true to the project, so what you sell is what gets built.</div>
+    </div>
+    <div class="principle-item reveal">
+      <div class="principle-mark">04</div>
+      <div class="principle-name" data-en="Reliability" data-es="Confiabilidad">Reliability</div>
+      <div class="principle-text" data-en="Clear scope, clear timelines and delivery you can plan a launch around." data-es="Alcance claro, plazos claros y entregas con las que podés planear un lanzamiento.">Clear scope, clear timelines and delivery you can plan a launch around.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS STRIP -->
+<section class="tools-strip">
+  <div class="tools-inner">
+    <div class="reveal">
+      <div class="section-label" data-en="Built To Communicate" data-es="Hecho Para Comunicar">Built To Communicate</div>
+      <h2 class="section-title" data-en="ONE BRIEF,<br>EVERY VISUAL." data-es="UN BRIEF,<br>TODO EL VISUAL.">ONE BRIEF,<br>EVERY VISUAL.</h2>
+      <p class="section-sub"
+         data-en="The same process scales from a single still image to a full interactive sales platform. Whatever your development needs, it follows the same clear path."
+         data-es="El mismo proceso escala desde una sola imagen fija hasta una plataforma de ventas interactiva completa. Sea lo que sea que tu desarrollo necesite, sigue el mismo camino claro.">The same process scales from a single still image to a full interactive sales platform. Whatever your development needs, it follows the same clear path.</p>
+    </div>
+    <ul class="tools-list reveal">
+      <li><span class="n">01</span><span class="l" data-en="Still Images" data-es="Imágenes Fijas">Still Images</span></li>
+      <li><span class="n">02</span><span class="l" data-en="Animations" data-es="Animaciones">Animations</span></li>
+      <li><span class="n">03</span><span class="l" data-en="VR Experiences" data-es="Experiencias VR">VR Experiences</span></li>
+      <li><span class="n">04</span><span class="l" data-en="Interactive Sales Tool" data-es="Sales Tool Interactiva">Interactive Sales Tool</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip reveal" id="contact">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2 data-en="READY TO<br>GET STARTED?" data-es="¿LISTO PARA<br>EMPEZAR?">READY TO<br>GET STARTED?</h2>
+      <p data-en="Send us your brief and we'll walk you through the process — and show you what your project can look like before it's built." data-es="Envianos tu brief y te guiamos por el proceso — y te mostramos cómo puede verse tu proyecto antes de construirlo.">Send us your brief and we'll walk you through the process — and show you what your project can look like before it's built.</p>
+    </div>
+    <div class="hero-actions">
+      <a href="mailto:info@vizor-solutions.com?subject=New%20project%20brief" class="btn-primary" data-en="Send a brief" data-es="Enviar un brief">Send a brief</a>
+      <a href="https://wa.me/5491160029154" target="_blank" class="btn-ghost">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer style="background:var(--surface);border-top:1px solid var(--border)">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo"><img src="assets/img/logo.png" alt="Vizor Solutions" width="197" height="32" loading="lazy" style="height:32px;width:auto;display:block;margin-bottom:12px"></div>
+      <p data-en="Creating visual experiences that connect projects and people. Architecture, real estate and beyond." data-es="Creamos experiencias visuales que conectan proyectos y personas. Arquitectura, real estate y más allá.">Creating visual experiences that connect projects and people. Architecture, real estate and beyond.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/vizorsolutions" target="_blank" title="Instagram">IG</a>
+        <a href="https://www.linkedin.com/company/vizorsol/" target="_blank" title="LinkedIn">IN</a>
+        <a href="https://www.behance.net/Vizorsolutions" target="_blank" rel="noopener" title="Behance">Be</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Products" data-es="Productos">Products</div>
+      <ul class="footer-links">
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="vz-credits.html">VZ Credits <span class="tag">Visual</span></a></li>
+        <li><a href="vz-credits.html#plans" data-en="Plans" data-es="Planes">Plans</a></li>
+        <li><a href="vz-credits.html#calculator" data-en="Calculator" data-es="Calculadora">Calculator</a></li>
+        <li><a href="vz-credits.html#pilot">VZ Pilot</a></li>
+        <li><a href="sales-tool.html">Sales Tool <span class="tag">Platform</span></a></li>
+        <li><a href="https://app.vizor-solutions.com" target="_blank" data-en="Live demo ↗" data-es="Demo en vivo ↗">Live demo ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Company" data-es="Compañía">Company</div>
+      <ul class="footer-links">
+        <li><a href="services.html" data-en="Work" data-es="Trabajo">Work</a></li>
+        <li><a href="process.html" data-en="Process" data-es="Proceso">Process</a></li>
+        <li><a href="about.html" data-en="About" data-es="Nosotros">About</a></li>
+        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Contact" data-es="Contacto">Contact</div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Email</span>
+        <span class="footer-contact-val"><a href="mailto:info@vizor-solutions.com">info@vizor-solutions.com</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">WhatsApp</span>
+        <span class="footer-contact-val"><a href="https://wa.me/5491160029154" target="_blank">+54 9 11 6002-9154</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label" data-en="Coverage" data-es="Cobertura">Coverage</span>
+        <span class="footer-contact-val" style="font-size:12px" data-en="Latin America · North America · Europe · Global" data-es="Latinoamérica · Norteamérica · Europa · Global">Latin America · North America · Europe · Global</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy" data-en="© 2026 Vizor Solutions. All rights reserved." data-es="© 2026 Vizor Solutions. Todos los derechos reservados.">© 2026 Vizor Solutions. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+      <a href="vz-credits.html">VZ Credits</a>
+      <a href="sales-tool.html">Sales Tool</a>
+      <a href="https://vizor-solutions.com">vizor-solutions.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<script src="assets/js/vizor-nav.js" defer></script>
+<script src="assets/js/vizor-lang.js" defer></script>
+</body>
+</html>

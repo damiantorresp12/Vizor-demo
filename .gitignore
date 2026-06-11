@@ -1,0 +1,19 @@
+# Editor / local tooling
+.claude/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs / temp
+*.log
+*.tmp
+node_modules/
+
+# Build artifacts (none in this project, but just in case)
+dist/
+build/
+.vercel/

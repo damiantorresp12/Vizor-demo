@@ -1,0 +1,103 @@
+/* ── VIZOR SHARED STYLES ── */
+/* Used by: vizor-home.html, about.html, and future pages. */
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+:root{
+  --black:#0a0a0a;
+  --surface:#111111;
+  --surface2:#171717;
+  --surface3:#1f1f1f;
+  --border:rgba(255,255,255,0.07);
+  --border-b:rgba(255,255,255,0.14);
+  --orange:#E8571E;
+  --orange-dim:#c44818;
+  --white:#f5f3ef;
+  --muted:rgba(245,243,239,0.45);
+  --muted2:rgba(245,243,239,0.22);
+  --fd:'Bebas Neue',sans-serif;
+  --fb:'DM Sans',sans-serif;
+  --fm:'DM Mono',monospace;
+}
+
+body{background:var(--black);color:var(--white);font-family:var(--fb);font-size:15px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+
+/* ── LANG BAR ── */
+.lang-bar{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:flex-end;align-items:center;padding:6px 48px;background:rgba(10,10,10,.95);border-bottom:1px solid var(--border)}
+.lang-btn{font-family:var(--fm);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--border-b);background:transparent;color:var(--muted);cursor:pointer;border-radius:2px;transition:all .2s}
+.lang-btn.active{border-color:var(--orange);color:var(--orange);background:rgba(232,87,30,.08)}
+.lang-btn:not(.active):hover{color:var(--white)}
+.lang-sep{color:var(--muted2);font-size:11px;display:flex;align-items:center;padding:0 4px}
+
+/* ── NAV ── */
+nav{position:fixed;top:29px;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid transparent;transition:background .4s,border-color .4s}
+nav.scrolled{background:rgba(10,10,10,.92);border-color:var(--border);backdrop-filter:blur(12px)}
+.nav-logo{font-family:var(--fd);font-size:22px;letter-spacing:1px;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--orange)}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-family:var(--fm);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--white)}
+.nav-links a.active{color:var(--orange)}
+.nav-cta{font-family:var(--fb);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--orange);border:1px solid var(--orange);padding:8px 20px;border-radius:2px;text-decoration:none;background:transparent;transition:background .2s,color .2s;display:inline-block}
+.nav-cta:hover{background:var(--orange);color:var(--black)}
+
+/* ── BUTTONS ── */
+.btn-primary{background:var(--orange);color:var(--black);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:14px 32px;border-radius:2px;border:none;display:inline-block;transition:background .2s;cursor:pointer}
+.btn-primary:hover{background:var(--orange-dim)}
+.btn-ghost{color:var(--orange);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:13px 32px;border-radius:2px;border:1px solid var(--orange);display:inline-block;transition:background .2s,color .2s}
+.btn-ghost:hover{background:var(--orange);color:var(--black)}
+
+/* ── HERO SHARED ── */
+.hero-tag{font-family:var(--fm);font-size:11px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:10px;animation:fadeUp .8s .1s ease both}
+.hero-tag::before{content:'';width:32px;height:1px;background:var(--orange)}
+
+/* ── SECTION HELPERS ── */
+.section-label{font-family:var(--fm);font-size:11px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.section-label::before{content:'';width:20px;height:1px;background:var(--orange)}
+.section-title{font-family:var(--fd);font-size:clamp(42px,6vw,72px);line-height:1;letter-spacing:1px;margin-bottom:12px}
+.section-sub{font-size:15px;color:var(--muted);max-width:480px;line-height:1.7}
+
+/* ── FOOTER ── */
+footer{padding:64px 48px 40px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid var(--border);margin-bottom:32px}
+.footer-brand .logo{font-family:var(--fd);font-size:24px;letter-spacing:1px;margin-bottom:12px}
+.footer-brand .logo span{color:var(--orange)}
+.footer-brand p{font-size:13px;color:var(--muted);line-height:1.7;max-width:240px;margin-bottom:20px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:34px;height:34px;border:1px solid var(--border-b);border-radius:2px;display:flex;align-items:center;justify-content:center;color:var(--muted);text-decoration:none;font-size:12px;transition:border-color .2s,color .2s}
+.footer-social a:hover{border-color:var(--orange);color:var(--orange)}
+.footer-col-title{font-family:var(--fm);font-size:10px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:var(--muted);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-links a:hover{color:var(--white)}
+.footer-links .tag{font-family:var(--fm);font-size:9px;color:var(--orange);letter-spacing:.1em;border:1px solid rgba(232,87,30,.3);padding:1px 6px}
+.footer-contact-item{display:flex;flex-direction:column;gap:3px;margin-bottom:14px}
+.footer-contact-label{font-family:var(--fm);font-size:10px;color:var(--muted2);letter-spacing:.1em;text-transform:uppercase}
+.footer-contact-val{font-size:13px;color:var(--muted)}
+.footer-contact-val a{color:var(--muted);text-decoration:none;transition:color .2s}
+.footer-contact-val a:hover{color:var(--orange)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-family:var(--fm);font-size:11px;color:var(--muted2)}
+.footer-bottom-links{display:flex;gap:24px}
+.footer-bottom-links a{font-family:var(--fm);font-size:11px;color:var(--muted2);text-decoration:none;transition:color .2s}
+.footer-bottom-links a:hover{color:var(--white)}
+
+/* ── REVEAL ON SCROLL ── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+/* ── RESPONSIVE SHARED ── */
+@media(max-width:900px){
+  nav{padding:0 20px;top:25px}
+  .nav-links{display:none}
+  .lang-bar{padding:6px 20px}
+  footer{padding:48px 20px 32px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center;align-items:flex-start}
+}
+@media(max-width:560px){
+  .footer-top{grid-template-columns:1fr}
+}

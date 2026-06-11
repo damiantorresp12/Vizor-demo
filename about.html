@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Vizor Solutions | Premium Architectural Visualization Studio</title>
+<meta name="description" content="Vizor is a creative studio of artists, designers and 3D specialists crafting high-end visuals for real estate. Because for us, it's not about renders — it's about emotions.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vizor Solutions">
+<meta property="og:url" content="https://vizor-solutions.com/about.html">
+<meta property="og:title" content="About — Vizor Solutions | Premium Architectural Visualization Studio">
+<meta property="og:description" content="A creative studio of artists, designers and 3D specialists crafting high-end visuals for real estate. It's not about renders — it's about emotions.">
+<meta property="og:image" content="https://vizor-solutions.com/assets/img/about-vz.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — Vizor Solutions">
+<meta name="twitter:description" content="A creative studio of artists, designers and 3D specialists crafting high-end visuals for real estate. It's not about renders — it's about emotions.">
+<meta name="twitter:image" content="https://vizor-solutions.com/assets/img/about-vz.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/vizor.css">
+<link rel="preload" as="image" href="assets/img/about-vz.jpg" fetchpriority="high">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<style>
+/* ── ABOUT-SPECIFIC ── */
+a{color:inherit}
+
+/* HERO */
+.hero{min-height:88vh;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 80px;padding-top:160px}
+.hero-bg{position:absolute;inset:0;z-index:0;background-image:url('assets/img/about-vz.jpg');background-size:cover;background-position:center;background-attachment:fixed}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,1) 0%,rgba(10,10,10,.72) 45%,rgba(10,10,10,.35) 100%)}
+.hero-grid{position:absolute;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px}
+.hero-content{position:relative;z-index:2;max-width:860px}
+.hero-h1{font-family:var(--fd);font-size:clamp(60px,10vw,128px);line-height:.9;letter-spacing:2px;margin-bottom:32px;animation:fadeUp .8s .2s ease both}
+.hero-h1 .accent{color:var(--orange)}
+.hero-sub{font-size:17px;font-weight:300;color:var(--muted);line-height:1.75;max-width:600px;margin-bottom:48px;animation:fadeUp .8s .35s ease both}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .8s .45s ease both}
+
+/* PHILOSOPHY (vision-strip) */
+.vision-strip{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:64px 48px}
+.vision-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1px 1fr;gap:0;align-items:center}
+.vision-divider{background:var(--border);height:120px;align-self:center}
+.vision-left{padding-right:64px}
+.vision-label{font-family:var(--fm);font-size:11px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.vision-label::before{content:'';width:20px;height:1px;background:var(--orange)}
+.vision-title{font-family:var(--fd);font-size:clamp(32px,4vw,52px);line-height:1;letter-spacing:1px;margin-bottom:16px}
+.vision-desc{font-size:14px;color:var(--muted);line-height:1.8;max-width:480px}
+.vision-right{padding-left:64px;display:flex;flex-direction:column;gap:28px}
+.vision-stat{display:flex;align-items:baseline;gap:14px}
+.vision-stat-num{font-family:var(--fd);font-size:46px;color:var(--orange);line-height:1;white-space:nowrap}
+.vision-stat-text{font-size:13px;color:var(--muted);line-height:1.45}
+
+/* WHAT WE DO */
+.do-section{padding:100px 48px}
+.do-header{max-width:1280px;margin:0 auto 56px}
+.do-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+.do-card{background:var(--black);padding:40px 36px;display:flex;flex-direction:column;gap:14px;transition:background .3s}
+.do-card:hover{background:var(--surface2)}
+.do-card-num{font-family:var(--fm);font-size:11px;color:var(--orange);letter-spacing:.12em}
+.do-card-title{font-family:var(--fd);font-size:30px;letter-spacing:.5px;line-height:1}
+.do-card-text{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* VALUES */
+.values-section{padding:100px 48px;background:var(--surface)}
+.values-header{max-width:1280px;margin:0 auto 56px}
+.values-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.value-item{display:flex;flex-direction:column;gap:12px}
+.value-mark{font-family:var(--fd);font-size:40px;color:var(--orange);line-height:1}
+.value-name{font-family:var(--fm);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--white)}
+.value-text{font-size:13px;color:var(--muted);line-height:1.7}
+
+/* OFFERINGS */
+.offer-section{padding:100px 48px}
+.offer-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:start}
+.offer-list{list-style:none;border-top:1px solid var(--border)}
+.offer-list li{display:flex;align-items:center;gap:18px;padding:22px 0;border-bottom:1px solid var(--border)}
+.offer-list li .n{font-family:var(--fm);font-size:11px;color:var(--muted2);letter-spacing:.1em;width:28px}
+.offer-list li .l{font-family:var(--fd);font-size:26px;letter-spacing:.5px}
+.offer-list li:hover .l{color:var(--orange)}
+
+/* CTA STRIP */
+.cta-strip{background:var(--black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:72px 48px}
+.cta-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:48px;flex-wrap:wrap}
+.cta-text h2{font-family:var(--fd);font-size:clamp(32px,4.5vw,56px);line-height:1;letter-spacing:1px;margin-bottom:14px}
+.cta-text p{font-size:15px;color:var(--muted);max-width:480px;line-height:1.7}
+
+/* FOOTER (about-specific layout: max-width centered) */
+.footer-top{max-width:1280px;margin:0 auto 32px}
+.footer-bottom{max-width:1280px;margin:0 auto}
+
+@media(max-width:900px){
+  .hero{padding:140px 20px 64px}
+  .vision-strip{padding:48px 20px}
+  .vision-inner{grid-template-columns:1fr;gap:40px}
+  .vision-divider{display:none}
+  .vision-left{padding-right:0}
+  .vision-right{padding-left:0}
+  .do-section,.values-section,.offer-section{padding:64px 20px}
+  .do-grid{grid-template-columns:1fr}
+  .values-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .offer-inner{grid-template-columns:1fr;gap:40px}
+  .cta-strip{padding:56px 20px}
+}
+@media(max-width:560px){
+  .values-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="Vizor Solutions" width="234" height="38" style="height:38px;width:auto;display:block"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="vz-credits.html">VZ Credits</a></li>
+    <li><a href="sales-tool.html">Sales Tool</a></li>
+    <li><a href="services.html">Work</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta" data-en="Contact" data-es="Contacto">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag" data-en="Who We Are" data-es="Quiénes Somos">Who We Are</div>
+    <h1 class="hero-h1"
+        data-en="WE CREATE<br>VISUAL <span class='accent'>EXPERIENCES</span>."
+        data-es="CREAMOS<br>EXPERIENCIAS <span class='accent'>VISUALES</span>.">WE CREATE<br>VISUAL <span class="accent">EXPERIENCES</span>.</h1>
+    <p class="hero-sub"
+       data-en="A creative studio of artists, designers and 3D specialists crafting high-end visuals for real estate. Because for us, it's not about renders — it's about emotions."
+       data-es="Un estudio creativo de artistas, diseñadores y especialistas 3D que produce visuales de alta gama para real estate. Porque para nosotros no se trata de renders, se trata de emociones.">A creative studio of artists, designers and 3D specialists crafting high-end visuals for real estate. Because for us, it's not about renders — it's about emotions.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary" data-en="Start a project" data-es="Iniciar un proyecto">Start a project</a>
+      <a href="services.html" class="btn-ghost" data-en="See our work" data-es="Ver nuestro trabajo">See our work</a>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<div class="vision-strip">
+  <div class="vision-inner">
+    <div class="vision-left reveal">
+      <div class="vision-label" data-en="Our Philosophy" data-es="Nuestra Filosofía">Our Philosophy</div>
+      <h2 class="vision-title"
+          data-en="A RENDER IS MORE<br>THAN AN IMAGE."
+          data-es="UN RENDER ES MÁS<br>QUE UNA IMAGEN.">A RENDER IS MORE<br>THAN AN IMAGE.</h2>
+      <p class="vision-desc"
+         data-en="We believe a render is more than just an image. It's an opportunity to experience a space before it even exists — to truly feel what it's like to be there. Every frame we produce is crafted by our team: AI-enhanced, not AI-generated."
+         data-es="Creemos que un render es más que una imagen. Es la oportunidad de experimentar un espacio antes de que exista, de sentir realmente lo que es estar ahí. Cada imagen que producimos está hecha por nuestro equipo: potenciada por IA, no generada por IA.">We believe a render is more than just an image. It's an opportunity to experience a space before it even exists — to truly feel what it's like to be there. Every frame we produce is crafted by our team: AI-enhanced, not AI-generated.</p>
+    </div>
+    <div class="vision-divider"></div>
+    <div class="vision-right reveal">
+      <div class="vision-stat">
+        <div class="vision-stat-num">100%</div>
+        <div class="vision-stat-text" data-en="Crafted by our<br>in-house team" data-es="Hecho por nuestro<br>equipo interno">Crafted by our<br>in-house team</div>
+      </div>
+      <div class="vision-stat">
+        <div class="vision-stat-num">3D·VR</div>
+        <div class="vision-stat-text" data-en="Immersive experiences,<br>not just static images" data-es="Experiencias inmersivas,<br>no solo imágenes estáticas">Immersive experiences,<br>not just static images</div>
+      </div>
+      <div class="vision-stat">
+        <div class="vision-stat-num">Global</div>
+        <div class="vision-stat-text" data-en="LatAm · North America<br>Europe · Worldwide" data-es="LatAm · Norteamérica<br>Europa · Todo el mundo">LatAm · North America<br>Europe · Worldwide</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE DO -->
+<section class="do-section">
+  <div class="do-header reveal">
+    <div class="section-label" data-en="What We Do" data-es="Qué Hacemos">What We Do</div>
+    <h2 class="section-title" data-en="VISUAL SOLUTIONS,<br>END TO END." data-es="SOLUCIONES VISUALES,<br>DE PRINCIPIO A FIN.">VISUAL SOLUTIONS,<br>END TO END.</h2>
+    <p class="section-sub"
+       data-en="We turn architectural plans, 3D models and project information into high-quality visual material designed to communicate, sell and present spaces more effectively."
+       data-es="Convertimos planos, modelos 3D e información de proyecto en material visual de alta calidad, diseñado para comunicar, vender y presentar espacios de forma más efectiva.">We turn architectural plans, 3D models and project information into high-quality visual material designed to communicate, sell and present spaces more effectively.</p>
+  </div>
+  <div class="do-grid">
+    <div class="do-card reveal">
+      <div class="do-card-num">01</div>
+      <div class="do-card-title" data-en="Architectural Visualization" data-es="Visualización Arquitectónica">Architectural Visualization</div>
+      <div class="do-card-text"
+           data-en="High-end still images and animations that bring exteriors and interiors to life before construction begins."
+           data-es="Imágenes y animaciones de alta gama que dan vida a exteriores e interiores antes de empezar la obra.">High-end still images and animations that bring exteriors and interiors to life before construction begins.</div>
+    </div>
+    <div class="do-card reveal">
+      <div class="do-card-num">02</div>
+      <div class="do-card-title" data-en="Immersive VR" data-es="VR Inmersivo">Immersive VR</div>
+      <div class="do-card-text"
+           data-en="360° virtual tours that let buyers walk through a space and feel it as if they were already there."
+           data-es="Tours virtuales 360° para que los compradores recorran el espacio y lo sientan como si ya estuvieran ahí.">360° virtual tours that let buyers walk through a space and feel it as if they were already there.</div>
+    </div>
+    <div class="do-card reveal">
+      <div class="do-card-num">03</div>
+      <div class="do-card-title" data-en="Marketing-Ready Content" data-es="Contenido para Marketing">Marketing-Ready Content</div>
+      <div class="do-card-text"
+           data-en="Interactive presentations, interior design support and social-ready content for every stage of the sale."
+           data-es="Presentaciones interactivas, apoyo en interiorismo y contenido para redes en cada etapa de la venta.">Interactive presentations, interior design support and social-ready content for every stage of the sale.</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="values-header reveal">
+    <div class="section-label" data-en="What Drives Us" data-es="Lo Que Nos Mueve">What Drives Us</div>
+    <h2 class="section-title" data-en="EVERY DETAIL<br>MATTERS." data-es="CADA DETALLE<br>IMPORTA.">EVERY DETAIL<br>MATTERS.</h2>
+  </div>
+  <div class="values-grid">
+    <div class="value-item reveal">
+      <div class="value-mark">01</div>
+      <div class="value-name" data-en="Emotion" data-es="Emoción">Emotion</div>
+      <div class="value-text" data-en="We design for how a space makes you feel, not just how it looks." data-es="Diseñamos por cómo te hace sentir un espacio, no solo por cómo se ve.">We design for how a space makes you feel, not just how it looks.</div>
+    </div>
+    <div class="value-item reveal">
+      <div class="value-mark">02</div>
+      <div class="value-name" data-en="Craft" data-es="Oficio">Craft</div>
+      <div class="value-text" data-en="Every frame is built by hand by artists who care about light, texture and detail." data-es="Cada imagen la construyen a mano artistas que cuidan la luz, la textura y el detalle.">Every frame is built by hand by artists who care about light, texture and detail.</div>
+    </div>
+    <div class="value-item reveal">
+      <div class="value-mark">03</div>
+      <div class="value-name" data-en="Precision" data-es="Precisión">Precision</div>
+      <div class="value-text" data-en="Visuals that stay true to the project, so what you sell is what gets built." data-es="Visuales fieles al proyecto: lo que vendés es lo que se construye.">Visuals that stay true to the project, so what you sell is what gets built.</div>
+    </div>
+    <div class="value-item reveal">
+      <div class="value-mark">04</div>
+      <div class="value-name" data-en="Partnership" data-es="Acompañamiento">Partnership</div>
+      <div class="value-text" data-en="We work alongside developers and architects from first sketch to final launch." data-es="Trabajamos junto a desarrolladores y arquitectos desde el primer boceto hasta el lanzamiento.">We work alongside developers and architects from first sketch to final launch.</div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFERINGS -->
+<section class="offer-section">
+  <div class="offer-inner">
+    <div class="reveal">
+      <div class="section-label" data-en="What You Get" data-es="Qué Recibís">What You Get</div>
+      <h2 class="section-title" data-en="EVERYTHING A<br>PROJECT NEEDS." data-es="TODO LO QUE UN<br>PROYECTO NECESITA.">EVERYTHING A<br>PROJECT NEEDS.</h2>
+      <p class="section-sub"
+         data-en="From a single still image to a full interactive sales experience — we cover every visual a development needs to communicate its value."
+         data-es="Desde una sola imagen fija hasta una experiencia de ventas interactiva completa: cubrimos cada visual que un desarrollo necesita para comunicar su valor.">From a single still image to a full interactive sales experience — we cover every visual a development needs to communicate its value.</p>
+    </div>
+    <ul class="offer-list reveal">
+      <li><span class="n">01</span><span class="l" data-en="Still Images" data-es="Imágenes Fijas">Still Images</span></li>
+      <li><span class="n">02</span><span class="l" data-en="VR Experiences" data-es="Experiencias VR">VR Experiences</span></li>
+      <li><span class="n">03</span><span class="l" data-en="Interior Design Support" data-es="Apoyo en Interiorismo">Interior Design Support</span></li>
+      <li><span class="n">04</span><span class="l" data-en="Interactive Presentations" data-es="Presentaciones Interactivas">Interactive Presentations</span></li>
+      <li><span class="n">05</span><span class="l" data-en="Social Media Content" data-es="Contenido para Redes">Social Media Content</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-strip reveal" id="contact">
+  <div class="cta-inner">
+    <div class="cta-text">
+      <h2 data-en="LET'S BRING YOUR<br>PROJECT TO LIFE." data-es="DEMOS VIDA A<br>TU PROYECTO.">LET'S BRING YOUR<br>PROJECT TO LIFE.</h2>
+      <p data-en="Tell us about your development and we'll show you what it can look like — before it's built." data-es="Contanos sobre tu desarrollo y te mostramos cómo puede verse, antes de construirlo.">Tell us about your development and we'll show you what it can look like — before it's built.</p>
+    </div>
+    <div class="hero-actions">
+      <a href="mailto:info@vizor-solutions.com" class="btn-primary" data-en="Email us" data-es="Escribinos">Email us</a>
+      <a href="https://wa.me/5491160029154" target="_blank" class="btn-ghost">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo"><img src="assets/img/logo.png" alt="Vizor Solutions" width="197" height="32" loading="lazy" style="height:32px;width:auto;display:block;margin-bottom:12px"></div>
+      <p data-en="Creating visual experiences that connect projects and people. Architecture, real estate and beyond." data-es="Creamos experiencias visuales que conectan proyectos y personas. Arquitectura, real estate y más allá.">Creating visual experiences that connect projects and people. Architecture, real estate and beyond.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/vizorsolutions" target="_blank" title="Instagram">IG</a>
+        <a href="https://www.linkedin.com/company/vizorsol/" target="_blank" title="LinkedIn">IN</a>
+        <a href="https://www.behance.net/Vizorsolutions" target="_blank" rel="noopener" title="Behance">Be</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Products" data-es="Productos">Products</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="vz-credits.html">VZ Credits <span class="tag">Visual</span></a></li>
+        <li><a href="sales-tool.html">Sales Tool <span class="tag">Platform</span></a></li>
+        <li><a href="https://app.vizor-solutions.com" target="_blank">Live demo ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Company" data-es="Compañía">Company</div>
+      <ul class="footer-links">
+        <li><a href="services.html" data-en="Work" data-es="Trabajo">Work</a></li>
+        <li><a href="process.html" data-en="Process" data-es="Proceso">Process</a></li>
+        <li><a href="about.html" data-en="About" data-es="Nosotros">About</a></li>
+        <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title" data-en="Contact" data-es="Contacto">Contact</div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Email</span>
+        <span class="footer-contact-val"><a href="mailto:info@vizor-solutions.com">info@vizor-solutions.com</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">WhatsApp</span>
+        <span class="footer-contact-val"><a href="https://wa.me/5491160029154" target="_blank">+54 9 11 6002-9154</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label" data-en="Coverage" data-es="Cobertura">Coverage</span>
+        <span class="footer-contact-val" style="font-size:12px" data-en="Latin America · North America · Europe · Global" data-es="Latinoamérica · Norteamérica · Europa · Global">Latin America · North America · Europe · Global</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Vizor Solutions. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="index.html">Home</a>
+      <a href="vz-credits.html">VZ Credits</a>
+      <a href="sales-tool.html">Sales Tool</a>
+      <a href="https://vizor-solutions.com">vizor-solutions.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
+}, {threshold: 0.12});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+</script>
+<script src="assets/js/vizor-nav.js" defer></script>
+<script src="assets/js/vizor-lang.js" defer></script>
+</body>
+</html>

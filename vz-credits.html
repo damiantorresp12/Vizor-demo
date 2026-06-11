@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VZ Credits — Vizor Solutions</title>
+<meta name="description" content="VZ Credits — flexible credit system for architectural visualization. Allocate credits across still images, animations, aerial views and VR tours.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vizor Solutions">
+<meta property="og:url" content="https://vizor-solutions.com/vz-credits.html">
+<meta property="og:title" content="VZ Credits — Vizor Solutions">
+<meta property="og:description" content="A flexible credit system for architectural visualization. Allocate credits across still images, animations, aerial views and VR tours.">
+<meta property="og:image" content="https://vizor-solutions.com/assets/img/vz-hero-bg.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VZ Credits — Vizor Solutions">
+<meta name="twitter:description" content="A flexible credit system for architectural visualization. Allocate credits across still images, animations, aerial views and VR tours.">
+<meta name="twitter:image" content="https://vizor-solutions.com/assets/img/vz-hero-bg.jpg">
+<link rel="icon" href="assets/img/logo.png" type="image/png">
+<link rel="preload" as="image" href="assets/img/vz-hero-bg.jpg" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#0a0a0a;--off-black:#111;--surface:#171717;--surface2:#1f1f1f;--border:rgba(255,255,255,.08);--border-b:rgba(255,255,255,.15);--orange:#E8571E;--white:#f5f3ef;--muted:rgba(245,243,239,.45);--muted2:rgba(245,243,239,.22);--fd:'Bebas Neue',sans-serif;--fb:'DM Sans',sans-serif;--fm:'DM Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.6;overflow-x:hidden}
+
+/* LANG SWITCHER */
+.lang-bar{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:flex-end;padding:6px 48px;background:rgba(10,10,10,.95);border-bottom:1px solid var(--border)}
+.lang-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border:1px solid var(--border-b);background:transparent;color:var(--muted);cursor:pointer;border-radius:2px;transition:all .2s}
+.lang-btn.active{border-color:var(--orange);color:var(--orange);background:rgba(232,87,30,.08)}
+.lang-btn:not(.active):hover{border-color:var(--border-b);color:var(--white)}
+.lang-sep{color:var(--muted2);font-size:11px;display:flex;align-items:center;padding:0 4px}
+
+/* NAV */
+nav{position:fixed;top:29px;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid var(--border);background:rgba(10,10,10,.85);backdrop-filter:blur(12px)}
+.nav-logo .vz{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px}
+.nav-logo .vz span{color:var(--orange)}
+.nav-logo .by{font-size:10px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase}
+.nav-cta{font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);border:1px solid var(--orange);padding:8px 20px;border-radius:2px;text-decoration:none;transition:background .2s,color .2s}
+.nav-cta:hover{background:var(--orange);color:var(--black)}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 48px 80px;position:relative;overflow:hidden;padding-top:120px}.hero-bg{position:absolute;inset:0;background-image:url('assets/img/vz-hero-bg.jpg');background-attachment:fixed;background-size:cover;background-position:center;background-repeat:no-repeat;z-index:0}.hero-bg::after{content:"";position:absolute;inset:0;background:rgba(10,10,10,0.80)}
+.hero-grid{position:absolute;inset:0;pointer-events:none;z-index:1;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px}
+.hero-glow{position:absolute;top:-200px;right:-200px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,rgba(232,87,30,.12) 0%,transparent 70%);pointer-events:none;z-index:1}
+.hero-tag{position:relative;z-index:2;font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:10px}
+.hero-tag::before{content:'';width:32px;height:1px;background:var(--orange)}
+.hero-title{position:relative;z-index:2;font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,13vw,150px);line-height:.92;letter-spacing:2px;margin-bottom:32px}
+.hero-title .accent{color:var(--orange)}
+.hero-title-coin{display:inline-block;height:.55em;width:auto;vertical-align:baseline;margin-left:.22em;opacity:.92;filter:drop-shadow(0 6px 14px rgba(0,0,0,.35))}
+.hero-desc{position:relative;z-index:2;max-width:520px;font-size:16px;font-weight:300;color:var(--muted);line-height:1.75;margin-bottom:32px}
+
+/* AI BADGE */
+.ai-badge{position:relative;z-index:2;display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(232,87,30,.3);padding:10px 18px;margin-bottom:40px;background:rgba(232,87,30,.05)}
+.ai-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
+.ai-badge-text{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:.08em}
+.ai-badge-text strong{color:var(--white)}
+
+.hero-stats{position:relative;z-index:2;display:flex;gap:48px;border-top:1px solid var(--border);padding-top:40px}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:42px;line-height:1}
+.stat-num span{color:var(--orange)}
+.stat-label{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+.hero-scroll{position:relative;z-index:2;position:absolute;bottom:40px;right:48px;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);letter-spacing:.1em;writing-mode:vertical-lr;display:flex;align-items:center;gap:8px}
+.hero-scroll::after{content:'';width:1px;height:40px;background:var(--border-b)}
+
+/* HERO LAYOUT + MINI CALC */
+.hero-main{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.hero-left{min-width:0}
+.hero-left .hero-tag,.hero-left .hero-title,.hero-left .hero-desc,.hero-left .ai-badge,.hero-left .hero-stats{position:relative;z-index:2}
+.hero-right{width:100%}
+@media(min-width:1080px){
+  .hero-main{grid-template-columns:minmax(0,1fr) 380px;gap:56px}
+  .hero-scroll{display:none}
+}
+.mini-calc{background:rgba(13,13,14,.82);border:1px solid var(--border-b);border-radius:5px;padding:20px 20px 22px;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.mini-calc-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding-bottom:14px;border-bottom:1px solid var(--border)}
+.mini-calc-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:10px}
+.mini-calc-coin{height:22px;width:auto;opacity:.9;display:block}
+.mini-calc-badge{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;color:var(--muted2)}
+
+/* Section title + VZ coin sigil */
+.title-with-coin{display:flex;align-items:center;gap:18px;margin-bottom:12px;flex-wrap:wrap}
+.title-with-coin .section-title{margin-bottom:0}
+.title-coin{height:52px;width:auto;opacity:.92;flex-shrink:0;display:block}
+@media(max-width:560px){
+  .title-coin{height:38px}
+  .title-with-coin{gap:12px}
+}
+.mini-rows{display:flex;flex-direction:column}
+.mini-row{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--border)}
+.mini-row-name{font-size:12.5px;color:var(--muted);line-height:1.2;transition:color .2s}
+.mini-row.active .mini-row-name{color:var(--white)}
+.mini-row-vz{font-family:'Bebas Neue',sans-serif;font-size:16px;color:var(--orange);white-space:nowrap}
+.mini-qty{display:flex;align-items:center;gap:7px}
+.mini-btn{width:24px;height:24px;border:1px solid var(--border-b);background:transparent;color:var(--white);font-size:15px;line-height:1;cursor:pointer;border-radius:2px;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s}
+.mini-btn:hover{border-color:var(--orange);color:var(--orange)}
+.mini-num{font-family:'DM Mono',monospace;font-size:12px;min-width:14px;text-align:center;color:var(--white)}
+.mini-row:not(.active) .mini-num{color:var(--muted2)}
+.mini-total-row{display:flex;align-items:baseline;gap:10px;margin-top:16px}
+.mini-total-num{font-family:'Bebas Neue',sans-serif;font-size:46px;line-height:.85;color:var(--orange)}
+.mini-total-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.mini-hint{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-top:8px;min-height:15px;letter-spacing:.04em}
+.mini-hint b{color:var(--white);font-weight:500}
+.mini-cta{width:100%;margin-top:16px;background:var(--orange);color:#0a0a0a;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border:none;border-radius:2px;padding:13px;cursor:pointer;transition:background .2s}
+.mini-cta:hover{background:#c44818}
+
+/* CONCEPT */
+.concept-strip{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px;display:grid;grid-template-columns:1fr 1px 1fr 1px 1fr 1px 1fr 1px 1fr}
+.concept-divider{background:var(--border)}
+.concept-item{padding:0 40px}
+.concept-item:first-child{padding-left:0}
+.concept-icon{width:36px;height:36px;border:1px solid var(--border-b);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.concept-icon svg{width:16px;height:16px;stroke:var(--orange);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.concept-name{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.concept-desc{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* AI STRIP */
+.ai-strip{background:var(--off-black);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:40px 48px;display:flex;align-items:center;gap:48px}
+.ai-strip-label{font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;display:flex;align-items:center;gap:8px;flex-shrink:0}
+.ai-strip-label::before{content:'';width:20px;height:1px;background:var(--orange)}
+.ai-tools{display:flex;gap:12px;flex-wrap:wrap}
+.ai-tool{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);border:1px solid var(--border);padding:5px 14px;letter-spacing:.06em}
+.ai-strip-desc{font-size:13px;color:var(--muted);line-height:1.6;max-width:500px;border-left:1px solid var(--border);padding-left:48px;margin-left:auto}
+
+/* PLANS */
+section{padding:100px 48px}
+.section-label{font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.section-label::before{content:'';width:20px;height:1px;background:var(--orange)}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,6vw,72px);line-height:1;letter-spacing:1px;margin-bottom:16px}
+.section-sub{font-size:15px;color:var(--muted);max-width:480px;line-height:1.7}
+
+.plans-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:64px;background:var(--border);border:1px solid var(--border)}
+.plan-card{background:var(--off-black);position:relative;transition:background .2s;display:flex;flex-direction:column}
+.plan-card:hover{background:var(--surface)}
+.plan-card.featured{background:var(--surface);border-top:2px solid var(--orange)}
+.plan-badge{position:absolute;top:-1px;left:0;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--black);background:var(--orange);padding:3px 12px;z-index:1}
+.plan-img{width:100%;height:200px;object-fit:cover;display:block;filter:brightness(.9)}
+.plan-body{padding:32px 32px 28px;flex:1;display:flex;flex-direction:column}
+.plan-name{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:1px;line-height:1;margin-bottom:8px}
+.plan-credits{font-family:'DM Mono',monospace;font-size:13px;color:var(--orange);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.plan-credits::before{content:'';width:16px;height:1px;background:var(--orange)}
+.plan-validity{font-size:11px;color:var(--muted2);letter-spacing:.08em;text-transform:uppercase;font-family:'DM Mono',monospace;margin-bottom:20px}
+.plan-desc{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:24px;flex:1}
+.plan-example{border-top:1px solid var(--border);padding-top:20px;font-size:12px;margin-bottom:20px}
+.plan-example-title{color:var(--muted2);font-weight:500;margin-bottom:10px;letter-spacing:.08em;text-transform:uppercase;font-size:10px;font-family:'DM Mono',monospace}
+.plan-example-item{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid var(--border);color:var(--muted)}
+.plan-example-item:last-child{border-bottom:none}
+.plan-example-item .item-vz{font-family:'DM Mono',monospace;font-size:11px;color:var(--orange)}
+.plan-actions{display:flex;gap:8px;margin-top:4px}
+.btn-info{flex:0 0 auto;padding:10px 16px;border:1px solid var(--border-b);background:transparent;color:var(--muted);font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.btn-info:hover{border-color:var(--orange);color:var(--orange)}
+.btn-request{flex:1;padding:10px 16px;border:1px solid var(--orange);background:rgba(232,87,30,.08);color:var(--orange);font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;transition:all .2s;text-align:center}
+.btn-request:hover{background:var(--orange);color:var(--black)}
+
+/* DELIVERABLES */
+.deliv-section{background:var(--surface)}
+.deliv-grid{margin-top:56px;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.deliv-cat-header{grid-column:1/-1;background:var(--off-black);padding:12px 24px;font-family:'DM Mono',monospace;font-size:10px;color:var(--orange);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.deliv-cat-header::before{content:'';width:16px;height:1px;background:var(--orange)}
+.deliv-row-item{background:var(--off-black);padding:18px 24px;display:flex;justify-content:space-between;align-items:center;transition:background .15s}
+.deliv-row-item:hover{background:var(--surface2)}
+.deliv-row-name{font-size:14px;color:var(--white)}
+.deliv-vz{font-family:'DM Mono',monospace;font-size:15px;font-weight:500;color:var(--orange)}
+
+/* CALCULATOR */
+.calc-wrapper{margin-top:56px;display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:start}
+.calc-list{display:flex;flex-direction:column;gap:2px}
+.calc-item{background:var(--surface);border:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:14px;transition:border-color .15s,background .15s}
+.calc-item.active{border-color:rgba(232,87,30,.4);background:rgba(232,87,30,.04)}
+.calc-item-info{flex:1;min-width:0}
+.calc-item-name{font-size:14px;color:var(--white)}
+.calc-item-vz{font-family:'DM Mono',monospace;font-size:13px;color:var(--orange);white-space:nowrap;margin-right:12px}
+.qty-wrap{display:flex;align-items:center;gap:8px}
+.qty-btn{width:24px;height:24px;border:1px solid var(--border-b);background:transparent;color:var(--white);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .15s;border-radius:2px}
+.qty-btn:hover{border-color:var(--orange);color:var(--orange)}
+.qty-num{font-family:'DM Mono',monospace;font-size:13px;min-width:16px;text-align:center}
+
+.calc-summary{background:var(--surface);border:1px solid var(--border);padding:28px;position:sticky;top:110px}
+.calc-sum-title{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);letter-spacing:.12em;text-transform:uppercase;margin-bottom:16px}
+.calc-total-vz{font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--orange);line-height:1}
+.calc-total-label{font-size:11px;color:var(--muted2);margin-bottom:16px}
+.calc-bar-bg{height:3px;background:var(--border-b);margin:12px 0 4px}
+.calc-bar-fill{height:3px;background:var(--orange);transition:width .3s}
+.calc-bar-labels{display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:10px;color:var(--muted2);margin-bottom:20px}
+.calc-plan-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px}
+.calc-plan-item{padding:10px 14px;border:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;transition:border-color .15s}
+.calc-plan-item.best{border-color:var(--orange)}
+.calc-plan-name{font-size:13px;font-weight:500}
+.calc-plan-fit{font-size:11px;margin-top:2px}
+.fit-ok{color:#5DCAA5}.fit-no{color:#E24B4A}.fit-neutral{color:var(--muted2)}
+.calc-plan-vz{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted2);text-align:right}
+.calc-empty{text-align:center;padding:28px 0;color:var(--muted2);font-size:13px}
+.btn-dl{display:block;width:100%;padding:13px;background:var(--orange);color:var(--black);font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-align:center;border:none;cursor:pointer;transition:background .2s}
+.btn-dl:hover{background:#f0631f}
+.btn-dl:disabled{background:var(--surface2);color:var(--muted2);cursor:default}
+.calc-disclaimer{font-size:11px;color:var(--muted2);text-align:center;margin-top:10px;line-height:1.5}
+
+/* PILOT */
+.pilot-section{background:var(--surface);border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr}
+.pilot-left{padding:80px 48px;border-right:1px solid var(--border)}
+.pilot-right{padding:80px 48px;display:flex;flex-direction:column;justify-content:center}
+.pilot-title{font-family:'Bebas Neue',sans-serif;font-size:56px;line-height:1;margin-bottom:20px}
+.pilot-title span{color:var(--orange)}
+.pilot-desc{font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:28px}
+.pilot-investment{display:inline-flex;align-items:baseline;gap:10px;border:1px solid var(--orange);padding:14px 22px;margin-bottom:24px}
+.pilot-price{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--orange)}
+.pilot-price-label{font-size:12px;color:var(--muted)}
+.pilot-include{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.pilot-include-item{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted)}
+.pilot-include-item::before{content:'—';color:var(--orange);flex-shrink:0}
+.pilot-step{display:flex;align-items:flex-start;gap:20px;padding:14px 0;border-bottom:1px solid var(--border)}
+.pilot-step:last-child{border-bottom:none}
+.pilot-step-num{font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);flex-shrink:0;padding-top:2px}
+.pilot-step-text{font-size:13px;color:var(--muted);line-height:1.5}
+.pilot-step-text strong{color:var(--white);font-weight:500;display:block;margin-bottom:2px}
+
+/* RULES */
+.rules-section{background:var(--off-black)}
+.rules-grid{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.rule-item{background:var(--off-black);padding:24px 28px}
+.rule-title{font-size:13px;font-weight:500;margin-bottom:6px}
+.rule-desc{font-size:13px;color:var(--muted);line-height:1.6}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.hero-tag{animation:fadeUp .8s .1s ease both}
+.hero-title{animation:fadeUp .8s .2s ease both}
+.hero-desc{animation:fadeUp .8s .3s ease both}
+.ai-badge{animation:fadeUp .8s .4s ease both}
+.hero-stats{animation:fadeUp .8s .5s ease both}
+
+@media(max-width:900px){
+  nav{top:25px;padding:14px 20px}
+  .lang-bar{padding:6px 20px}
+  section{padding:64px 20px}
+  .hero{padding:120px 20px 64px}
+  .concept-strip{grid-template-columns:1fr 1fr;gap:28px;padding:36px 20px}
+  .concept-divider{display:none}
+  .plans-grid,.deliv-grid,.rules-grid{grid-template-columns:1fr}
+  .calc-wrapper{grid-template-columns:1fr}
+  .calc-summary{position:static}
+  .pilot-section{grid-template-columns:1fr}
+  .pilot-left{border-right:none;border-bottom:1px solid var(--border);padding:48px 20px}
+  .pilot-right{padding:48px 20px}
+  .hero-stats{gap:24px;flex-wrap:wrap}
+  footer{flex-direction:column;gap:16px;text-align:center;padding:32px 20px}
+  .ai-strip{flex-direction:column;gap:24px;padding:32px 20px}
+  .ai-strip-desc{border-left:none;padding-left:0;margin-left:0;border-top:1px solid var(--border);padding-top:24px}
+}
+
+/* SUBNAV */
+.subnav{position:fixed;top:0;left:0;right:0;z-index:98;background:rgba(10,10,10,.97);border-bottom:1px solid var(--border);display:none}
+.subnav.visible{display:block}
+.subnav-inner{display:flex;align-items:center;gap:0;padding:0 48px;overflow-x:auto;scrollbar-width:none}
+.subnav-inner::-webkit-scrollbar{display:none}
+.subnav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:14px 20px;white-space:nowrap;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+.subnav-link:hover{color:var(--white)}
+.subnav-link.active{color:var(--orange);border-bottom-color:var(--orange)}
+@media(max-width:900px){.subnav-inner{padding:0 16px}.subnav-link{padding:12px 14px;font-size:9px}}
+
+
+
+/* ── SHARED NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:68px;border-bottom:1px solid transparent;transition:background .4s,border-color .4s}
+nav.scrolled{background:rgba(10,10,10,.92);border-color:rgba(255,255,255,0.07);backdrop-filter:blur(12px)}
+.nav-logo{text-decoration:none;display:flex;align-items:center}
+.nav-logo-img{height:36px;width:auto;display:block}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,243,239,0.45);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:#f5f3ef}
+.nav-links a.active{color:#E8571E}
+.nav-cta{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#E8571E;border:1px solid #E8571E;padding:8px 20px;border-radius:2px;text-decoration:none;transition:background .2s,color .2s}
+.nav-cta:hover{background:#E8571E;color:#0a0a0a}
+/* ── SHARED FOOTER ── */
+footer{background:#111111;border-top:1px solid rgba(255,255,255,0.07);padding:64px 48px 40px}
+.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.07);margin-bottom:32px}
+.footer-brand p{font-size:13px;color:rgba(245,243,239,0.45);line-height:1.7;max-width:240px;margin-bottom:20px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:34px;height:34px;border:1px solid rgba(255,255,255,0.14);border-radius:2px;display:flex;align-items:center;justify-content:center;color:rgba(245,243,239,0.45);text-decoration:none;font-size:12px;font-family:'DM Mono',monospace;transition:border-color .2s,color .2s}
+.footer-social a:hover{border-color:#E8571E;color:#E8571E}
+.footer-col-title{font-family:'DM Mono',monospace;font-size:10px;color:#E8571E;letter-spacing:.14em;text-transform:uppercase;margin-bottom:20px}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.footer-links a{font-size:13px;color:rgba(245,243,239,0.45);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-links a:hover{color:#f5f3ef}
+.footer-links .tag{font-family:'DM Mono',monospace;font-size:9px;color:#E8571E;letter-spacing:.1em;border:1px solid rgba(232,87,30,.3);padding:1px 6px}
+.footer-contact-item{display:flex;flex-direction:column;gap:3px;margin-bottom:14px}
+.footer-contact-label{font-family:'DM Mono',monospace;font-size:10px;color:rgba(245,243,239,0.22);letter-spacing:.1em;text-transform:uppercase}
+.footer-contact-val{font-size:13px;color:rgba(245,243,239,0.45)}
+.footer-contact-val a{color:rgba(245,243,239,0.45);text-decoration:none;transition:color .2s}
+.footer-contact-val a:hover{color:#E8571E}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-family:'DM Mono',monospace;font-size:11px;color:rgba(245,243,239,0.22)}
+.footer-bottom-links{display:flex;gap:24px}
+.footer-bottom-links a{font-family:'DM Mono',monospace;font-size:11px;color:rgba(245,243,239,0.22);text-decoration:none;transition:color .2s}
+.footer-bottom-links a:hover{color:#f5f3ef}
+@media(max-width:900px){
+  nav{padding:0 20px}
+  .nav-links{display:none}
+  footer{padding:48px 20px 32px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+}
+
+/* NAV LANG BAR OFFSET */
+nav{top:29px !important}
+.nav-cta{background:transparent !important;color:#E8571E !important;border:1px solid #E8571E !important;font-weight:500 !important;padding:8px 20px !important}
+.nav-cta:hover{background:#E8571E !important;color:#0a0a0a !important}
+
+.nav-cta{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#E8571E !important;border:1px solid #E8571E !important;padding:8px 20px;border-radius:2px;text-decoration:none;background:transparent !important;transition:background .2s,color .2s;display:inline-block}
+.nav-cta:hover{background:#E8571E !important;color:#0a0a0a !important}
+
+
+</style>
+</head>
+<body>
+
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+  <span class="lang-sep">·</span>
+  <button class="lang-btn" id="btn-es" onclick="setLang('es')">ES</button>
+</div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="index.html" class="nav-logo"><img src="assets/img/logo.png" alt="Vizor Solutions" width="235" height="38" style="height:38px;width:auto;display:block"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="vz-credits.html" class="active">VZ Credits</a></li>
+    <li><a href="sales-tool.html">Sales Tool</a></li>
+    <li><a href="services.html">Work</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Contact</a>
+</nav>
+
+<!-- QUICK NAV -->
+<div class="subnav" id="subnav">
+  <div class="subnav-inner">
+    <a class="subnav-link" href="#plans" data-i="sn_plans">Plans</a>
+    <a class="subnav-link" href="#deliverables" data-i="sn_deliv">Deliverables</a>
+    <a class="subnav-link" href="#calculator" data-i="sn_calc">Calculator</a>
+    <a class="subnav-link" href="#pilot" data-i="sn_pilot">VZ Pilot</a>
+    <a class="subnav-link" href="#how-it-works" data-i="sn_rules">How it works</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-main">
+    <div class="hero-left">
+      <div class="hero-tag" data-i="hero_tag">Visual Production System</div>
+      <h1 class="hero-title">ONE SYSTEM.<br><span class="accent">MULTIPLE</span><br>SOLUTIONS.<img class="hero-title-coin" src="assets/img/vz-coin.png" alt="" loading="lazy"></h1>
+      <p class="hero-desc" data-i="hero_desc">Flexible visual production for architecture and real estate. Allocate your credits across still images, animations, VR tours and marketing visuals — based on what each project needs.</p>
+      <div class="ai-badge">
+        <div class="ai-dot"></div>
+        <div class="ai-badge-text" data-i="ai_badge"><strong>AI-Enhanced Production</strong> — Human expertise meets cutting-edge technology</div>
+      </div>
+      <div class="hero-stats">
+        <div><div class="stat-num">4<span>+</span></div><div class="stat-label" data-i="stat1">Deliverable types</div></div>
+        <div><div class="stat-num">3</div><div class="stat-label" data-i="stat2">Plans available</div></div>
+        <div><div class="stat-num">60<span>–</span>250</div><div class="stat-label" data-i="stat3">VZ Credits per plan</div></div>
+      </div>
+    </div>
+    <aside class="hero-right">
+      <!-- Mini calculator: shares state (qty[]/change()/total()/PLANS) with the full #calculator. -->
+      <div class="mini-calc">
+        <div class="mini-calc-head">
+          <span class="mini-calc-title">
+            <img class="mini-calc-coin" src="assets/img/vz-coin.png" alt="" width="32" height="22" loading="lazy">
+            <span data-i="hw_title">Quick estimate</span>
+          </span>
+        </div>
+        <div class="mini-rows" id="miniRows"></div>
+        <div class="mini-total-row">
+          <span class="mini-total-num" id="miniTotal">0</span>
+          <span class="mini-total-label" data-i="hw_label">Estimated credits</span>
+        </div>
+        <div class="mini-hint" id="miniHint"></div>
+        <button class="mini-cta" id="miniCta" type="button" onclick="goToCalc()" data-i="hw_cta">Build full project ↓</button>
+      </div>
+    </aside>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
+
+<!-- CONCEPT STRIP -->
+<div class="concept-strip">
+  <div class="concept-item">
+    <div class="concept-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M3 9a2 2 0 0 1 2-2h.93a2 2 0 0 0 1.664-.89l.812-1.22A2 2 0 0 1 10.07 4h3.86a2 2 0 0 1 1.664.89l.812 1.22A2 2 0 0 0 18.07 7H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+    <div class="concept-name">Still Images</div>
+    <div class="concept-desc" data-i="c1">Interiors, exteriors and AI-generated aerial views tailored to each project's exact location.</div>
+  </div>
+  <div class="concept-divider"></div>
+  <div class="concept-item">
+    <div class="concept-icon"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+    <div class="concept-name">Animations</div>
+    <div class="concept-desc" data-i="c2">5 to 15-second pieces for presentations and launch campaigns.</div>
+  </div>
+  <div class="concept-divider"></div>
+  <div class="concept-item">
+    <div class="concept-icon"><svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+    <div class="concept-name">VR Tours</div>
+    <div class="concept-desc" data-i="c3">Panoramic points and virtual walkthroughs for projects in commercialization.</div>
+  </div>
+  <div class="concept-divider"></div>
+  <div class="concept-item">
+    <div class="concept-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg></div>
+    <div class="concept-name">Marketing Visuals</div>
+    <div class="concept-desc" data-i="c4">Communication assets for projects in sale or pre-sale.</div>
+  </div>
+  <div class="concept-divider"></div>
+  <div class="concept-item">
+    <div class="concept-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+    <div class="concept-name">3D Modeling</div>
+    <div class="concept-desc" data-i="c5">Architectural modeling as the foundation for every deliverable. Quoted per project.</div>
+  </div>
+</div>
+
+<!-- AI STRIP -->
+<div class="ai-strip">
+  <div class="ai-strip-label" data-i="ai_strip_label">AI-Powered</div>
+  <div class="ai-tools">
+    <span class="ai-tool">Stable Diffusion XL</span>
+    <span class="ai-tool">ComfyUI</span>
+    <span class="ai-tool">ControlNet</span>
+    <span class="ai-tool">Flux</span>
+    <span class="ai-tool">Meta AI</span>
+    <span class="ai-tool">Veo 3</span>
+    <span class="ai-tool">LoRA Fine-tuning</span>
+    <span class="ai-tool">Runway ML</span>
+    <span class="ai-tool">Midjourney</span>
+    <span class="ai-tool">3D + AI Pipeline</span>
+  </div>
+  <div class="ai-strip-desc" data-i="ai_strip_desc">Every visual is crafted by our team using the most advanced AI tools available — enhancing our workflow, not replacing it. The result is a precise combination of technical expertise, art direction and cutting-edge technology that delivers production-ready visuals faster and at a higher standard.</div>
+</div>
+
+<!-- PLANS -->
+<section id="plans">
+  <div class="section-label" data-i="plans_label">Plans</div>
+  <div class="title-with-coin">
+    <img class="title-coin" src="assets/img/vz-coin.png" alt="" width="75" height="52" loading="lazy">
+    <h2 class="section-title" data-i="plans_title">CHOOSE YOUR PLAN</h2>
+  </div>
+  <p class="section-sub" data-i="plans_sub">Each plan is a credit balance you can distribute freely across the deliverables your project needs.</p>
+  <div class="plans-grid">
+
+    <div class="plan-card">
+      <img class="plan-img" src="assets/img/plan-starter.jpg" alt="Starter plan — residential project" width="900" height="506" loading="lazy">
+      <div class="plan-body">
+        <div class="plan-name">Starter</div>
+        <div class="plan-credits">60 VZ Credits</div>
+        <div class="plan-validity" data-i="p1_validity">Validity · 60 days</div>
+        <p class="plan-desc" data-i="p1_desc">Ideal for first collaborations or smaller scopes. A great way to explore the system before scaling up.</p>
+        <div class="plan-example">
+          <div class="plan-example-title" data-i="example_title">Usage example</div>
+          <div class="plan-example-item"><span data-i="p1_ex1">4 interior renders</span><span class="item-vz">40 VZ</span></div>
+          <div class="plan-example-item"><span data-i="p1_ex2">1 exterior render</span><span class="item-vz">12 VZ</span></div>
+          <div class="plan-example-item"><span data-i="p1_ex3">1 aerial view</span><span class="item-vz">15 VZ</span></div>
+        </div>
+        <div class="plan-actions">
+          <button class="btn-info" onclick="handleInfo('starter')" data-i="btn_info">↓ Info</button>
+          <button class="btn-request" onclick="handleQuote('Starter')" data-i="btn_quote">Request Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan-card featured">
+      <div class="plan-badge" data-i="most_chosen">Most chosen</div>
+      <img class="plan-img" src="assets/img/plan-pro.jpg" alt="Pro plan — mixed-use building" width="900" height="506" loading="lazy">
+      <div class="plan-body">
+        <div class="plan-name">Pro</div>
+        <div class="plan-credits">120 VZ Credits</div>
+        <div class="plan-validity" data-i="p2_validity">Validity · 90 days</div>
+        <p class="plan-desc" data-i="p2_desc">The most balanced option for ongoing visual production, mixed deliverables and launch campaigns.</p>
+        <div class="plan-example">
+          <div class="plan-example-title" data-i="example_title">Usage example</div>
+          <div class="plan-example-item"><span data-i="p2_ex1">6 final renders</span><span class="item-vz">72 VZ</span></div>
+          <div class="plan-example-item"><span data-i="p2_ex2">1 VR tour</span><span class="item-vz">25 VZ</span></div>
+          <div class="plan-example-item"><span data-i="p2_ex3">1 aerial view</span><span class="item-vz">15 VZ</span></div>
+        </div>
+        <div class="plan-actions">
+          <button class="btn-info" onclick="handleInfo('pro')" data-i="btn_info">↓ Info</button>
+          <button class="btn-request" onclick="handleQuote('Pro')" data-i="btn_quote">Request Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="plan-card">
+      <img class="plan-img" src="assets/img/plan-partner.jpg" alt="Partner plan — commercial building" width="900" height="505" loading="lazy">
+      <div class="plan-body">
+        <div class="plan-name">Partner</div>
+        <div class="plan-credits">250 VZ Credits</div>
+        <div class="plan-validity" data-i="p3_validity">Validity · 6 months</div>
+        <p class="plan-desc" data-i="p3_desc">Designed for long-term collaborations, multiple deliverables and scalable visual support for B2B teams.</p>
+        <div class="plan-example">
+          <div class="plan-example-title" data-i="example_title">Usage example</div>
+          <div class="plan-example-item"><span data-i="p3_ex1">Animation 10–15 sec</span><span class="item-vz">35 VZ</span></div>
+          <div class="plan-example-item"><span data-i="p3_ex2">3 VR tours</span><span class="item-vz">75 VZ</span></div>
+          <div class="plan-example-item"><span data-i="p3_ex3">8 final renders</span><span class="item-vz">96 VZ</span></div>
+        </div>
+        <div class="plan-actions">
+          <button class="btn-info" onclick="handleInfo('partner')" data-i="btn_info">↓ Info</button>
+          <button class="btn-request" onclick="handleQuote('Partner')" data-i="btn_quote">Request Quote</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+<!-- CALCULATOR -->
+<section id="calculator">
+  <div class="section-label" data-i="calc_label">Calculator</div>
+  <div class="title-with-coin">
+    <img class="title-coin" src="assets/img/vz-coin.png" alt="" width="75" height="52" loading="lazy">
+    <h2 class="section-title" data-i="calc_title">BUILD YOUR PROJECT</h2>
+  </div>
+  <p class="section-sub" data-i="calc_sub">Select the deliverables you need and find the right plan. We'll send you a custom quote.</p>
+  <p class="calc-budget-note" data-i="calc_budget">Not sure about your budget? Start by selecting what you need — the system will suggest the most efficient plan for your investment.</p>
+  <div class="calc-wrapper">
+    <div class="calc-list" id="calcList"></div>
+    <div class="calc-summary">
+      <div class="calc-sum-title" data-i="calc_sum_title">Your selection</div>
+      <div id="calcEmpty" class="calc-empty" data-i="calc_empty">Add deliverables to see the summary</div>
+      <div id="calcContent" style="display:none">
+        <div class="calc-total-vz" id="calcTotal">0</div>
+        <div class="calc-total-label" data-i="calc_total_label">estimated VZ Credits</div>
+        <div class="calc-bar-bg"><div class="calc-bar-fill" id="calcBar" style="width:0%"></div></div>
+        <div class="calc-bar-labels"><span id="calcBarL"></span><span id="calcBarR"></span></div>
+      </div>
+      <div class="calc-plan-list" id="calcPlans"></div>
+      <button class="btn-dl" id="calcCta" onclick="downloadQuote()" disabled data-i="calc_cta">↓ Download Custom Quote</button>
+      <div class="calc-disclaimer" data-i="calc_disc">Credits are estimates. Final usage may vary by scope and complexity.</div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<!-- DELIVERABLES -->
+<section class="deliv-section" id="deliverables">
+  <div class="section-label" data-i="deliv_label">Credits per deliverable</div>
+  <div class="title-with-coin">
+    <img class="title-coin" src="assets/img/vz-coin.png" alt="" width="75" height="52" loading="lazy">
+    <h2 class="section-title" data-i="deliv_title">HOW MUCH IS EACH PIECE?</h2>
+  </div>
+  <p class="section-sub" data-i="deliv_sub">Credits cover production. Each deliverable has an estimated credit cost that may vary based on scope and complexity.</p>
+  <div class="deliv-grid">
+    <div class="deliv-cat-header" data-i="cat_images">Images</div>
+    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_int">Interior render</div><div class="deliv-vz">10 VZ</div></div>
+    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_ext">Exterior render</div><div class="deliv-vz">12 VZ</div></div>
+    <div class="deliv-row-item" style="grid-column:1/-1"><div class="deliv-row-name" data-i="d_hero">Aerial view — AI-generated, exact location</div><div class="deliv-vz">15 VZ</div></div>
+    <div class="deliv-cat-header" data-i="cat_anim">Animations</div>
+    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_a1">Short animation 5–8 sec</div><div class="deliv-vz">20 VZ</div></div>
+    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_a2">Animation 10–15 sec</div><div class="deliv-vz">35 VZ</div></div>
+    <div class="deliv-cat-header" data-i="cat_vr">VR / Virtual Tours</div>
+    <div class="deliv-row-item" style="grid-column:1/-1"><div class="deliv-row-name" data-i="d_vr">VR tour / panoramic point</div><div class="deliv-vz">25 VZ</div></div>
+  </div>
+</section>
+
+
+
+<!-- PILOT -->
+<section class="pilot-section" id="pilot">
+  <div class="pilot-left">
+    <div class="section-label" data-i="pilot_label">VZ Pilot</div>
+    <h2 class="pilot-title">A TEST BEFORE<br><span>YOU COMMIT.</span></h2>
+    <p class="pilot-desc" data-i="pilot_desc">The VZ Pilot is a small-scale visual test designed to evaluate workflow, visual quality and communication before entering a full VZ Credits collaboration.</p>
+    <div class="pilot-investment">
+      <div class="pilot-price">USD 150</div>
+      <div class="pilot-price-label" data-i="pilot_inv_label">initial investment<br><small style="color:var(--muted2)" data-i="pilot_disc">Discountable from final plan</small></div>
+    </div>
+    <div class="pilot-include">
+      <div class="pilot-include-item" data-i="pi1">1 final render</div>
+      <div class="pilot-include-item" data-i="pi2">1 VR / panoramic view</div>
+      <div class="pilot-include-item" data-i="pi3">1 minor revision included</div>
+      <div class="pilot-include-item" data-i="pi4">Limited scope and basic setup</div>
+    </div>
+    <div style="margin-top:24px">
+      <button class="btn-request" style="display:inline-block;padding:10px 24px" onclick="handleInfo('pilot')" data-i="pilot_dl_btn">↓ Download Plan Info</button>
+    </div>
+  </div>
+  <div class="pilot-right">
+    <div class="plan-example-title" style="margin-bottom:4px" data-i="pilot_how">How it works</div>
+    <div>
+      <div class="pilot-step"><div class="pilot-step-num">01</div><div class="pilot-step-text"><strong data-i="ps1t">Request</strong><span data-i="ps1d">Tell us about your project and what you want to test.</span></div></div>
+      <div class="pilot-step"><div class="pilot-step-num">02</div><div class="pilot-step-text"><strong data-i="ps2t">Scope confirmation</strong><span data-i="ps2d">We review the brief and confirm the pilot scope.</span></div></div>
+      <div class="pilot-step"><div class="pilot-step-num">03</div><div class="pilot-step-text"><strong data-i="ps3t">Production</strong><span data-i="ps3d">We deliver the agreed visuals within the estimated timeframe.</span></div></div>
+      <div class="pilot-step"><div class="pilot-step-num">04</div><div class="pilot-step-text"><strong data-i="ps4t">Evaluation</strong><span data-i="ps4d">You evaluate results, communication and overall experience.</span></div></div>
+      <div class="pilot-step"><div class="pilot-step-num">05</div><div class="pilot-step-text"><strong data-i="ps5t">Next step</strong><span data-i="ps5d">Move forward with a tailored VZ Credits plan.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RULES -->
+<section class="rules-section" id="how-it-works">
+  <div class="section-label" data-i="rules_label">How the system works</div>
+  <h2 class="section-title" data-i="rules_title">WHAT YOU NEED TO KNOW</h2>
+  <div class="rules-grid">
+    <div class="rule-item"><div class="rule-title" data-i="r1t">Credits are estimates</div><div class="rule-desc" data-i="r1d">Final usage may vary based on scope, detail level and project complexity.</div></div>
+    <div class="rule-item"><div class="rule-title" data-i="r2t">Plan validity</div><div class="rule-desc" data-i="r2d">Starter 60 days · Pro 90 days · Partner 6 months. Unused credits expire at the end of each period.</div></div>
+    <div class="rule-item"><div class="rule-title" data-i="r3t">Rush delivery & complex projects</div><div class="rule-desc" data-i="r3d">Express delivery may require additional credits. Large-scale projects are quoted separately.</div></div>
+    <div class="rule-item"><div class="rule-title" data-i="r4t">Credits = production capacity</div><div class="rule-desc" data-i="r4d">VZ Credits represent visual quality, consistency and production support. The value is in the result, not just the quantity.</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo"><img src="assets/img/logo.png" alt="Vizor Solutions" width="197" height="32" loading="lazy" style="height:32px;width:auto;display:block;margin-bottom:12px"></div>
+      <p>Creating visual experiences that connect projects and people. Architecture, real estate and beyond.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/vizorsolutions" target="_blank">IG</a>
+        <a href="https://www.linkedin.com/company/vizorsol/" target="_blank">IN</a>
+        <a href="https://www.behance.net/Vizorsolutions" target="_blank" rel="noopener">Be</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Products</div>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="vz-credits.html">VZ Credits <span class="tag">Visual</span></a></li>
+        <li><a href="vz-credits.html#plans">Plans</a></li>
+        <li><a href="vz-credits.html#calculator">Calculator</a></li>
+        <li><a href="vz-credits.html#pilot">VZ Pilot</a></li>
+        <li><a href="sales-tool.html">Sales Tool <span class="tag">Platform</span></a></li>
+        <li><a href="https://app.vizor-solutions.com" target="_blank">Live demo ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Work</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Email</span>
+        <span class="footer-contact-val"><a href="mailto:info@vizor-solutions.com">info@vizor-solutions.com</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">WhatsApp</span>
+        <span class="footer-contact-val"><a href="https://wa.me/5491160029154" target="_blank">+54 9 11 6002-9154</a></span>
+      </div>
+      <div class="footer-contact-item">
+        <span class="footer-contact-label">Coverage</span>
+        <span class="footer-contact-val" style="font-size:12px">Latin America · North America · Europe · Global</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Vizor Solutions. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="index.html">Home</a>
+      <a href="vz-credits.html">VZ Credits</a>
+      <a href="sales-tool.html">Sales Tool</a>
+      <a href="https://vizor-solutions.com">vizor-solutions.com</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ── TRANSLATIONS ──────────────────────────────────────────────
+// Exposed as window.vizorT so the shared vizor-lang.js can pick it up.
+const T = window.vizorT = {
+  en: {
+    mod_label:"Foundation",mod_title:"3D MODELING",
+    mod_desc:"Every visual starts with a solid 3D model. We handle full architectural modeling — from concept geometry to construction-ready detail — as the foundation that makes every deliverable possible. Quoted separately based on scope.",
+    mf1t:"Architectural modeling",mf1d:"From concept sketches to full geometry",
+    mf2t:"Materials & lighting setup",mf2d:"Scene-ready from day one",
+    mf3t:"Quoted per project",mf3d:"Complexity-based, not credit-based",
+    sn_plans:"Plans",sn_deliv:"Deliverables",sn_calc:"Calculator",sn_pilot:"VZ Pilot",sn_rules:"How it works",
+    hw_title:"Quick estimate",hw_label:"Estimated credits",hw_cta:"Build full project ↓",hw_hint_pre:"Suggested plan:",
+    nav_cta:"Get a Quote", hero_tag:"Visual Production System",
+    hero_desc:"Flexible visual production for architecture and real estate. Allocate your credits across still images, animations, VR tours and marketing visuals — based on what each project needs.",
+    ai_badge:"AI-Enhanced Production — Human expertise meets cutting-edge technology",
+    stat1:"Deliverable types", stat2:"Plans available", stat3:"VZ Credits per plan",
+    c1:"Interiors, exteriors and AI-generated aerial views tailored to each project's exact location.",
+    c2:"5 to 15-second pieces for presentations and launch campaigns.",
+    c3:"Panoramic points and virtual walkthroughs for projects in commercialization.",
+    c4:"Communication assets for projects in sale or pre-sale.",
+    c5:"Architectural modeling as the foundation for every deliverable. Quoted per project.",
+    ai_strip_label:"AI-Powered",
+    ai_strip_desc:"Every visual is produced using the most advanced AI tools available — combined with architectural expertise and precise art direction to deliver production-ready results at a new level of quality and speed.",
+    plans_label:"Plans", plans_title:"CHOOSE YOUR PLAN",
+    plans_sub:"Each plan is a credit balance you can distribute freely across the deliverables your project needs.",
+    p1_validity:"Validity · 60 days", p2_validity:"Validity · 90 days", p3_validity:"Validity · 6 months",
+    p1_desc:"Ideal for first collaborations or smaller scopes. A great way to explore the system before scaling up.",
+    p2_desc:"The most balanced option for ongoing visual production, mixed deliverables and launch campaigns.",
+    p3_desc:"Designed for long-term collaborations, multiple deliverables and scalable visual support for B2B teams.",
+    example_title:"Usage example",
+    p1_ex1:"4 interior renders", p1_ex2:"1 exterior render", p1_ex3:"1 aerial view",
+    p2_ex1:"6 final renders", p2_ex2:"1 VR tour", p2_ex3:"1 aerial view",
+    p3_ex1:"Animation 10–15 sec", p3_ex2:"3 VR tours", p3_ex3:"8 final renders",
+    most_chosen:"Most chosen", btn_info:"↓ Info", btn_quote:"Request Quote",
+    deliv_label:"Credits per deliverable", deliv_title:"HOW MUCH IS EACH PIECE?",
+    deliv_sub:"Credits cover production. Each deliverable has an estimated credit cost that may vary based on scope and complexity.",
+    cat_images:"Images", cat_anim:"Animations", cat_vr:"VR / Virtual Tours",
+    d_int:"Interior render", d_ext:"Exterior render", d_hero:"Aerial view — AI-generated, exact location",
+    d_a1:"Short animation 5–8 sec", d_a2:"Animation 10–15 sec", d_vr:"VR tour / panoramic point",
+    calc_label:"Calculator", calc_title:"BUILD YOUR PROJECT",
+    calc_sub:"Select the deliverables you need and find the right plan. We'll send you a custom quote.",
+    calc_budget:"Not sure about your budget? Start by selecting what you need — the system will suggest the most efficient plan for your investment.",
+    calc_sum_title:"Your selection", calc_empty:"Add deliverables to see the summary",
+    calc_total_label:"estimated VZ Credits",
+    calc_cta:"↓ Download Custom Quote",
+    calc_disc:"Credits are estimates. Final usage may vary by scope and complexity.",
+    pilot_label:"VZ Pilot", pilot_desc:"The VZ Pilot is a small-scale visual test designed to evaluate workflow, visual quality and communication before entering a full VZ Credits collaboration.",
+    pilot_inv_label:"initial investment", pilot_disc:"Discountable from final plan",
+    pi1:"1 final render", pi2:"1 VR / panoramic view", pi3:"1 minor revision included", pi4:"Limited scope and basic setup",
+    pilot_dl_btn:"↓ Download Plan Info", pilot_how:"How it works",
+    ps1t:"Request", ps1d:"Tell us about your project and what you want to test.",
+    ps2t:"Scope confirmation", ps2d:"We review the brief and confirm the pilot scope.",
+    ps3t:"Production", ps3d:"We deliver the agreed visuals within the estimated timeframe.",
+    ps4t:"Evaluation", ps4d:"You evaluate results, communication and overall experience.",
+    ps5t:"Next step", ps5d:"Move forward with a tailored VZ Credits plan.",
+    rules_label:"How the system works", rules_title:"WHAT YOU NEED TO KNOW",
+    r1t:"Credits are estimates", r1d:"Final usage may vary based on scope, detail level and project complexity.",
+    r2t:"Plan validity", r2d:"Starter 60 days · Pro 90 days · Partner 6 months. Unused credits expire at the end of each period.",
+    r3t:"Rush delivery & complex projects", r3d:"Express delivery may require additional credits. Large-scale projects are quoted separately.",
+    r4t:"Credits = production capacity", r4d:"VZ Credits represent visual quality, consistency and production support. The value is in the result, not just the quantity.",
+    calc_items:["Interior render","Exterior render","Aerial view","Short animation 5–8 sec","Animation 10–15 sec","VR tour / panoramic point"],
+    plan_names:["Starter","Pro","Partner"], plan_recommended:"← recommended",
+    fit_surplus:"Surplus", fit_ok:"✓ Just right", fit_no:"✗ Missing"
+  },
+  es: {
+    mod_label:"Base",mod_title:"MODELADO 3D",
+    mod_desc:"Todo visual empieza con un modelo 3D sólido. Nos encargamos del modelado arquitectónico completo — desde la geometría conceptual hasta el detalle constructivo — como la base que hace posible cada entregable. Se cotiza por separado según complejidad.",
+    mf1t:"Modelado arquitectónico",mf1d:"Desde bocetos conceptuales hasta geometría completa",
+    mf2t:"Materiales e iluminación",mf2d:"Escena lista desde el primer día",
+    mf3t:"Cotizado por proyecto",mf3d:"Basado en complejidad, no en créditos",
+    sn_plans:"Planes",sn_deliv:"Entregables",sn_calc:"Calculadora",sn_pilot:"VZ Pilot",sn_rules:"Cómo funciona",
+    hw_title:"Estimación rápida",hw_label:"Créditos estimados",hw_cta:"Armar proyecto completo ↓",hw_hint_pre:"Plan sugerido:",
+    nav_cta:"Solicitar presupuesto", hero_tag:"Sistema de producción visual",
+    hero_desc:"Producción visual flexible para arquitectura y real estate. Distribuí tus créditos entre imágenes, animaciones, tours VR y visuales de marketing según lo que necesite cada proyecto.",
+    ai_badge:"Producción potenciada con IA — Experiencia humana y tecnología de vanguardia",
+    stat1:"Tipos de entregables", stat2:"Planes disponibles", stat3:"VZ Credits por plan",
+    c1:"Interiores, exteriores y vistas aéreas generadas con IA adaptadas a la ubicación exacta de cada proyecto.",
+    c2:"Piezas de 5 a 15 segundos para presentaciones y lanzamientos.",
+    c3:"Puntos panorámicos y recorridos virtuales para proyectos en comercialización.",
+    c4:"Piezas de comunicación para proyectos en venta o preventa.",
+    c5:"Modelado arquitectónico como base de cada entregable. Se cotiza por proyecto.",
+    ai_strip_label:"Impulsado por IA",
+    ai_strip_desc:"Cada visual es creado por nuestro equipo usando las herramientas de IA más avanzadas del mercado — como complemento a nuestro flujo de trabajo, no como reemplazo. El resultado es una combinación precisa de expertise técnico, dirección artística y tecnología de vanguardia.",
+    plans_label:"Planes", plans_title:"ELEGÍ TU PLAN",
+    plans_sub:"Cada plan es un balance de créditos que podés distribuir libremente entre los entregables que necesite tu proyecto.",
+    p1_validity:"Vigencia · 60 días", p2_validity:"Vigencia · 90 días", p3_validity:"Vigencia · 6 meses",
+    p1_desc:"Ideal para primeras colaboraciones o proyectos de alcance acotado. Una excelente forma de explorar el sistema antes de escalar.",
+    p2_desc:"La opción más equilibrada para producción visual continua, entregables mixtos y campañas de lanzamiento.",
+    p3_desc:"Diseñado para colaboraciones de largo plazo, múltiples entregables y soporte visual escalable para equipos B2B.",
+    example_title:"Ejemplo de uso",
+    p1_ex1:"4 renders de interior", p1_ex2:"1 render exterior", p1_ex3:"1 aerial view",
+    p2_ex1:"6 renders finales", p2_ex2:"1 tour VR", p2_ex3:"1 aerial view",
+    p3_ex1:"Animación 10–15 seg", p3_ex2:"3 tours VR", p3_ex3:"8 renders finales",
+    most_chosen:"Más elegido", btn_info:"↓ Info", btn_quote:"Solicitar presupuesto",
+    deliv_label:"Créditos por entregable", deliv_title:"¿CUÁNTO VALE CADA PIEZA?",
+    deliv_sub:"Los créditos cubren la producción. Cada entregable tiene un costo estimado que puede variar según el alcance y la complejidad.",
+    cat_images:"Imágenes", cat_anim:"Animaciones", cat_vr:"VR / Tours virtuales",
+    d_int:"Render de interior", d_ext:"Render exterior", d_hero:"Aerial view — AI-generated, exact location",
+    d_a1:"Animación corta 5–8 seg", d_a2:"Animación 10–15 seg", d_vr:"Tour VR / punto panorámico",
+    calc_label:"Calculadora", calc_title:"ARMÁ TU PROYECTO",
+    calc_sub:"Seleccioná los entregables que necesitás y encontrá el plan ideal. Te enviamos un presupuesto personalizado.",
+    calc_budget:"¿No tenés claro tu presupuesto? Empezá seleccionando lo que necesitás — el sistema te sugerirá el plan más eficiente para tu inversión.",
+    calc_sum_title:"Tu selección", calc_empty:"Agregá entregables para ver el resumen",
+    calc_total_label:"VZ Credits estimados",
+    calc_cta:"↓ Descargar presupuesto personalizado",
+    calc_disc:"Los créditos son estimados. El uso final puede variar por alcance y complejidad.",
+    pilot_label:"VZ Pilot", pilot_desc:"El VZ Pilot es un test visual de pequeña escala para evaluar flujo de trabajo, calidad visual y comunicación antes de entrar a una colaboración VZ Credits completa.",
+    pilot_inv_label:"inversión inicial", pilot_disc:"Descontable del plan final",
+    pi1:"1 render final", pi2:"1 vista VR / panorámica", pi3:"1 revisión menor incluida", pi4:"Alcance limitado y setup básico",
+    pilot_dl_btn:"↓ Descargar info del plan", pilot_how:"Cómo funciona",
+    ps1t:"Solicitud", ps1d:"Contanos sobre tu proyecto y qué querés testear.",
+    ps2t:"Confirmación de alcance", ps2d:"Revisamos el brief y confirmamos el scope del Pilot.",
+    ps3t:"Producción", ps3d:"Entregamos los visuales dentro del plazo estimado.",
+    ps4t:"Evaluación", ps4d:"Evaluás los resultados, la comunicación y la experiencia.",
+    ps5t:"Siguiente paso", ps5d:"Avanzamos con un plan VZ Credits adaptado a tu proyecto.",
+    rules_label:"Cómo funciona el sistema", rules_title:"LO QUE NECESITÁS SABER",
+    r1t:"Los créditos son estimados", r1d:"El uso final puede variar según el alcance, nivel de detalle y complejidad del proyecto.",
+    r2t:"Vigencia por plan", r2d:"Starter 60 días · Pro 90 días · Partner 6 meses. Los créditos no usados vencen al cierre del período.",
+    r3t:"Urgencia y proyectos complejos", r3d:"La entrega express puede requerir créditos adicionales. Proyectos de gran escala se cotizan aparte.",
+    r4t:"Créditos = capacidad de producción", r4d:"VZ Credits representan calidad visual, consistencia y soporte de producción. El valor está en el resultado, no en la cantidad.",
+    calc_items:["Render de interior","Render exterior","Vista aérea","Animación corta 5–8 seg","Animación 10–15 seg","Tour VR / punto panorámico"],
+    plan_names:["Starter","Pro","Partner"], plan_recommended:"← recomendado",
+    fit_surplus:"Sobran", fit_ok:"✓ Justo", fit_no:"✗ Faltan"
+  }
+};
+
+let lang = "en";
+// vizor-lang.js drives EN/ES; we just react to keep `lang` and the calc in sync.
+window.onLangChange = function (l) {
+  lang = l;
+  renderCalc();
+};
+
+// ── CALCULATOR ────────────────────────────────────────────────
+const ITEMS = [
+  {vz:10},{vz:12},{vz:15},{vz:20},{vz:35},{vz:25}
+];
+const PLANS = [
+  {vz:60,days:"60"},{vz:120,days:"90"},{vz:250,days:"6m"}
+];
+const qty = [0,0,0,0,0,0];
+
+function change(i, d) {
+  qty[i] = Math.max(0, qty[i]+d);
+  renderCalc();
+}
+
+function total() { return ITEMS.reduce((s,item,i) => s + qty[i]*item.vz, 0); }
+
+function renderCalc() {
+  const t = T[lang];
+  const names = t.calc_items;
+  const pnames = t.plan_names;
+
+  const list = document.getElementById("calcList");
+  list.innerHTML = "";
+  ITEMS.forEach((item, i) => {
+    const active = qty[i] > 0;
+    const el = document.createElement("div");
+    el.className = "calc-item" + (active?" active":"");
+    el.innerHTML = `<div class="calc-item-info"><div class="calc-item-name">${names[i]}</div></div>
+      <span class="calc-item-vz">${item.vz} VZ</span>
+      <div class="qty-wrap">
+        <button class="qty-btn" onclick="change(${i},-1)">−</button>
+        <span class="qty-num">${qty[i]}</span>
+        <button class="qty-btn" onclick="change(${i},1)">+</button>
+      </div>`;
+    list.appendChild(el);
+  });
+
+  const tot = total();
+  const has = tot > 0;
+  document.getElementById("calcEmpty").style.display = has?"none":"block";
+  document.getElementById("calcContent").style.display = has?"block":"none";
+  document.getElementById("calcCta").disabled = !has;
+
+  if (has) {
+    document.getElementById("calcTotal").textContent = tot;
+    const best = PLANS.find(p=>p.vz>=tot)||PLANS[PLANS.length-1];
+    const pct = Math.round(Math.min(tot/best.vz*100,100));
+    document.getElementById("calcBar").style.width = pct+"%";
+    document.getElementById("calcBarL").textContent = tot+" VZ";
+    document.getElementById("calcBarR").textContent = pnames[PLANS.indexOf(best)];
+  }
+
+  const pc = document.getElementById("calcPlans");
+  pc.innerHTML = "";
+  PLANS.forEach((p,pi) => {
+    const fits = p.vz>=tot;
+    const isBest = fits && !PLANS.slice(0,pi).some(pp=>pp.vz>=tot);
+    const surplus = p.vz-tot;
+    let fitHTML = tot===0
+      ? `<span class="fit-neutral">${p.vz} VZ</span>`
+      : fits
+        ? `<span class="fit-ok">${surplus>0? t.fit_surplus+" "+surplus+" VZ" : t.fit_ok}</span>`
+        : `<span class="fit-no">${t.fit_no} ${tot-p.vz} VZ</span>`;
+    const el = document.createElement("div");
+    el.className = "calc-plan-item"+(isBest&&tot>0?" best":"");
+    el.innerHTML = `<div><div class="calc-plan-name">${pnames[pi]}${isBest&&tot>0?` <span style="font-size:10px;color:var(--orange);font-family:'DM Mono',monospace">${t.plan_recommended}</span>`:""}</div>
+      <div class="calc-plan-fit">${fitHTML}</div></div>
+      <div class="calc-plan-vz">${p.vz} VZ</div>`;
+    pc.appendChild(el);
+  });
+
+  renderMini();
+}
+
+// ── MINI CALCULATOR (hero) — mirrors the full calc, shares the same state ──
+function renderMini() {
+  const rows = document.getElementById("miniRows");
+  if (!rows) return;
+  const t = T[lang];
+  const names = t.calc_items;
+  const pnames = t.plan_names;
+
+  rows.innerHTML = "";
+  ITEMS.forEach((item, i) => {
+    const el = document.createElement("div");
+    el.className = "mini-row" + (qty[i] > 0 ? " active" : "");
+    el.innerHTML = `<span class="mini-row-name">${names[i]}</span>
+      <span class="mini-row-vz">${item.vz} VZ</span>
+      <span class="mini-qty">
+        <button class="mini-btn" type="button" onclick="change(${i},-1)" aria-label="−">−</button>
+        <span class="mini-num">${qty[i]}</span>
+        <button class="mini-btn" type="button" onclick="change(${i},1)" aria-label="+">+</button>
+      </span>`;
+    rows.appendChild(el);
+  });
+
+  const tot = total();
+  document.getElementById("miniTotal").textContent = tot;
+  const hint = document.getElementById("miniHint");
+  if (tot > 0) {
+    const best = PLANS.find(p => p.vz >= tot) || PLANS[PLANS.length - 1];
+    hint.innerHTML = `${t.hw_hint_pre} <b>${pnames[PLANS.indexOf(best)]}</b>`;
+  } else {
+    hint.innerHTML = "";
+  }
+}
+
+function goToCalc() {
+  const el = document.getElementById("calculator");
+  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function downloadQuote() {
+  const t = T[lang];
+  const names = t.calc_items;
+  const pnames = t.plan_names;
+  const tot = total();
+  const best = PLANS.find(p=>p.vz>=tot)||PLANS[PLANS.length-1];
+  const bi = PLANS.indexOf(best);
+  const lines = ITEMS.map((item,i)=>qty[i]>0?`  ${qty[i]}× ${names[i]} = ${qty[i]*item.vz} VZ`:null).filter(Boolean).join("\n");
+  alert(lang==="en"
+    ? `Your selection:\n\n${lines}\n\nTotal: ${tot} VZ\nSuggested plan: ${pnames[bi]} (${best.vz} VZ)\n\n→ In your live site this will trigger a PDF download or open a contact form.`
+    : `Tu selección:\n\n${lines}\n\nTotal: ${tot} VZ\nPlan sugerido: ${pnames[bi]} (${best.vz} VZ)\n\n→ En tu sitio real esto generará la descarga del presupuesto personalizado.`
+  );
+}
+
+function handleInfo(plan) {
+  alert(lang==="en"
+    ? `↓ Download plan info — "${plan}"\n\nIn your live site this button will trigger the PDF download for the ${plan} plan.`
+    : `↓ Descargar info del plan — "${plan}"\n\nEn tu sitio real este botón descargará el PDF del plan ${plan}.`
+  );
+}
+function handleQuote(plan) {
+  alert(lang==="en"
+    ? `Request a quote for the ${plan} plan.\n\n→ In your live site this will open your contact form or send an email.`
+    : `Solicitar presupuesto para el plan ${plan}.\n\n→ En tu sitio real esto abrirá tu formulario de contacto o enviará un email.`
+  );
+}
+
+renderCalc();
+
+
+// SUBNAV SCROLL BEHAVIOR
+(function(){
+  const subnav = document.getElementById("subnav");
+  const langBar = document.querySelector(".lang-bar");
+  const nav = document.querySelector("nav");
+  const sections = ["plans","deliverables","calculator","pilot","how-it-works"];
+  const links = document.querySelectorAll(".subnav-link");
+
+  function positionSubnav(){
+    const langH = langBar ? langBar.getBoundingClientRect().height : 0;
+    const navH = nav ? nav.getBoundingClientRect().height : 0;
+    subnav.style.top = (langH + navH) + "px";
+  }
+
+  window.addEventListener("scroll", function(){
+    positionSubnav();
+    const scrollY = window.scrollY;
+    if(scrollY > 300){
+      subnav.classList.add("visible");
+    } else {
+      subnav.classList.remove("visible");
+    }
+    let current = "";
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if(el && el.getBoundingClientRect().top <= 150) current = id;
+    });
+    links.forEach(link => {
+      const href = link.getAttribute("href").replace("#","");
+      link.classList.toggle("active", href === current);
+    });
+  });
+
+  // Set initial position
+  positionSubnav();
+  window.addEventListener("resize", positionSubnav);
+})();
+
+</script>
+
+<script>
+// Shared nav scroll behavior
+(function(){
+  const nav = document.getElementById('mainNav');
+  if(nav) window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  });
+})();
+</script>
+<script src="assets/js/vizor-nav.js" defer></script>
+<script src="assets/js/vizor-lang.js" defer></script>
+</body>
+</html>
