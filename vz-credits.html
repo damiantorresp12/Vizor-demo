@@ -528,7 +528,10 @@ nav{top:29px !important}
         <div class="calc-bar-labels"><span id="calcBarL"></span><span id="calcBarR"></span></div>
       </div>
       <div class="calc-plan-list" id="calcPlans"></div>
-      <button class="btn-dl" id="calcCta" onclick="downloadQuote()" disabled data-i="calc_cta">↓ Download Custom Quote</button>
+      <div class="plan-actions" style="margin-top:4px">
+        <button class="btn-info" id="calcInfoBtn" onclick="downloadQuote()" disabled data-i="calc_cta_info">↓ Info (PDF)</button>
+        <button class="btn-request" id="calcCta" onclick="requestQuoteFromCalc()" disabled data-i="calc_cta_request">Request Quote</button>
+      </div>
       <div class="calc-disclaimer" data-i="calc_disc">Credits are estimates. Final usage may vary by scope and complexity.</div>
     </div>
   </div>
@@ -709,7 +712,8 @@ const T = window.vizorT = {
     calc_budget:"Not sure about your budget? Start by selecting what you need — the system will suggest the most efficient plan for your investment.",
     calc_sum_title:"Your selection", calc_empty:"Add deliverables to see the summary",
     calc_total_label:"estimated VZ Credits",
-    calc_cta:"↓ Download Custom Quote",
+    calc_cta_info:"↓ Info (PDF)",
+    calc_cta_request:"Request Quote",
     calc_disc:"Credits are estimates. Final usage may vary by scope and complexity.",
     pilot_label:"VZ Pilot", pilot_desc:"The VZ Pilot is a small-scale visual test designed to evaluate workflow, visual quality and communication before entering a full VZ Credits collaboration.",
     pilot_inv_label:"initial investment", pilot_disc:"Discountable from final plan",
@@ -813,7 +817,8 @@ const T = window.vizorT = {
     calc_budget:"¿No tenés claro tu presupuesto? Empezá seleccionando lo que necesitás — el sistema te sugerirá el plan más eficiente para tu inversión.",
     calc_sum_title:"Tu selección", calc_empty:"Agregá entregables para ver el resumen",
     calc_total_label:"VZ Credits estimados",
-    calc_cta:"↓ Descargar presupuesto personalizado",
+    calc_cta_info:"↓ Info (PDF)",
+    calc_cta_request:"Solicitar presupuesto",
     calc_disc:"Los créditos son estimados. El uso final puede variar por alcance y complejidad.",
     pilot_label:"VZ Pilot", pilot_desc:"El VZ Pilot es un test visual de pequeña escala para evaluar flujo de trabajo, calidad visual y comunicación antes de entrar a una colaboración VZ Credits completa.",
     pilot_inv_label:"inversión inicial", pilot_disc:"Descontable del plan final",
@@ -1015,6 +1020,8 @@ function renderCalc() {
   document.getElementById("calcEmpty").style.display = has ? "none" : "block";
   document.getElementById("calcContent").style.display = has ? "block" : "none";
   document.getElementById("calcCta").disabled = !has;
+  const infoBtn = document.getElementById("calcInfoBtn");
+  if (infoBtn) infoBtn.disabled = !has;
 
   const planLabel = (plan, idx) => {
     // Plan name lookup: prefer T.plan_names[idx] (legacy ordered array kept for display)
@@ -1128,15 +1135,31 @@ function handleInfo(planId) {
   promise.catch(function (err) { console.error("Plan brochure PDF failed:", err); });
 }
 
-// "Request Quote" buttons in plan cards — opens email with the plan pre-filled in the subject.
+// "Request Quote" buttons in plan cards — opens WhatsApp with the plan in the message.
 function handleQuote(planName) {
-  const subject = lang === "en"
-    ? "Quote request — " + planName + " plan"
-    : "Solicitud de cotización — Plan " + planName;
-  const body = lang === "en"
-    ? "Hi Vizor team,\n\nI'd like to request a custom quote for the " + planName + " plan.\n\n"
-    : "Hola equipo Vizor,\n\nQuisiera solicitar una cotización personalizada para el plan " + planName + ".\n\n";
-  window.location.href = "mailto:info@vizor-solutions.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  const msg = lang === "en"
+    ? "Hi Vizor! I'd like to request a custom quote for the " + planName + " plan."
+    : "¡Hola Vizor! Quisiera solicitar una cotización personalizada para el plan " + planName + ".";
+  window.open("https://wa.me/5491160029154?text=" + encodeURIComponent(msg), "_blank");
+}
+
+// "Request Quote" button at the bottom of the calculator — opens WhatsApp with the
+// full selection (items, qty, total, suggested plan) pre-armed in the message body.
+function requestQuoteFromCalc() {
+  const tot = total();
+  if (tot <= 0) return;
+  const t = T[lang];
+  const best = PLANS.find(p => p.vz >= tot) || PLANS[PLANS.length - 1];
+  const planName = (t.plan_names && t.plan_names[PLANS.indexOf(best)]) || best.id;
+  const itemLines = ITEMS.map((item, i) => {
+    if (qty[i] <= 0) return null;
+    const name = (t.deliverable_names[item.id] || {}).display || item.id;
+    return qty[i] + "× " + name + " (" + (qty[i] * item.vz) + " VZ)";
+  }).filter(Boolean).join("\n");
+  const msg = lang === "en"
+    ? "Hi Vizor! I just built a custom quote on your site:\n\n" + itemLines + "\n\nTotal: " + tot + " VZ\nSuggested plan: " + planName + " (" + best.vz + " VZ)\n\nI'd like to discuss it."
+    : "¡Hola Vizor! Acabo de armar una cotización en el sitio:\n\n" + itemLines + "\n\nTotal: " + tot + " VZ\nPlan sugerido: " + planName + " (" + best.vz + " VZ)\n\nMe gustaría conversar.";
+  window.open("https://wa.me/5491160029154?text=" + encodeURIComponent(msg), "_blank");
 }
 
 // Wait for pricing to load (fetch from JSON, or fallback). vizor-pricing.js calls
