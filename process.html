@@ -321,27 +321,27 @@ a{color:inherit}
     <div class="vzc-grid">
       <div class="vzc-item">
         <span class="vzc-item-name" data-en="Interior render" data-es="Render de interior">Interior render</span>
-        <span class="vzc-item-val">10 <span>VZ</span></span>
+        <span class="vzc-item-val" data-vz-item="interior">10 <span>VZ</span></span>
       </div>
       <div class="vzc-item">
         <span class="vzc-item-name" data-en="Exterior render" data-es="Render exterior">Exterior render</span>
-        <span class="vzc-item-val">12 <span>VZ</span></span>
+        <span class="vzc-item-val" data-vz-item="exterior">15 <span>VZ</span></span>
       </div>
       <div class="vzc-item">
         <span class="vzc-item-name" data-en="Aerial view" data-es="Vista aérea">Aerial view</span>
-        <span class="vzc-item-val">15 <span>VZ</span></span>
+        <span class="vzc-item-val" data-vz-item="aerial">20 <span>VZ</span></span>
       </div>
       <div class="vzc-item">
         <span class="vzc-item-name" data-en="Short animation 5–8 sec" data-es="Animación corta 5–8 seg">Short animation 5–8 sec</span>
-        <span class="vzc-item-val">20 <span>VZ</span></span>
+        <span class="vzc-item-val" data-vz-item="anim_short">25 <span>VZ</span></span>
       </div>
       <div class="vzc-item">
         <span class="vzc-item-name" data-en="Animation 10–15 sec" data-es="Animación 10–15 seg">Animation 10–15 sec</span>
-        <span class="vzc-item-val">35 <span>VZ</span></span>
+        <span class="vzc-item-val" data-vz-item="anim_long">50 <span>VZ</span></span>
       </div>
       <div class="vzc-item">
         <span class="vzc-item-name" data-en="VR tour / panoramic point" data-es="Tour VR / punto panorámico">VR tour / panoramic point</span>
-        <span class="vzc-item-val">25 <span>VZ</span></span>
+        <span class="vzc-item-val" data-vz-item="vr">30 <span>VZ</span></span>
       </div>
     </div>
     <div class="vzc-foot">
@@ -486,6 +486,17 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); } });
 }, {threshold: 0.12});
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+<!-- Pricing loader: same single source of truth (assets/data/pricing.json) used by vz-credits.html.
+     Updates the 6 VZ values in the "ONE BALANCE, ANY DELIVERABLE" grid on load. -->
+<script src="assets/js/vizor-pricing.js"></script>
+<script>
+window.onPricingReady(function (P) {
+  document.querySelectorAll("[data-vz-item]").forEach(function (el) {
+    var ent = P.getEntregable(el.getAttribute("data-vz-item"));
+    if (ent) el.innerHTML = ent.vz + ' <span>VZ</span>';
+  });
+});
 </script>
 <script src="assets/js/vizor-nav.js" defer></script>
 <script src="assets/js/vizor-lang.js" defer></script>

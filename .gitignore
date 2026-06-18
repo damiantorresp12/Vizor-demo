@@ -17,3 +17,6 @@ node_modules/
 dist/
 build/
 .vercel/
+
+# Internal session docs (not part of the site)
+HANDOFF.md

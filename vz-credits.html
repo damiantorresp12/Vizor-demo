@@ -365,7 +365,7 @@ nav{top:29px !important}
       <div class="hero-stats">
         <div><div class="stat-num">4<span>+</span></div><div class="stat-label" data-i="stat1">Deliverable types</div></div>
         <div><div class="stat-num">3</div><div class="stat-label" data-i="stat2">Plans available</div></div>
-        <div><div class="stat-num">60<span>–</span>250</div><div class="stat-label" data-i="stat3">VZ Credits per plan</div></div>
+        <div><div class="stat-num" data-vz-range>50<span>–</span>300</div><div class="stat-label" data-i="stat3">VZ Credits per plan</div></div>
       </div>
     </div>
     <aside class="hero-right">
@@ -451,18 +451,16 @@ nav{top:29px !important}
   <p class="section-sub" data-i="plans_sub">Each plan is a credit balance you can distribute freely across the deliverables your project needs.</p>
   <div class="plans-grid">
 
-    <div class="plan-card">
+    <div class="plan-card" data-vz-plan="starter">
       <img class="plan-img" src="assets/img/plan-starter.jpg" alt="Starter plan — residential project" width="900" height="506" loading="lazy">
       <div class="plan-body">
         <div class="plan-name">Starter</div>
-        <div class="plan-credits">60 VZ Credits</div>
-        <div class="plan-validity" data-i="p1_validity">Validity · 60 days</div>
+        <div class="plan-credits" data-vz-plan-credits>50 VZ Credits</div>
+        <div class="plan-validity" data-vz-plan-validity>Validity · 60 days</div>
         <p class="plan-desc" data-i="p1_desc">Ideal for first collaborations or smaller scopes. A great way to explore the system before scaling up.</p>
         <div class="plan-example">
           <div class="plan-example-title" data-i="example_title">Usage example</div>
-          <div class="plan-example-item"><span data-i="p1_ex1">4 interior renders</span><span class="item-vz">40 VZ</span></div>
-          <div class="plan-example-item"><span data-i="p1_ex2">1 exterior render</span><span class="item-vz">12 VZ</span></div>
-          <div class="plan-example-item"><span data-i="p1_ex3">1 aerial view</span><span class="item-vz">15 VZ</span></div>
+          <div data-vz-plan-example></div>
         </div>
         <div class="plan-actions">
           <button class="btn-info" onclick="handleInfo('starter')" data-i="btn_info">↓ Info</button>
@@ -471,19 +469,17 @@ nav{top:29px !important}
       </div>
     </div>
 
-    <div class="plan-card featured">
+    <div class="plan-card featured" data-vz-plan="pro">
       <div class="plan-badge" data-i="most_chosen">Most chosen</div>
       <img class="plan-img" src="assets/img/plan-pro.jpg" alt="Pro plan — mixed-use building" width="900" height="506" loading="lazy">
       <div class="plan-body">
         <div class="plan-name">Pro</div>
-        <div class="plan-credits">120 VZ Credits</div>
-        <div class="plan-validity" data-i="p2_validity">Validity · 90 days</div>
+        <div class="plan-credits" data-vz-plan-credits>150 VZ Credits</div>
+        <div class="plan-validity" data-vz-plan-validity>Validity · 90 days</div>
         <p class="plan-desc" data-i="p2_desc">The most balanced option for ongoing visual production, mixed deliverables and launch campaigns.</p>
         <div class="plan-example">
           <div class="plan-example-title" data-i="example_title">Usage example</div>
-          <div class="plan-example-item"><span data-i="p2_ex1">6 final renders</span><span class="item-vz">72 VZ</span></div>
-          <div class="plan-example-item"><span data-i="p2_ex2">1 VR tour</span><span class="item-vz">25 VZ</span></div>
-          <div class="plan-example-item"><span data-i="p2_ex3">1 aerial view</span><span class="item-vz">15 VZ</span></div>
+          <div data-vz-plan-example></div>
         </div>
         <div class="plan-actions">
           <button class="btn-info" onclick="handleInfo('pro')" data-i="btn_info">↓ Info</button>
@@ -492,18 +488,16 @@ nav{top:29px !important}
       </div>
     </div>
 
-    <div class="plan-card">
+    <div class="plan-card" data-vz-plan="partner">
       <img class="plan-img" src="assets/img/plan-partner.jpg" alt="Partner plan — commercial building" width="900" height="505" loading="lazy">
       <div class="plan-body">
         <div class="plan-name">Partner</div>
-        <div class="plan-credits">250 VZ Credits</div>
-        <div class="plan-validity" data-i="p3_validity">Validity · 6 months</div>
+        <div class="plan-credits" data-vz-plan-credits>300 VZ Credits</div>
+        <div class="plan-validity" data-vz-plan-validity>Validity · 6 months</div>
         <p class="plan-desc" data-i="p3_desc">Designed for long-term collaborations, multiple deliverables and scalable visual support for B2B teams.</p>
         <div class="plan-example">
           <div class="plan-example-title" data-i="example_title">Usage example</div>
-          <div class="plan-example-item"><span data-i="p3_ex1">Animation 10–15 sec</span><span class="item-vz">35 VZ</span></div>
-          <div class="plan-example-item"><span data-i="p3_ex2">3 VR tours</span><span class="item-vz">75 VZ</span></div>
-          <div class="plan-example-item"><span data-i="p3_ex3">8 final renders</span><span class="item-vz">96 VZ</span></div>
+          <div data-vz-plan-example></div>
         </div>
         <div class="plan-actions">
           <button class="btn-info" onclick="handleInfo('partner')" data-i="btn_info">↓ Info</button>
@@ -552,14 +546,14 @@ nav{top:29px !important}
   <p class="section-sub" data-i="deliv_sub">Credits cover production. Each deliverable has an estimated credit cost that may vary based on scope and complexity.</p>
   <div class="deliv-grid">
     <div class="deliv-cat-header" data-i="cat_images">Images</div>
-    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_int">Interior render</div><div class="deliv-vz">10 VZ</div></div>
-    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_ext">Exterior render</div><div class="deliv-vz">12 VZ</div></div>
-    <div class="deliv-row-item" style="grid-column:1/-1"><div class="deliv-row-name" data-i="d_hero">Aerial view — AI-generated, exact location</div><div class="deliv-vz">15 VZ</div></div>
+    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_int">Interior render</div><div class="deliv-vz" data-vz-item="interior">10 VZ</div></div>
+    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_ext">Exterior render</div><div class="deliv-vz" data-vz-item="exterior">15 VZ</div></div>
+    <div class="deliv-row-item" style="grid-column:1/-1"><div class="deliv-row-name" data-i="d_hero">Aerial view — AI-generated, exact location</div><div class="deliv-vz" data-vz-item="aerial">20 VZ</div></div>
     <div class="deliv-cat-header" data-i="cat_anim">Animations</div>
-    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_a1">Short animation 5–8 sec</div><div class="deliv-vz">20 VZ</div></div>
-    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_a2">Animation 10–15 sec</div><div class="deliv-vz">35 VZ</div></div>
+    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_a1">Short animation 5–8 sec</div><div class="deliv-vz" data-vz-item="anim_short">25 VZ</div></div>
+    <div class="deliv-row-item"><div class="deliv-row-name" data-i="d_a2">Animation 10–15 sec</div><div class="deliv-vz" data-vz-item="anim_long">50 VZ</div></div>
     <div class="deliv-cat-header" data-i="cat_vr">VR / Virtual Tours</div>
-    <div class="deliv-row-item" style="grid-column:1/-1"><div class="deliv-row-name" data-i="d_vr">VR tour / panoramic point</div><div class="deliv-vz">25 VZ</div></div>
+    <div class="deliv-row-item" style="grid-column:1/-1"><div class="deliv-row-name" data-i="d_vr">VR tour / panoramic point</div><div class="deliv-vz" data-vz-item="vr">30 VZ</div></div>
   </div>
 </section>
 
@@ -668,6 +662,9 @@ nav{top:29px !important}
   </div>
 </footer>
 
+<!-- Pricing loader: defines window.VizorPricing + window.onPricingReady before the inline calc script below uses them. -->
+<script src="assets/js/vizor-pricing.js"></script>
+
 <script>
 // ── TRANSLATIONS ──────────────────────────────────────────────
 // Exposed as window.vizorT so the shared vizor-lang.js can pick it up.
@@ -693,14 +690,14 @@ const T = window.vizorT = {
     ai_strip_desc:"Every visual is produced using the most advanced AI tools available — combined with architectural expertise and precise art direction to deliver production-ready results at a new level of quality and speed.",
     plans_label:"Plans", plans_title:"CHOOSE YOUR PLAN",
     plans_sub:"Each plan is a credit balance you can distribute freely across the deliverables your project needs.",
-    p1_validity:"Validity · 60 days", p2_validity:"Validity · 90 days", p3_validity:"Validity · 6 months",
     p1_desc:"Ideal for first collaborations or smaller scopes. A great way to explore the system before scaling up.",
     p2_desc:"The most balanced option for ongoing visual production, mixed deliverables and launch campaigns.",
     p3_desc:"Designed for long-term collaborations, multiple deliverables and scalable visual support for B2B teams.",
     example_title:"Usage example",
-    p1_ex1:"4 interior renders", p1_ex2:"1 exterior render", p1_ex3:"1 aerial view",
-    p2_ex1:"6 final renders", p2_ex2:"1 VR tour", p2_ex3:"1 aerial view",
-    p3_ex1:"Animation 10–15 sec", p3_ex2:"3 VR tours", p3_ex3:"8 final renders",
+    vz_credits_suffix:"VZ Credits",
+    validity_prefix:"Validity ·",
+    validity_unit_days:"days",
+    validity_unit_months:"months",
     most_chosen:"Most chosen", btn_info:"↓ Info", btn_quote:"Request Quote",
     deliv_label:"Credits per deliverable", deliv_title:"HOW MUCH IS EACH PIECE?",
     deliv_sub:"Credits cover production. Each deliverable has an estimated credit cost that may vary based on scope and complexity.",
@@ -728,7 +725,51 @@ const T = window.vizorT = {
     r2t:"Plan validity", r2d:"Starter 60 days · Pro 90 days · Partner 6 months. Unused credits expire at the end of each period.",
     r3t:"Rush delivery & complex projects", r3d:"Express delivery may require additional credits. Large-scale projects are quoted separately.",
     r4t:"Credits = production capacity", r4d:"VZ Credits represent visual quality, consistency and production support. The value is in the result, not just the quantity.",
-    calc_items:["Interior render","Exterior render","Aerial view","Short animation 5–8 sec","Animation 10–15 sec","VR tour / panoramic point"],
+    deliverable_names:{
+      interior:   { display:"Interior render",            singular:"interior render",            plural:"interior renders" },
+      exterior:   { display:"Exterior render",            singular:"exterior render",            plural:"exterior renders" },
+      aerial:     { display:"Aerial view",                singular:"aerial view",                plural:"aerial views" },
+      anim_short: { display:"Short animation 5–8 sec",    singular:"short animation 5–8 sec",    plural:"short animations 5–8 sec" },
+      vr:         { display:"VR tour / panoramic point",  singular:"VR tour / panoramic point",  plural:"VR tours / panoramic points" },
+      anim_long:  { display:"Animation 10–15 sec",        singular:"animation 10–15 sec",        plural:"animations 10–15 sec" }
+    },
+    // ── PDF strings ──
+    pdf_quote_eyebrow:"CUSTOM QUOTE",
+    pdf_quote_title:"Your VZ Credits selection",
+    pdf_quote_subtitle_one:"deliverable · estimated for your project",
+    pdf_quote_subtitle_many:"deliverables · estimated for your project",
+    pdf_total_estimated:"TOTAL ESTIMATED",
+    pdf_suggested_plan:"SUGGESTED PLAN",
+    pdf_surplus:"SURPLUS",
+    pdf_plan_subline:"Flexible allocation across deliverables",
+    pdf_why_title:"WHY A CUSTOM QUOTE?",
+    pdf_why_body:"Every project has different scope, complexity and timeline. We don't believe in one-size-fits-all pricing — we tailor it to your specific development so you only pay for what you actually need.",
+    pdf_next_steps:"NEXT STEPS",
+    pdf_steps_quote:[
+      { title:"You send", body:"this quote" },
+      { title:"Custom price", body:"within 24h" },
+      { title:"Real-time", body:"review (Miro)" },
+      { title:"Final delivery", body:"ready to publish" }
+    ],
+    pdf_cta_title:"Ready for your custom pricing?",
+    pdf_cta_body:"We respond in less than 24h. Pick the channel that works best for you.",
+    pdf_btn_email:"EMAIL US",
+    pdf_btn_whatsapp:"WHATSAPP",
+    pdf_btn_schedule:"SCHEDULE CALL",
+    pdf_email_subject:"Custom quote request — Vizor Credits",
+    pdf_whatsapp_msg:"Hi! I just generated a Vizor quote and would like to discuss pricing.",
+    pdf_footer_disc:"Credits are estimates. Final usage and pricing may vary by scope and complexity. Quote valid for 30 days.",
+    pdf_plan_eyebrow:"PLAN BROCHURE",
+    pdf_usage_example:"USAGE EXAMPLE",
+    pdf_example_total:"EXAMPLE TOTAL",
+    pdf_included_title:"WHAT'S INCLUDED",
+    pdf_included_items:[
+      "Production-ready files (high-res)",
+      "Up to 2 minor revisions per deliverable",
+      "Real-time progress board (Miro)",
+      "Final delivery in agreed format"
+    ],
+    pdf_pilot_title:"A test before you commit",
     plan_names:["Starter","Pro","Partner"], plan_recommended:"← recommended",
     fit_surplus:"Surplus", fit_ok:"✓ Just right", fit_no:"✗ Missing"
   },
@@ -753,14 +794,14 @@ const T = window.vizorT = {
     ai_strip_desc:"Cada visual es creado por nuestro equipo usando las herramientas de IA más avanzadas del mercado — como complemento a nuestro flujo de trabajo, no como reemplazo. El resultado es una combinación precisa de expertise técnico, dirección artística y tecnología de vanguardia.",
     plans_label:"Planes", plans_title:"ELEGÍ TU PLAN",
     plans_sub:"Cada plan es un balance de créditos que podés distribuir libremente entre los entregables que necesite tu proyecto.",
-    p1_validity:"Vigencia · 60 días", p2_validity:"Vigencia · 90 días", p3_validity:"Vigencia · 6 meses",
     p1_desc:"Ideal para primeras colaboraciones o proyectos de alcance acotado. Una excelente forma de explorar el sistema antes de escalar.",
     p2_desc:"La opción más equilibrada para producción visual continua, entregables mixtos y campañas de lanzamiento.",
     p3_desc:"Diseñado para colaboraciones de largo plazo, múltiples entregables y soporte visual escalable para equipos B2B.",
     example_title:"Ejemplo de uso",
-    p1_ex1:"4 renders de interior", p1_ex2:"1 render exterior", p1_ex3:"1 aerial view",
-    p2_ex1:"6 renders finales", p2_ex2:"1 tour VR", p2_ex3:"1 aerial view",
-    p3_ex1:"Animación 10–15 seg", p3_ex2:"3 tours VR", p3_ex3:"8 renders finales",
+    vz_credits_suffix:"VZ Credits",
+    validity_prefix:"Vigencia ·",
+    validity_unit_days:"días",
+    validity_unit_months:"meses",
     most_chosen:"Más elegido", btn_info:"↓ Info", btn_quote:"Solicitar presupuesto",
     deliv_label:"Créditos por entregable", deliv_title:"¿CUÁNTO VALE CADA PIEZA?",
     deliv_sub:"Los créditos cubren la producción. Cada entregable tiene un costo estimado que puede variar según el alcance y la complejidad.",
@@ -788,47 +829,178 @@ const T = window.vizorT = {
     r2t:"Vigencia por plan", r2d:"Starter 60 días · Pro 90 días · Partner 6 meses. Los créditos no usados vencen al cierre del período.",
     r3t:"Urgencia y proyectos complejos", r3d:"La entrega express puede requerir créditos adicionales. Proyectos de gran escala se cotizan aparte.",
     r4t:"Créditos = capacidad de producción", r4d:"VZ Credits representan calidad visual, consistencia y soporte de producción. El valor está en el resultado, no en la cantidad.",
-    calc_items:["Render de interior","Render exterior","Vista aérea","Animación corta 5–8 seg","Animación 10–15 seg","Tour VR / punto panorámico"],
+    deliverable_names:{
+      interior:   { display:"Render de interior",         singular:"render de interior",         plural:"renders de interior" },
+      exterior:   { display:"Render exterior",            singular:"render exterior",            plural:"renders exteriores" },
+      aerial:     { display:"Vista aérea",                singular:"vista aérea",                plural:"vistas aéreas" },
+      anim_short: { display:"Animación corta 5–8 seg",    singular:"animación corta 5–8 seg",    plural:"animaciones cortas 5–8 seg" },
+      vr:         { display:"Tour VR / punto panorámico", singular:"tour VR / punto panorámico", plural:"tours VR / puntos panorámicos" },
+      anim_long:  { display:"Animación 10–15 seg",        singular:"animación 10–15 seg",        plural:"animaciones 10–15 seg" }
+    },
+    // ── PDF strings ──
+    pdf_quote_eyebrow:"PRESUPUESTO PERSONALIZADO",
+    pdf_quote_title:"Tu selección de VZ Credits",
+    pdf_quote_subtitle_one:"entregable · estimado para tu proyecto",
+    pdf_quote_subtitle_many:"entregables · estimados para tu proyecto",
+    pdf_total_estimated:"TOTAL ESTIMADO",
+    pdf_suggested_plan:"PLAN SUGERIDO",
+    pdf_surplus:"SOBRAN",
+    pdf_plan_subline:"Distribución flexible entre entregables",
+    pdf_why_title:"¿POR QUÉ COTIZACIÓN PERSONALIZADA?",
+    pdf_why_body:"Cada proyecto tiene un alcance, complejidad y plazo distintos. No creemos en precios genéricos — los adaptamos a tu desarrollo específico para que pagues solo por lo que realmente necesitás.",
+    pdf_next_steps:"PRÓXIMOS PASOS",
+    pdf_steps_quote:[
+      { title:"Enviás", body:"esta cotización" },
+      { title:"Precio custom", body:"en menos de 24h" },
+      { title:"Revisión", body:"en vivo (Miro)" },
+      { title:"Entrega final", body:"lista para publicar" }
+    ],
+    pdf_cta_title:"¿Listo para tu cotización personalizada?",
+    pdf_cta_body:"Respondemos en menos de 24h. Elegí el canal que más te convenga.",
+    pdf_btn_email:"ESCRIBINOS",
+    pdf_btn_whatsapp:"WHATSAPP",
+    pdf_btn_schedule:"AGENDAR LLAMADA",
+    pdf_email_subject:"Solicitud de cotización — Vizor Credits",
+    pdf_whatsapp_msg:"¡Hola! Acabo de armar una cotización en Vizor y me gustaría conversar sobre el precio.",
+    pdf_footer_disc:"Los créditos son estimados. El uso final y el precio pueden variar según el alcance y la complejidad. Cotización válida por 30 días.",
+    pdf_plan_eyebrow:"INFORMACIÓN DEL PLAN",
+    pdf_usage_example:"EJEMPLO DE USO",
+    pdf_example_total:"TOTAL DEL EJEMPLO",
+    pdf_included_title:"QUÉ INCLUYE",
+    pdf_included_items:[
+      "Archivos listos para producción (alta resolución)",
+      "Hasta 2 revisiones menores por entregable",
+      "Tablero de avance en tiempo real (Miro)",
+      "Entrega final en el formato acordado"
+    ],
+    pdf_pilot_title:"Un test antes de comprometerte",
     plan_names:["Starter","Pro","Partner"], plan_recommended:"← recomendado",
     fit_surplus:"Sobran", fit_ok:"✓ Justo", fit_no:"✗ Faltan"
   }
 };
 
 let lang = "en";
-// vizor-lang.js drives EN/ES; we just react to keep `lang` and the calc in sync.
-window.onLangChange = function (l) {
-  lang = l;
-  renderCalc();
-};
 
 // ── CALCULATOR ────────────────────────────────────────────────
-const ITEMS = [
-  {vz:10},{vz:12},{vz:15},{vz:20},{vz:35},{vz:25}
-];
-const PLANS = [
-  {vz:60,days:"60"},{vz:120,days:"90"},{vz:250,days:"6m"}
-];
-const qty = [0,0,0,0,0,0];
+// ITEMS and PLANS mirror VizorPricing (assets/data/pricing.json). The pricing script is
+// loaded synchronously above this one, so the fallback snapshot is always available here
+// — we initialise from it so the calc never shows an empty list before the fetch resolves.
+// applyPricing() runs again when the real JSON loads, preserving qty if the item ids match.
+let ITEMS = window.VizorPricing ? window.VizorPricing.entregables.map(e => ({ id: e.id, vz: e.vz })) : [];
+let PLANS = window.VizorPricing ? window.VizorPricing.planes.map(pl => ({ id: pl.id, vz: pl.vz })) : [];
+let qty   = ITEMS.map(() => 0);
 
 function change(i, d) {
-  qty[i] = Math.max(0, qty[i]+d);
+  qty[i] = Math.max(0, qty[i] + d);
   renderCalc();
 }
 
-function total() { return ITEMS.reduce((s,item,i) => s + qty[i]*item.vz, 0); }
+function total() { return ITEMS.reduce((s, item, i) => s + qty[i] * item.vz, 0); }
+
+// "2 interior renders" / "1 interior render" — uses singular/plural from T per id.
+function formatExampleLine(line, l) {
+  const t = T[l];
+  const d = t.deliverable_names[line.entregable_id];
+  if (!d) return `${line.cantidad} —`;
+  const name = line.cantidad === 1 ? d.singular : d.plural;
+  return `${line.cantidad} ${name}`;
+}
+
+// "Validity · 60 days" / "Vigencia · 6 meses" — formats days into days/months.
+function formatValidity(dias, l) {
+  const t = T[l];
+  if (dias >= 30 && dias % 30 === 0) {
+    const months = dias / 30;
+    return `${t.validity_prefix} ${months} ${t.validity_unit_months}`;
+  }
+  return `${t.validity_prefix} ${dias} ${t.validity_unit_days}`;
+}
+
+// Fills HTML elements with VZ data: hero range, deliverable grid prices,
+// plan credits, plan validity. Called after pricing loads and on lang change.
+function fillStaticPricing() {
+  const t = T[lang];
+  const p = window.VizorPricing;
+  if (!p) return;
+
+  // Hero stat: VZ range across plans
+  const range = document.querySelector("[data-vz-range]");
+  if (range) {
+    const min = Math.min.apply(null, p.planes.map(pl => pl.vz));
+    const max = Math.max.apply(null, p.planes.map(pl => pl.vz));
+    range.innerHTML = `${min}<span>–</span>${max}`;
+  }
+
+  // Deliverable grid prices
+  document.querySelectorAll("[data-vz-item]").forEach(el => {
+    const ent = p.getEntregable(el.getAttribute("data-vz-item"));
+    if (ent) el.textContent = ent.vz + " VZ";
+  });
+
+  // Plan credits + validity texts
+  document.querySelectorAll("[data-vz-plan]").forEach(card => {
+    const plan = p.getPlan(card.getAttribute("data-vz-plan"));
+    if (!plan) return;
+    const credits = card.querySelector("[data-vz-plan-credits]");
+    if (credits) credits.textContent = `${plan.vz} ${t.vz_credits_suffix}`;
+    const validity = card.querySelector("[data-vz-plan-validity]");
+    if (validity) validity.textContent = formatValidity(plan.validez_dias, lang);
+  });
+}
+
+// Renders the "Usage example" list inside each plan card from the JSON ejemplo[].
+function renderPlanExamples() {
+  const p = window.VizorPricing;
+  if (!p) return;
+  document.querySelectorAll("[data-vz-plan]").forEach(card => {
+    const plan = p.getPlan(card.getAttribute("data-vz-plan"));
+    const target = card.querySelector("[data-vz-plan-example]");
+    if (!plan || !target) return;
+    target.innerHTML = (plan.ejemplo || []).map(line => {
+      const ent = p.getEntregable(line.entregable_id);
+      const lineTotal = ent ? line.cantidad * ent.vz : 0;
+      return `<div class="plan-example-item"><span>${formatExampleLine(line, lang)}</span><span class="item-vz">${lineTotal} VZ</span></div>`;
+    }).join("");
+  });
+}
+
+// Called when VizorPricing finishes loading. Builds ITEMS/PLANS and paints everything.
+// Preserves qty across reloads if the deliverable ids match (so a user mid-click isn't reset
+// when the fetch resolves a few ms after first paint).
+function applyPricing() {
+  const p = window.VizorPricing;
+  if (!p) return;
+  const newItems = p.entregables.map(e => ({ id: e.id, vz: e.vz }));
+  const newPlans = p.planes.map(pl => ({ id: pl.id, vz: pl.vz }));
+  const sameIds = ITEMS.length === newItems.length && ITEMS.every((it, i) => it.id === newItems[i].id);
+  ITEMS = newItems;
+  PLANS = newPlans;
+  if (!sameIds) qty = ITEMS.map(() => 0);
+  fillStaticPricing();
+  renderPlanExamples();
+  renderCalc();
+}
+
+// vizor-lang.js drives EN/ES; we react to keep `lang`, the calc and language-sensitive
+// static texts (validity, examples) in sync.
+window.onLangChange = function (l) {
+  lang = l;
+  fillStaticPricing();
+  renderPlanExamples();
+  renderCalc();
+};
 
 function renderCalc() {
   const t = T[lang];
-  const names = t.calc_items;
-  const pnames = t.plan_names;
-
   const list = document.getElementById("calcList");
+  if (!list) return;
   list.innerHTML = "";
   ITEMS.forEach((item, i) => {
     const active = qty[i] > 0;
+    const name = (t.deliverable_names[item.id] || {}).display || item.id;
     const el = document.createElement("div");
-    el.className = "calc-item" + (active?" active":"");
-    el.innerHTML = `<div class="calc-item-info"><div class="calc-item-name">${names[i]}</div></div>
+    el.className = "calc-item" + (active ? " active" : "");
+    el.innerHTML = `<div class="calc-item-info"><div class="calc-item-name">${name}</div></div>
       <span class="calc-item-vz">${item.vz} VZ</span>
       <div class="qty-wrap">
         <button class="qty-btn" onclick="change(${i},-1)">−</button>
@@ -840,33 +1012,39 @@ function renderCalc() {
 
   const tot = total();
   const has = tot > 0;
-  document.getElementById("calcEmpty").style.display = has?"none":"block";
-  document.getElementById("calcContent").style.display = has?"block":"none";
+  document.getElementById("calcEmpty").style.display = has ? "none" : "block";
+  document.getElementById("calcContent").style.display = has ? "block" : "none";
   document.getElementById("calcCta").disabled = !has;
+
+  const planLabel = (plan, idx) => {
+    // Plan name lookup: prefer T.plan_names[idx] (legacy ordered array kept for display)
+    // and fall back to plan.id capitalized.
+    return (t.plan_names && t.plan_names[idx]) || (plan.id.charAt(0).toUpperCase() + plan.id.slice(1));
+  };
 
   if (has) {
     document.getElementById("calcTotal").textContent = tot;
-    const best = PLANS.find(p=>p.vz>=tot)||PLANS[PLANS.length-1];
-    const pct = Math.round(Math.min(tot/best.vz*100,100));
-    document.getElementById("calcBar").style.width = pct+"%";
-    document.getElementById("calcBarL").textContent = tot+" VZ";
-    document.getElementById("calcBarR").textContent = pnames[PLANS.indexOf(best)];
+    const best = PLANS.find(p => p.vz >= tot) || PLANS[PLANS.length - 1];
+    const pct = Math.round(Math.min(tot / best.vz * 100, 100));
+    document.getElementById("calcBar").style.width = pct + "%";
+    document.getElementById("calcBarL").textContent = tot + " VZ";
+    document.getElementById("calcBarR").textContent = planLabel(best, PLANS.indexOf(best));
   }
 
   const pc = document.getElementById("calcPlans");
   pc.innerHTML = "";
-  PLANS.forEach((p,pi) => {
-    const fits = p.vz>=tot;
-    const isBest = fits && !PLANS.slice(0,pi).some(pp=>pp.vz>=tot);
-    const surplus = p.vz-tot;
-    let fitHTML = tot===0
+  PLANS.forEach((p, pi) => {
+    const fits = p.vz >= tot;
+    const isBest = fits && !PLANS.slice(0, pi).some(pp => pp.vz >= tot);
+    const surplus = p.vz - tot;
+    const fitHTML = tot === 0
       ? `<span class="fit-neutral">${p.vz} VZ</span>`
       : fits
-        ? `<span class="fit-ok">${surplus>0? t.fit_surplus+" "+surplus+" VZ" : t.fit_ok}</span>`
-        : `<span class="fit-no">${t.fit_no} ${tot-p.vz} VZ</span>`;
+        ? `<span class="fit-ok">${surplus > 0 ? t.fit_surplus + " " + surplus + " VZ" : t.fit_ok}</span>`
+        : `<span class="fit-no">${t.fit_no} ${tot - p.vz} VZ</span>`;
     const el = document.createElement("div");
-    el.className = "calc-plan-item"+(isBest&&tot>0?" best":"");
-    el.innerHTML = `<div><div class="calc-plan-name">${pnames[pi]}${isBest&&tot>0?` <span style="font-size:10px;color:var(--orange);font-family:'DM Mono',monospace">${t.plan_recommended}</span>`:""}</div>
+    el.className = "calc-plan-item" + (isBest && tot > 0 ? " best" : "");
+    el.innerHTML = `<div><div class="calc-plan-name">${planLabel(p, pi)}${isBest && tot > 0 ? ` <span style="font-size:10px;color:var(--orange);font-family:'DM Mono',monospace">${t.plan_recommended}</span>` : ""}</div>
       <div class="calc-plan-fit">${fitHTML}</div></div>
       <div class="calc-plan-vz">${p.vz} VZ</div>`;
     pc.appendChild(el);
@@ -880,14 +1058,13 @@ function renderMini() {
   const rows = document.getElementById("miniRows");
   if (!rows) return;
   const t = T[lang];
-  const names = t.calc_items;
-  const pnames = t.plan_names;
 
   rows.innerHTML = "";
   ITEMS.forEach((item, i) => {
+    const name = (t.deliverable_names[item.id] || {}).display || item.id;
     const el = document.createElement("div");
     el.className = "mini-row" + (qty[i] > 0 ? " active" : "");
-    el.innerHTML = `<span class="mini-row-name">${names[i]}</span>
+    el.innerHTML = `<span class="mini-row-name">${name}</span>
       <span class="mini-row-vz">${item.vz} VZ</span>
       <span class="mini-qty">
         <button class="mini-btn" type="button" onclick="change(${i},-1)" aria-label="−">−</button>
@@ -902,7 +1079,9 @@ function renderMini() {
   const hint = document.getElementById("miniHint");
   if (tot > 0) {
     const best = PLANS.find(p => p.vz >= tot) || PLANS[PLANS.length - 1];
-    hint.innerHTML = `${t.hw_hint_pre} <b>${pnames[PLANS.indexOf(best)]}</b>`;
+    const idx = PLANS.indexOf(best);
+    const name = (t.plan_names && t.plan_names[idx]) || best.id;
+    hint.innerHTML = `${t.hw_hint_pre} <b>${name}</b>`;
   } else {
     hint.innerHTML = "";
   }
@@ -913,34 +1092,62 @@ function goToCalc() {
   if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+// Generates the Custom Quote PDF from the current calc selection.
 function downloadQuote() {
   const t = T[lang];
-  const names = t.calc_items;
-  const pnames = t.plan_names;
   const tot = total();
-  const best = PLANS.find(p=>p.vz>=tot)||PLANS[PLANS.length-1];
-  const bi = PLANS.indexOf(best);
-  const lines = ITEMS.map((item,i)=>qty[i]>0?`  ${qty[i]}× ${names[i]} = ${qty[i]*item.vz} VZ`:null).filter(Boolean).join("\n");
-  alert(lang==="en"
-    ? `Your selection:\n\n${lines}\n\nTotal: ${tot} VZ\nSuggested plan: ${pnames[bi]} (${best.vz} VZ)\n\n→ In your live site this will trigger a PDF download or open a contact form.`
-    : `Tu selección:\n\n${lines}\n\nTotal: ${tot} VZ\nPlan sugerido: ${pnames[bi]} (${best.vz} VZ)\n\n→ En tu sitio real esto generará la descarga del presupuesto personalizado.`
-  );
+  if (tot <= 0) return;
+  if (!window.VizorPDF) {
+    console.warn("VizorPDF not loaded yet — try again in a moment.");
+    return;
+  }
+  const best = PLANS.find(p => p.vz >= tot) || PLANS[PLANS.length - 1];
+  const planName = (t.plan_names && t.plan_names[PLANS.indexOf(best)]) || best.id;
+  const items = ITEMS.map((item, i) => {
+    if (qty[i] <= 0) return null;
+    const name = (t.deliverable_names[item.id] || {}).display || item.id;
+    return { name: name, vz: item.vz, qty: qty[i] };
+  }).filter(Boolean);
+  window.VizorPDF.generateCustomQuote({
+    lang: lang,
+    items: items,
+    total: tot,
+    suggestedPlan: { name: planName, vz: best.vz }
+  }).catch(function (err) { console.error("Custom Quote PDF failed:", err); });
 }
 
-function handleInfo(plan) {
-  alert(lang==="en"
-    ? `↓ Download plan info — "${plan}"\n\nIn your live site this button will trigger the PDF download for the ${plan} plan.`
-    : `↓ Descargar info del plan — "${plan}"\n\nEn tu sitio real este botón descargará el PDF del plan ${plan}.`
-  );
-}
-function handleQuote(plan) {
-  alert(lang==="en"
-    ? `Request a quote for the ${plan} plan.\n\n→ In your live site this will open your contact form or send an email.`
-    : `Solicitar presupuesto para el plan ${plan}.\n\n→ En tu sitio real esto abrirá tu formulario de contacto o enviará un email.`
-  );
+// Downloads a plan brochure (starter / pro / partner) or the Pilot brochure.
+function handleInfo(planId) {
+  if (!window.VizorPDF) {
+    console.warn("VizorPDF not loaded yet — try again in a moment.");
+    return;
+  }
+  const promise = planId === "pilot"
+    ? window.VizorPDF.generatePilotBrochure({ lang: lang })
+    : window.VizorPDF.generatePlanBrochure({ lang: lang, planId: planId });
+  promise.catch(function (err) { console.error("Plan brochure PDF failed:", err); });
 }
 
-renderCalc();
+// "Request Quote" buttons in plan cards — opens email with the plan pre-filled in the subject.
+function handleQuote(planName) {
+  const subject = lang === "en"
+    ? "Quote request — " + planName + " plan"
+    : "Solicitud de cotización — Plan " + planName;
+  const body = lang === "en"
+    ? "Hi Vizor team,\n\nI'd like to request a custom quote for the " + planName + " plan.\n\n"
+    : "Hola equipo Vizor,\n\nQuisiera solicitar una cotización personalizada para el plan " + planName + ".\n\n";
+  window.location.href = "mailto:info@vizor-solutions.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+}
+
+// Wait for pricing to load (fetch from JSON, or fallback). vizor-pricing.js calls
+// the registered callback synchronously if data is already ready.
+if (window.onPricingReady) {
+  window.onPricingReady(applyPricing);
+} else {
+  // Pricing script not loaded — render once with whatever ITEMS/PLANS happen to be.
+  console.warn("[vz-credits] vizor-pricing.js not detected; rendering with empty pricing.");
+  renderCalc();
+}
 
 
 // SUBNAV SCROLL BEHAVIOR
@@ -992,6 +1199,9 @@ renderCalc();
   });
 })();
 </script>
+<!-- jsPDF (UMD) + Vizor PDF generator. Loaded deferred — only kicks in when a download button is clicked. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+<script src="assets/js/vizor-pdf.js" defer></script>
 <script src="assets/js/vizor-nav.js" defer></script>
 <script src="assets/js/vizor-lang.js" defer></script>
 </body>

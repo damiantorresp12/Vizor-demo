@@ -1,0 +1,45 @@
+{
+  "_comentario": "Fuente unica de precios VZ Credits. Editar este archivo actualiza la calculadora, la grilla de deliverables, los planes y los PDFs descargables. Tras guardar, Vercel redeploya solo (~30 segundos).",
+
+  "entregables": [
+    { "id": "interior",    "vz": 10 },
+    { "id": "exterior",    "vz": 15 },
+    { "id": "aerial",      "vz": 20 },
+    { "id": "anim_short",  "vz": 25 },
+    { "id": "vr",          "vz": 30 },
+    { "id": "anim_long",   "vz": 50 }
+  ],
+
+  "planes": [
+    {
+      "id": "starter",
+      "vz": 50,
+      "validez_dias": 60,
+      "ejemplo": [
+        { "cantidad": 2, "entregable_id": "interior" },
+        { "cantidad": 1, "entregable_id": "exterior" },
+        { "cantidad": 1, "entregable_id": "aerial" }
+      ]
+    },
+    {
+      "id": "pro",
+      "vz": 150,
+      "validez_dias": 90,
+      "ejemplo": [
+        { "cantidad": 6, "entregable_id": "interior" },
+        { "cantidad": 2, "entregable_id": "vr" },
+        { "cantidad": 1, "entregable_id": "aerial" }
+      ]
+    },
+    {
+      "id": "partner",
+      "vz": 300,
+      "validez_dias": 180,
+      "ejemplo": [
+        { "cantidad": 1,  "entregable_id": "anim_long" },
+        { "cantidad": 4,  "entregable_id": "vr" },
+        { "cantidad": 10, "entregable_id": "interior" }
+      ]
+    }
+  ]
+}
