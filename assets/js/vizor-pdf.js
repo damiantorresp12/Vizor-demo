@@ -222,8 +222,15 @@
   }
 
   // ── CTA BOX (multichannel) ───────────────────────────────────────────
-  // Returns an array of clickable link regions to register after drawing.
-  function drawCTABox(doc, y, t) {
+  // `ctaContent` carries the message that Email/WhatsApp will pre-fill — when
+  // the client taps a button inside the PDF, Vizor receives a message containing
+  // the exact selection/plan they were looking at. No backend needed.
+  function drawCTABox(doc, y, t, ctaContent) {
+    const c = ctaContent || {};
+    const emailSubject = c.emailSubject || t.pdf_email_subject;
+    const emailBody    = c.emailBody    || '';
+    const whatsappMsg  = c.whatsappMsg  || t.pdf_whatsapp_msg;
+
     const h = 38;
     rect(doc, PAGE.m, y, CW, h, PAL.surface);
     stroke(doc, PAL.border); doc.setLineWidth(0.2);
@@ -260,11 +267,15 @@
     setText(doc, { size: 9, weight: 'bold', color: PAL.orange });
     doc.text(t.pdf_btn_schedule, sx + btnW / 2, btnY + btnH / 2 + 1.5, { align: 'center' });
 
+    const mailto = 'mailto:' + CONTACT.email
+      + '?subject=' + encodeURIComponent(emailSubject)
+      + (emailBody ? '&body=' + encodeURIComponent(emailBody) : '');
+
     return {
       nextY: y + h + 8,
       links: [
-        { x: ex, y: btnY, w: btnW, h: btnH, url: 'mailto:' + CONTACT.email + '?subject=' + encodeURIComponent(t.pdf_email_subject) },
-        { x: wx, y: btnY, w: btnW, h: btnH, url: 'https://wa.me/' + CONTACT.whatsapp + '?text=' + encodeURIComponent(t.pdf_whatsapp_msg) },
+        { x: ex, y: btnY, w: btnW, h: btnH, url: mailto },
+        { x: wx, y: btnY, w: btnW, h: btnH, url: 'https://wa.me/' + CONTACT.whatsapp + '?text=' + encodeURIComponent(whatsappMsg) },
         { x: sx, y: btnY, w: btnW, h: btnH, url: CONTACT.calendly }
       ]
     };
@@ -325,6 +336,33 @@
     links.forEach(function (l) { doc.link(l.x, l.y, l.w, l.h, { url: l.url }); });
   }
 
+  // ── CTA CONTENT BUILDERS ─────────────────────────────────────────────
+  // The body string is shared by Email and WhatsApp (single newline separator
+  // works in both — mailto preserves \n via encodeURIComponent, WhatsApp too).
+  function buildQuoteCTAContent(t, items, total, suggestedPlan) {
+    const itemLines = items.map(function (it) {
+      return it.qty + '× ' + it.name + ' (' + (it.qty * it.vz) + ' VZ)';
+    }).join('\n');
+    const totalLine = t.pdf_msg_total + ': ' + total + ' VZ';
+    const planLine = suggestedPlan
+      ? '\n' + t.pdf_msg_suggested_plan + ': ' + suggestedPlan.name + ' (' + suggestedPlan.vz + ' VZ)'
+      : '';
+    const body = t.pdf_msg_quote_intro + '\n\n' + itemLines + '\n\n' + totalLine + planLine + '\n\n' + t.pdf_msg_quote_outro;
+    const subject = t.pdf_msg_quote_subject + ' ' + total + ' VZ' + (suggestedPlan ? ' · ' + suggestedPlan.name : '');
+    return { emailSubject: subject, emailBody: body, whatsappMsg: body };
+  }
+
+  function buildPlanCTAContent(t, planName) {
+    const body = t.pdf_msg_plan_intro + ' ' + planName + '.\n\n' + t.pdf_msg_plan_outro;
+    const subject = t.pdf_msg_plan_subject + ' ' + planName;
+    return { emailSubject: subject, emailBody: body, whatsappMsg: body };
+  }
+
+  function buildPilotCTAContent(t) {
+    const body = t.pdf_msg_pilot_intro + '\n\n' + t.pdf_msg_pilot_outro;
+    return { emailSubject: t.pdf_msg_pilot_subject, emailBody: body, whatsappMsg: body };
+  }
+
   // ── CUSTOM QUOTE ─────────────────────────────────────────────────────
   async function generateCustomQuote(opts) {
     await loadLogo();
@@ -354,7 +392,8 @@
 
     y = drawNextSteps(doc, y, t.pdf_steps_quote, t);
 
-    const cta = drawCTABox(doc, y, t);
+    const ctaContent = buildQuoteCTAContent(t, opts.items, opts.total, opts.suggestedPlan);
+    const cta = drawCTABox(doc, y, t, ctaContent);
     drawFooter(doc, t);
     registerLinks(doc, cta.links);
 
@@ -416,7 +455,7 @@
 
     y = drawWhyBox(doc, y, t);
 
-    const cta = drawCTABox(doc, y, t);
+    const cta = drawCTABox(doc, y, t, buildPlanCTAContent(t, planName));
     drawFooter(doc, t);
     registerLinks(doc, cta.links);
 
@@ -489,7 +528,7 @@
     });
     y += 4;
 
-    const cta = drawCTABox(doc, y, t);
+    const cta = drawCTABox(doc, y, t, buildPilotCTAContent(t));
     drawFooter(doc, t);
     registerLinks(doc, cta.links);
 
