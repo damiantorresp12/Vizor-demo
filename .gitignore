@@ -20,3 +20,13 @@ build/
 
 # Internal session docs (not part of the site)
 HANDOFF.md
+
+# Local secrets (Cloudinary API creds, etc.)
+.env
+.env.local
+
+# Source images for the portfolio (800+ MB). The site references the Cloudinary
+# copies via URLs in assets/data/portfolio.json -- the local originals are not
+# needed at runtime. Re-upload to Cloudinary if you ever need to regenerate.
+assets/img/portfolio/
+

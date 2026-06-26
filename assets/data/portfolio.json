@@ -1,0 +1,1703 @@
+{
+    "generated_at":  "2026-06-26T16:05:10.7561867Z",
+    "cloud_name":  "dyxxgwmpp",
+    "total":  243,
+    "groups":  {
+                   "interiors":  {
+                                     "label_en":  "Interiors",
+                                     "label_es":  "Interiores"
+                                 },
+                   "residential":  {
+                                       "label_en":  "Residential",
+                                       "label_es":  "Residencial"
+                                   },
+                   "hospitality":  {
+                                       "label_en":  "Hospitality and Commercial",
+                                       "label_es":  "Hoteleria y Comercial"
+                                   },
+                   "civic":  {
+                                 "label_en":  "Civic and Cultural",
+                                 "label_es":  "Civico y Cultural"
+                             },
+                   "urban":  {
+                                 "label_en":  "Urban",
+                                 "label_es":  "Urbano"
+                             }
+               },
+    "categories":  {
+                       "airport":  {
+                                       "label_en":  "Airport",
+                                       "label_es":  "Aeropuerto",
+                                       "group":  "civic",
+                                       "count":  12,
+                                       "images":  [
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487373/Create_a_breathtaking_international_airport_202606222157_we2nfy.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487373/Create_a_breathtaking_international_airport_202606222157_we2nfy.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487307/Create_a_large-scale_international_airport_202606222200_1_kdl26q.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487307/Create_a_large-scale_international_airport_202606222200_1_kdl26q.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487337/Create_a_large-scale_international_airport_202606222200_zeji61.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487337/Create_a_large-scale_international_airport_202606222200_zeji61.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487312/Create_a_next-generation_airport_terminal_202606222212_viz1vl.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487312/Create_a_next-generation_airport_terminal_202606222212_viz1vl.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487296/Create_a_next-generation_airport_terminal_202606222213_e1sjlo.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487296/Create_a_next-generation_airport_terminal_202606222213_e1sjlo.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487297/Create_a_spectacular_luxury_international_202606221736_w1jz9g.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487297/Create_a_spectacular_luxury_international_202606221736_w1jz9g.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487318/Create_a_spectacular_luxury_international_202606221742_trtjni.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487318/Create_a_spectacular_luxury_international_202606221742_trtjni.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487375/Create_a_world-class_international_airport_202606221709_1_itaqw8.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487375/Create_a_world-class_international_airport_202606221709_1_itaqw8.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487297/Create_a_world-class_international_airport_202606221709_pwqvu5.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487297/Create_a_world-class_international_airport_202606221709_pwqvu5.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487313/Create_an_enormous_international_airport_202606221647_1_mktwkb.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487313/Create_an_enormous_international_airport_202606221647_1_mktwkb.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487311/Create_an_enormous_international_airport_202606221647_ts8mdp.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487311/Create_an_enormous_international_airport_202606221647_ts8mdp.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487295/Create_an_iconic_international_airport_202606161621_oi5mfv.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487295/Create_an_iconic_international_airport_202606161621_oi5mfv.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      }
+                                                  ]
+                                   },
+                       "amenities":  {
+                                         "label_en":  "Amenities",
+                                         "label_es":  "Amenities",
+                                         "group":  "urban",
+                                         "count":  19,
+                                         "images":  [
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487301/Create_a_world-class_indoor_swimming_202606122346_1_tbdhpx.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487301/Create_a_world-class_indoor_swimming_202606122346_1_tbdhpx.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487316/Create_a_world-class_indoor_swimming_202606122346_2_szofve.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487316/Create_a_world-class_indoor_swimming_202606122346_2_szofve.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487317/Create_a_world-class_indoor_swimming_202606122346_3_uj4g6z.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487317/Create_a_world-class_indoor_swimming_202606122346_3_uj4g6z.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487363/Create_a_world-class_indoor_swimming_202606122346_rebgrt.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487363/Create_a_world-class_indoor_swimming_202606122346_rebgrt.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487369/Create_a_world-class_indoor_swimming_202606221037_1_podtck.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487369/Create_a_world-class_indoor_swimming_202606221037_1_podtck.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487388/Create_a_world-class_indoor_swimming_202606221037_auj4di.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487388/Create_a_world-class_indoor_swimming_202606221037_auj4di.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487305/Create_an_extraordinary_luxury_fitness_202606122340_wr454v.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487305/Create_an_extraordinary_luxury_fitness_202606122340_wr454v.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487364/Create_an_extraordinary_luxury_fitness_202606221039_1_cxhzfq.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487364/Create_an_extraordinary_luxury_fitness_202606221039_1_cxhzfq.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487303/Create_an_extraordinary_luxury_fitness_202606221039_2_k1op1h.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487303/Create_an_extraordinary_luxury_fitness_202606221039_2_k1op1h.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487308/Create_an_extraordinary_luxury_fitness_202606221039_vmelsn.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487308/Create_an_extraordinary_luxury_fitness_202606221039_vmelsn.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487315/Create_an_ultra-premium_wellness_club_202606122342_lltuwh.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487315/Create_an_ultra-premium_wellness_club_202606122342_lltuwh.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487364/Create_an_ultra-premium_wellness_club_202606122343_g6u016.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487364/Create_an_ultra-premium_wellness_club_202606122343_g6u016.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487386/Create_an_ultra-premium_wellness_club_202606221038_1_om95rw.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487386/Create_an_ultra-premium_wellness_club_202606221038_1_om95rw.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487294/Create_an_ultra-premium_wellness_club_202606221038_a2sfv6.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487294/Create_an_ultra-premium_wellness_club_202606221038_a2sfv6.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487297/Design_a_dramatic_dark_luxury_202606122344_1_uusyh7.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487297/Design_a_dramatic_dark_luxury_202606122344_1_uusyh7.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487299/Design_a_dramatic_dark_luxury_202606122344_t1l5tg.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487299/Design_a_dramatic_dark_luxury_202606122344_t1l5tg.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487302/Design_a_dramatic_dark_luxury_202606221037_1_x2cuff.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487302/Design_a_dramatic_dark_luxury_202606221037_1_x2cuff.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487313/Design_a_dramatic_dark_luxury_202606221037_dzratb.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487313/Design_a_dramatic_dark_luxury_202606221037_dzratb.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487315/Design_a_dramatic_dark_luxury_202606221038_qhnxrc.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487315/Design_a_dramatic_dark_luxury_202606221038_qhnxrc.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        }
+                                                    ]
+                                     },
+                       "apartment-building":  {
+                                                  "label_en":  "Apartment Building",
+                                                  "label_es":  "Edificio",
+                                                  "group":  "residential",
+                                                  "count":  15,
+                                                  "images":  [
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487372/Create_a_high-end_apartment_building_202606231039_1_lqpffh.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487372/Create_a_high-end_apartment_building_202606231039_1_lqpffh.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487389/Create_a_high-end_apartment_building_202606231039_ddzjxq.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487389/Create_a_high-end_apartment_building_202606231039_ddzjxq.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487295/Create_a_high-end_apartment_building_202606231040_qbh3ef.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487295/Create_a_high-end_apartment_building_202606231040_qbh3ef.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487300/Create_a_premium_residential_apartment_202606231109_jpiaug.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487300/Create_a_premium_residential_apartment_202606231109_jpiaug.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487302/Create_a_refined_11-story_apartment_202606241244_1_t5pb6s.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487302/Create_a_refined_11-story_apartment_202606241244_1_t5pb6s.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487305/Create_a_refined_11-story_apartment_202606241244_blct84.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487305/Create_a_refined_11-story_apartment_202606241244_blct84.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487306/Create_a_refined_11-story_apartment_202606241247_b19cdm.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487306/Create_a_refined_11-story_apartment_202606241247_b19cdm.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487309/Create_a_sophisticated_apartment_building_202606231132_fcsqhn.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487309/Create_a_sophisticated_apartment_building_202606231132_fcsqhn.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487314/Create_a_striking_15-story_residential_202606231156_pos37e.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487314/Create_a_striking_15-story_residential_202606231156_pos37e.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487336/Create_a_striking_15-story_residential_202606231157_yrzoib.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487336/Create_a_striking_15-story_residential_202606231157_yrzoib.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487362/Create_a_stunning_15-story_waterfront_202606241240_orulvz.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487362/Create_a_stunning_15-story_waterfront_202606241240_orulvz.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487335/Create_an_elegant_14-story_apartment_202606241231_qjcalm.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487335/Create_an_elegant_14-story_apartment_202606241231_qjcalm.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487366/Create_an_elegant_14-story_apartment_202606241237_m8groh.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487366/Create_an_elegant_14-story_apartment_202606241237_m8groh.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487366/Create_an_elegant_14-story_apartment_202606241240_apjep8.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487366/Create_an_elegant_14-story_apartment_202606241240_apjep8.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 },
+                                                                 {
+                                                                     "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487367/Create_an_elegant_mid-rise_apartment_202606231111_s0gi43.jpg",
+                                                                     "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487367/Create_an_elegant_mid-rise_apartment_202606231111_s0gi43.jpg",
+                                                                     "width":  2752,
+                                                                     "height":  1536
+                                                                 }
+                                                             ]
+                                              },
+                       "balcony":  {
+                                       "label_en":  "Balcony",
+                                       "label_es":  "Balcon",
+                                       "group":  "interiors",
+                                       "count":  6,
+                                       "images":  [
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487295/Create_a_beautifully_designed_contemporary_202606230849_hygv8a.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487295/Create_a_beautifully_designed_contemporary_202606230849_hygv8a.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487369/Create_an_extraordinary_penthouse_balcony_202606230853_tadirq.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487369/Create_an_extraordinary_penthouse_balcony_202606230853_tadirq.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487373/Create_an_ultra-luxury_balcony_attached_202606222236_1_mcqkgu.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487373/Create_an_ultra-luxury_balcony_attached_202606222236_1_mcqkgu.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487372/Create_an_ultra-luxury_balcony_attached_202606222236_2_ljbigh.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487372/Create_an_ultra-luxury_balcony_attached_202606222236_2_ljbigh.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487388/Create_an_ultra-luxury_balcony_attached_202606222236_3_buftsi.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487388/Create_an_ultra-luxury_balcony_attached_202606222236_3_buftsi.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487296/Create_an_ultra-luxury_balcony_attached_202606222236_dgtekx.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487296/Create_an_ultra-luxury_balcony_attached_202606222236_dgtekx.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      }
+                                                  ]
+                                   },
+                       "bathroom":  {
+                                        "label_en":  "Bathroom",
+                                        "label_es":  "Bano",
+                                        "group":  "interiors",
+                                        "count":  5,
+                                        "images":  [
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487297/Create_an_extraordinary_ultra-luxury_spa-inspired_202606112231_h2qbfs.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487297/Create_an_extraordinary_ultra-luxury_spa-inspired_202606112231_h2qbfs.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       },
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487298/Create_an_extraordinary_ultra-luxury_spa-inspired_202606112232_1_ytbclp.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487298/Create_an_extraordinary_ultra-luxury_spa-inspired_202606112232_1_ytbclp.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       },
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487302/Create_an_extraordinary_ultra-luxury_spa-inspired_202606112232_2_ug4gxv.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487302/Create_an_extraordinary_ultra-luxury_spa-inspired_202606112232_2_ug4gxv.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       },
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487307/Create_an_extraordinary_ultra-luxury_spa-inspired_202606112232_rqtcdc.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487307/Create_an_extraordinary_ultra-luxury_spa-inspired_202606112232_rqtcdc.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       },
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487306/Create_an_iconic_architectural_bathroom_202606121100_rvtlwh.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487306/Create_an_iconic_architectural_bathroom_202606121100_rvtlwh.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       }
+                                                   ]
+                                    },
+                       "bedroom":  {
+                                       "label_en":  "Bedroom",
+                                       "label_es":  "Dormitorio",
+                                       "group":  "interiors",
+                                       "count":  7,
+                                       "images":  [
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487307/Contemporary_Mediterranean_bedroom__limewash_walls__202606111139_lepro9.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487307/Contemporary_Mediterranean_bedroom__limewash_walls__202606111139_lepro9.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487312/Create_a_six-star_luxury_hotel_202606111718_o8mqtx.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487312/Create_a_six-star_luxury_hotel_202606111718_o8mqtx.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487315/Create_a_world-class_contemporary_bedroom_202606112148_zb5agu.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487315/Create_a_world-class_contemporary_bedroom_202606112148_zb5agu.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487317/Create_a_world-class_contemporary_bedroom_202606112149_q6htle.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487317/Create_a_world-class_contemporary_bedroom_202606112149_q6htle.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487309/Create_an_ultra-luxury_contemporary_penthouse_202606111714_coy6bb.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487309/Create_an_ultra-luxury_contemporary_penthouse_202606111714_coy6bb.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487318/Luxury_Japandi_bedroom__light_oak_202606111700_iuxkqo.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487318/Luxury_Japandi_bedroom__light_oak_202606111700_iuxkqo.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487294/Ref_Dormitorio.jpg_202606111701_ldyjaf.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487294/Ref_Dormitorio.jpg_202606111701_ldyjaf.jpg",
+                                                          "width":  1376,
+                                                          "height":  768
+                                                      }
+                                                  ]
+                                   },
+                       "classroom":  {
+                                         "label_en":  "Classroom",
+                                         "label_es":  "Aula",
+                                         "group":  "civic",
+                                         "count":  14,
+                                         "images":  [
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487372/Create_a_cutting-edge_STEM_classroom_202606161322_kqbw1z.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487372/Create_a_cutting-edge_STEM_classroom_202606161322_kqbw1z.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487371/Create_a_world-class_university_classroom_202606221037_1_idyzl2.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487371/Create_a_world-class_university_classroom_202606221037_1_idyzl2.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487374/Create_a_world-class_university_classroom_202606221037_ox0ihc.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487374/Create_a_world-class_university_classroom_202606221037_ox0ihc.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487367/Create_an_iconic_educational_space_202606161023_qeoqc6.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487367/Create_an_iconic_educational_space_202606161023_qeoqc6.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487301/Design_a_futuristic_but_realistic_202606161234_ynrzx9.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487301/Design_a_futuristic_but_realistic_202606161234_ynrzx9.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487304/Design_a_futuristic_but_realistic_202606161235_wvdgtk.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487304/Design_a_futuristic_but_realistic_202606161235_wvdgtk.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487305/Design_a_futuristic_but_realistic_202606161302_b1xb6y.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487305/Design_a_futuristic_but_realistic_202606161302_b1xb6y.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487387/Design_an_extraordinary_architecture_and_202606161007_bmhdjd.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487387/Design_an_extraordinary_architecture_and_202606161007_bmhdjd.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487387/Design_an_extraordinary_architecture_and_202606161009_mqsepi.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487387/Design_an_extraordinary_architecture_and_202606161009_mqsepi.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487296/Design_an_extraordinary_architecture_and_202606161014_xojpua.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487296/Design_an_extraordinary_architecture_and_202606161014_xojpua.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487296/Design_an_extraordinary_middle_school_202606161325_1_vk0moc.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487296/Design_an_extraordinary_middle_school_202606161325_1_vk0moc.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487297/Design_an_extraordinary_middle_school_202606161325_atptxc.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487297/Design_an_extraordinary_middle_school_202606161325_atptxc.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487300/Design_an_extraordinary_middle_school_202606161326_1_a7kgve.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487300/Design_an_extraordinary_middle_school_202606161326_1_a7kgve.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        },
+                                                        {
+                                                            "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487299/Design_an_extraordinary_middle_school_202606161326_jacbv8.jpg",
+                                                            "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487299/Design_an_extraordinary_middle_school_202606161326_jacbv8.jpg",
+                                                            "width":  2752,
+                                                            "height":  1536
+                                                        }
+                                                    ]
+                                     },
+                       "convention-center":  {
+                                                 "label_en":  "Convention Center",
+                                                 "label_es":  "Centro de Convenciones",
+                                                 "group":  "civic",
+                                                 "count":  7,
+                                                 "images":  [
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487393/Create_a_large_convention_center_202606241614_pjlsip.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487393/Create_a_large_convention_center_202606241614_pjlsip.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487392/Create_a_large_convention_center_202606241625_tgyz5s.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487392/Create_a_large_convention_center_202606241625_tgyz5s.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487314/Create_a_refined_11-story_apartment_202606241247_1_collzs.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487314/Create_a_refined_11-story_apartment_202606241247_1_collzs.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487317/Create_a_world-class_international_convention_202606241253_i7dvud.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487317/Create_a_world-class_international_convention_202606241253_i7dvud.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487317/Create_a_world-class_international_convention_202606241254_kl4xsv.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487317/Create_a_world-class_international_convention_202606241254_kl4xsv.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487306/Create_an_enormous_convention_center_202606192127_1_njxqqw.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487306/Create_an_enormous_convention_center_202606192127_1_njxqqw.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487310/Create_an_enormous_convention_center_202606192127_yp1gol.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487310/Create_an_enormous_convention_center_202606192127_yp1gol.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                }
+                                                            ]
+                                             },
+                       "high-rise-development":  {
+                                                     "label_en":  "High-Rise",
+                                                     "label_es":  "Torre Residencial",
+                                                     "group":  "residential",
+                                                     "count":  5,
+                                                     "images":  [
+                                                                    {
+                                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487335/Create_an_award-winning_luxury_housing_202606212308_1_mimzni.jpg",
+                                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487335/Create_an_award-winning_luxury_housing_202606212308_1_mimzni.jpg",
+                                                                        "width":  2752,
+                                                                        "height":  1536
+                                                                    },
+                                                                    {
+                                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487336/Create_an_award-winning_luxury_housing_202606212308_xg6a14.jpg",
+                                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487336/Create_an_award-winning_luxury_housing_202606212308_xg6a14.jpg",
+                                                                        "width":  2752,
+                                                                        "height":  1536
+                                                                    },
+                                                                    {
+                                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487365/Create_an_iconic_luxury_residential_202606212136_1_bfn4q8.jpg",
+                                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487365/Create_an_iconic_luxury_residential_202606212136_1_bfn4q8.jpg",
+                                                                        "width":  2752,
+                                                                        "height":  1536
+                                                                    },
+                                                                    {
+                                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487368/Create_an_iconic_luxury_residential_202606212136_2_gfank8.jpg",
+                                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487368/Create_an_iconic_luxury_residential_202606212136_2_gfank8.jpg",
+                                                                        "width":  2752,
+                                                                        "height":  1536
+                                                                    },
+                                                                    {
+                                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487370/Create_an_iconic_luxury_residential_202606212136_g4v3o6.jpg",
+                                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487370/Create_an_iconic_luxury_residential_202606212136_g4v3o6.jpg",
+                                                                        "width":  2752,
+                                                                        "height":  1536
+                                                                    }
+                                                                ]
+                                                 },
+                       "hotel":  {
+                                     "label_en":  "Hotel",
+                                     "label_es":  "Hotel",
+                                     "group":  "hospitality",
+                                     "count":  7,
+                                     "images":  [
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487388/Create_a_sophisticated_luxury_hotel_202606241858_1_yx1w22.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487388/Create_a_sophisticated_luxury_hotel_202606241858_1_yx1w22.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487390/Create_a_sophisticated_luxury_hotel_202606241858_2_ckj9jy.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487390/Create_a_sophisticated_luxury_hotel_202606241858_2_ckj9jy.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487390/Create_a_sophisticated_luxury_hotel_202606241858_y3cpnp.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487390/Create_a_sophisticated_luxury_hotel_202606241858_y3cpnp.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487295/Create_a_world-class_luxury_hotel_202606241838_rm0slc.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487295/Create_a_world-class_luxury_hotel_202606241838_rm0slc.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487374/Create_an_iconic_ultra-luxury_hotel_202606212119_deaii4.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487374/Create_an_iconic_ultra-luxury_hotel_202606212119_deaii4.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487376/Create_an_ultra-luxury_beachfront_resort_202606241857_1_zvotuj.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487376/Create_an_ultra-luxury_beachfront_resort_202606241857_1_zvotuj.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487387/Create_an_ultra-luxury_beachfront_resort_202606241857_ejnxku.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487387/Create_an_ultra-luxury_beachfront_resort_202606241857_ejnxku.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    }
+                                                ]
+                                 },
+                       "housing-developments":  {
+                                                    "label_en":  "Housing",
+                                                    "label_es":  "Conjunto Residencial",
+                                                    "group":  "residential",
+                                                    "count":  6,
+                                                    "images":  [
+                                                                   {
+                                                                       "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487298/Create_a_spectacular_waterfront_housing_202606212217_wp6xks.jpg",
+                                                                       "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487298/Create_a_spectacular_waterfront_housing_202606212217_wp6xks.jpg",
+                                                                       "width":  2752,
+                                                                       "height":  1536
+                                                                   },
+                                                                   {
+                                                                       "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487391/Create_a_world-class_luxury_residential_202606212135_1_fc0gmk.jpg",
+                                                                       "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487391/Create_a_world-class_luxury_residential_202606212135_1_fc0gmk.jpg",
+                                                                       "width":  2752,
+                                                                       "height":  1536
+                                                                   },
+                                                                   {
+                                                                       "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487299/Create_a_world-class_luxury_residential_202606212135_2_dwv4xs.jpg",
+                                                                       "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487299/Create_a_world-class_luxury_residential_202606212135_2_dwv4xs.jpg",
+                                                                       "width":  2752,
+                                                                       "height":  1536
+                                                                   },
+                                                                   {
+                                                                       "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487302/Create_a_world-class_luxury_residential_202606212135_rfg2aa.jpg",
+                                                                       "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487302/Create_a_world-class_luxury_residential_202606212135_rfg2aa.jpg",
+                                                                       "width":  2752,
+                                                                       "height":  1536
+                                                                   },
+                                                                   {
+                                                                       "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487391/Create_an_award-winning_luxury_housing_202606212308_2_bnejyv.jpg",
+                                                                       "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487391/Create_an_award-winning_luxury_housing_202606212308_2_bnejyv.jpg",
+                                                                       "width":  2752,
+                                                                       "height":  1536
+                                                                   },
+                                                                   {
+                                                                       "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487391/Create_an_extraordinary_residential_community_202606212215_q6qqyy.jpg",
+                                                                       "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487391/Create_an_extraordinary_residential_community_202606212215_q6qqyy.jpg",
+                                                                       "width":  2752,
+                                                                       "height":  1536
+                                                                   }
+                                                               ]
+                                                },
+                       "kitchen":  {
+                                       "label_en":  "Kitchen",
+                                       "label_es":  "Cocina",
+                                       "group":  "interiors",
+                                       "count":  17,
+                                       "images":  [
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487318/Create_a_stunning_Italian-inspired_luxury_202606112221_a8qd4z.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487318/Create_a_stunning_Italian-inspired_luxury_202606112221_a8qd4z.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487319/Create_a_stunning_Italian-inspired_luxury_202606112222_1_iot7d8.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487319/Create_a_stunning_Italian-inspired_luxury_202606112222_1_iot7d8.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487320/Create_a_stunning_Italian-inspired_luxury_202606112222_nz5hln.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487320/Create_a_stunning_Italian-inspired_luxury_202606112222_nz5hln.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487320/Create_a_world-class_architectural_kitchen_202606112223_1_u7myfs.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487320/Create_a_world-class_architectural_kitchen_202606112223_1_u7myfs.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487320/Create_a_world-class_architectural_kitchen_202606112223_ekfuhj.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487320/Create_a_world-class_architectural_kitchen_202606112223_ekfuhj.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487303/Create_an_extraordinary_ultra-luxury_contemporary_202606112216_1_gtmj8j.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487303/Create_an_extraordinary_ultra-luxury_contemporary_202606112216_1_gtmj8j.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487304/Create_an_extraordinary_ultra-luxury_contemporary_202606112216_vreigt.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487304/Create_an_extraordinary_ultra-luxury_contemporary_202606112216_vreigt.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487305/Create_an_extraordinary_ultra-luxury_contemporary_202606112217_zzgxw6.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487305/Create_an_extraordinary_ultra-luxury_contemporary_202606112217_zzgxw6.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487308/Create_an_extraordinary_ultra-luxury_contemporary_202606112219_uyuhry.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487308/Create_an_extraordinary_ultra-luxury_contemporary_202606112219_uyuhry.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487309/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_1_fscimx.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487309/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_1_fscimx.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487310/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_2_mxlohg.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487310/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_2_mxlohg.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487311/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_3_rucg8m.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487311/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_3_rucg8m.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487311/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_4_dr26k3.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487311/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_4_dr26k3.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487312/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_5_p5v6wy.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487312/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_5_p5v6wy.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487313/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_gm9jnd.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487313/Create_an_extraordinary_ultra-luxury_contemporary_202606221039_gm9jnd.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487315/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_1_hl7qd9.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487315/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_1_hl7qd9.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487316/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_lefgnb.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487316/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_lefgnb.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      }
+                                                  ]
+                                   },
+                       "living-room":  {
+                                           "label_en":  "Living Room",
+                                           "label_es":  "Living",
+                                           "group":  "interiors",
+                                           "count":  21,
+                                           "images":  [
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487320/Create_an_elegant_luxury_coastal_202606112200_1_zbqzyl.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487320/Create_an_elegant_luxury_coastal_202606112200_1_zbqzyl.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487321/Create_an_elegant_luxury_coastal_202606112200_2_hhhmas.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487321/Create_an_elegant_luxury_coastal_202606112200_2_hhhmas.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487321/Create_an_elegant_luxury_coastal_202606112200_gppl09.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487321/Create_an_elegant_luxury_coastal_202606112200_gppl09.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487321/Create_an_elegant_luxury_coastal_202606221040_1_wao0r4.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487321/Create_an_elegant_luxury_coastal_202606221040_1_wao0r4.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487322/Create_an_elegant_luxury_coastal_202606221040_2_nssakd.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487322/Create_an_elegant_luxury_coastal_202606221040_2_nssakd.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487322/Create_an_elegant_luxury_coastal_202606221040_3_rb4nu6.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487322/Create_an_elegant_luxury_coastal_202606221040_3_rb4nu6.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487323/Create_an_elegant_luxury_coastal_202606221040_wqwexw.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487323/Create_an_elegant_luxury_coastal_202606221040_wqwexw.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487323/Create_an_extraordinary_ultra-luxury_contemporary_202606112153_1_pcfmtf.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487323/Create_an_extraordinary_ultra-luxury_contemporary_202606112153_1_pcfmtf.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487323/Create_an_extraordinary_ultra-luxury_contemporary_202606112153_njqbqu.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487323/Create_an_extraordinary_ultra-luxury_contemporary_202606112153_njqbqu.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487324/Create_an_extraordinary_ultra-luxury_contemporary_202606112154_fgeysq.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487324/Create_an_extraordinary_ultra-luxury_contemporary_202606112154_fgeysq.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487324/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_2_ym13j7.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487324/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_2_ym13j7.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487324/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_3_ra4apc.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487324/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_3_ra4apc.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487325/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_4_fzonah.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487325/Create_an_extraordinary_ultra-luxury_contemporary_202606221040_4_fzonah.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487325/Design_a_stunning_modern_organic_202606112156_1_n5fpnb.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487325/Design_a_stunning_modern_organic_202606112156_1_n5fpnb.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487326/Design_a_stunning_modern_organic_202606112156_2_n1u8uj.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487326/Design_a_stunning_modern_organic_202606112156_2_n1u8uj.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487326/Design_a_stunning_modern_organic_202606112156_3_klkrre.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487326/Design_a_stunning_modern_organic_202606112156_3_klkrre.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487326/Design_a_stunning_modern_organic_202606112156_zpuq5h.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487326/Design_a_stunning_modern_organic_202606112156_zpuq5h.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487327/Design_a_stunning_modern_organic_202606221040_1_xfaqf3.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487327/Design_a_stunning_modern_organic_202606221040_1_xfaqf3.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487327/Design_a_stunning_modern_organic_202606221040_2_ryxy54.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487327/Design_a_stunning_modern_organic_202606221040_2_ryxy54.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487327/Design_a_stunning_modern_organic_202606221040_3_u08rme.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487327/Design_a_stunning_modern_organic_202606221040_3_u08rme.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487328/Design_a_stunning_modern_organic_202606221040_rzu8jn.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487328/Design_a_stunning_modern_organic_202606221040_rzu8jn.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          }
+                                                      ]
+                                       },
+                       "lobby":  {
+                                     "label_en":  "Lobby",
+                                     "label_es":  "Lobby",
+                                     "group":  "interiors",
+                                     "count":  15,
+                                     "images":  [
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487329/Create_a_breathtaking_luxury_residential_202606122235_1_yp6hnd.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487329/Create_a_breathtaking_luxury_residential_202606122235_1_yp6hnd.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487329/Create_a_breathtaking_luxury_residential_202606122235_tsqxdm.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487329/Create_a_breathtaking_luxury_residential_202606122235_tsqxdm.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487330/Create_a_world-class_interior_design_202606192120_1_dfe2ac.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487330/Create_a_world-class_interior_design_202606192120_1_dfe2ac.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487330/Create_a_world-class_interior_design_202606192120_sxdl4b.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487330/Create_a_world-class_interior_design_202606192120_sxdl4b.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487330/Create_a_world-class_interior_design_202606221325_tero7p.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487330/Create_a_world-class_interior_design_202606221325_tero7p.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487331/Create_a_world-class_interior_design_202606221326_1_gud5ye.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487331/Create_a_world-class_interior_design_202606221326_1_gud5ye.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487331/Create_a_world-class_interior_design_202606221326_p89h65.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487331/Create_a_world-class_interior_design_202606221326_p89h65.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487331/Create_a_world-class_interior_design_202606221646_ofkuyd.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487331/Create_a_world-class_interior_design_202606221646_ofkuyd.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487328/Create_an_extraordinary_ultra-luxury_residential_202606121523_s5sp1e.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487328/Create_an_extraordinary_ultra-luxury_residential_202606121523_s5sp1e.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487329/Create_an_extraordinary_ultra-luxury_residential_202606121524_zjnogb.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487329/Create_an_extraordinary_ultra-luxury_residential_202606121524_zjnogb.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487332/Design_a_dramatic_dark_luxury_202606122231_gj0pkx.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487332/Design_a_dramatic_dark_luxury_202606122231_gj0pkx.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487332/Design_a_dramatic_dark_luxury_202606122232_1_mwcekm.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487332/Design_a_dramatic_dark_luxury_202606122232_1_mwcekm.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487332/Design_a_dramatic_dark_luxury_202606122232_nfnbj7.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487332/Design_a_dramatic_dark_luxury_202606122232_nfnbj7.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487333/Design_a_sophisticated_contemporary_residential_202606122226_1_hvyesa.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487333/Design_a_sophisticated_contemporary_residential_202606122226_1_hvyesa.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    },
+                                                    {
+                                                        "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487333/Design_a_sophisticated_contemporary_residential_202606122226_edljuu.jpg",
+                                                        "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487333/Design_a_sophisticated_contemporary_residential_202606122226_edljuu.jpg",
+                                                        "width":  2752,
+                                                        "height":  1536
+                                                    }
+                                                ]
+                                 },
+                       "mixed-use-tower":  {
+                                               "label_en":  "Mixed-Use Tower",
+                                               "label_es":  "Torre de Usos Mixtos",
+                                               "group":  "hospitality",
+                                               "count":  9,
+                                               "images":  [
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487392/Create_a_next-generation_mixed-use_residential_202606212304_1_sduddt.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487392/Create_a_next-generation_mixed-use_residential_202606212304_1_sduddt.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487394/Create_a_next-generation_mixed-use_residential_202606212304_hq2ugr.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487394/Create_a_next-generation_mixed-use_residential_202606212304_hq2ugr.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487335/Create_a_spectacular_mixed-use_tower_202606241941_1_q8hjw1.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487335/Create_a_spectacular_mixed-use_tower_202606241941_1_q8hjw1.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487334/Create_a_spectacular_mixed-use_tower_202606241941_2_eldmpk.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487334/Create_a_spectacular_mixed-use_tower_202606241941_2_eldmpk.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487336/Create_a_spectacular_mixed-use_tower_202606241941_ktixyh.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487336/Create_a_spectacular_mixed-use_tower_202606241941_ktixyh.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487338/Create_a_world-class_mixed-use_tower_202606241915_mcy9ap.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487338/Create_a_world-class_mixed-use_tower_202606241915_mcy9ap.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487338/Create_a_world-class_mixed-use_tower_202606241916_cwvof2.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487338/Create_a_world-class_mixed-use_tower_202606241916_cwvof2.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487333/Create_an_ultra-premium_mixed-use_skyscraper_202606241923_1_u6ndwu.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487333/Create_an_ultra-premium_mixed-use_skyscraper_202606241923_1_u6ndwu.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487334/Create_an_ultra-premium_mixed-use_skyscraper_202606241923_wgxlgk.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487334/Create_an_ultra-premium_mixed-use_skyscraper_202606241923_wgxlgk.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              }
+                                                          ]
+                                           },
+                       "museum-gallery":  {
+                                              "label_en":  "Museum and Gallery",
+                                              "label_es":  "Museo y Galeria",
+                                              "group":  "civic",
+                                              "count":  6,
+                                              "images":  [
+                                                             {
+                                                                 "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487339/Create_a_contemporary_museum_surrounded_202606242023_utcgak.jpg",
+                                                                 "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487339/Create_a_contemporary_museum_surrounded_202606242023_utcgak.jpg",
+                                                                 "width":  2752,
+                                                                 "height":  1536
+                                                             },
+                                                             {
+                                                                 "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487339/Create_a_next-generation_museum_dedicated_202606242246_on5bsu.jpg",
+                                                                 "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487339/Create_a_next-generation_museum_dedicated_202606242246_on5bsu.jpg",
+                                                                 "width":  2752,
+                                                                 "height":  1536
+                                                             },
+                                                             {
+                                                                 "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487340/Create_a_spectacular_contemporary_museum_202606242006_eh9wkf.jpg",
+                                                                 "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487340/Create_a_spectacular_contemporary_museum_202606242006_eh9wkf.jpg",
+                                                                 "width":  2752,
+                                                                 "height":  1536
+                                                             },
+                                                             {
+                                                                 "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487341/Create_a_world-class_contemporary_art_202606241948_vqkc7g.jpg",
+                                                                 "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487341/Create_a_world-class_contemporary_art_202606241948_vqkc7g.jpg",
+                                                                 "width":  2752,
+                                                                 "height":  1536
+                                                             },
+                                                             {
+                                                                 "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487338/Create_an_award-winning_museum_visualization_202606242247_nqnzut.jpg",
+                                                                 "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487338/Create_an_award-winning_museum_visualization_202606242247_nqnzut.jpg",
+                                                                 "width":  2752,
+                                                                 "height":  1536
+                                                             },
+                                                             {
+                                                                 "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487338/Create_an_elegant_contemporary_art_202606241949_grzghy.jpg",
+                                                                 "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487338/Create_an_elegant_contemporary_art_202606241949_grzghy.jpg",
+                                                                 "width":  2752,
+                                                                 "height":  1536
+                                                             }
+                                                         ]
+                                          },
+                       "office-building":  {
+                                               "label_en":  "Office Building",
+                                               "label_es":  "Oficinas",
+                                               "group":  "hospitality",
+                                               "count":  7,
+                                               "images":  [
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487341/Create_an_extraordinary_executive_office_202606221037_1_pai9cn.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487341/Create_an_extraordinary_executive_office_202606221037_1_pai9cn.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487341/Create_an_extraordinary_executive_office_202606221037_2_qruycu.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487341/Create_an_extraordinary_executive_office_202606221037_2_qruycu.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487341/Create_an_extraordinary_executive_office_202606221037_3_krz7u1.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487341/Create_an_extraordinary_executive_office_202606221037_3_krz7u1.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487341/Create_an_extraordinary_executive_office_202606221037_h4fsar.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487341/Create_an_extraordinary_executive_office_202606221037_h4fsar.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487342/Design_an_extraordinary_architecture_and_202606221036_1_bwyxis.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487342/Design_an_extraordinary_architecture_and_202606221036_1_bwyxis.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487343/Design_an_extraordinary_architecture_and_202606221036_2_l0kisx.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487343/Design_an_extraordinary_architecture_and_202606221036_2_l0kisx.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              },
+                                                              {
+                                                                  "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487344/Design_an_extraordinary_architecture_and_202606221036_fxgdhj.jpg",
+                                                                  "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487344/Design_an_extraordinary_architecture_and_202606221036_fxgdhj.jpg",
+                                                                  "width":  2752,
+                                                                  "height":  1536
+                                                              }
+                                                          ]
+                                           },
+                       "resort":  {
+                                      "label_en":  "Resort",
+                                      "label_es":  "Resort",
+                                      "group":  "hospitality",
+                                      "count":  5,
+                                      "images":  [
+                                                     {
+                                                         "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487345/Create_a_spectacular_five-star_luxury_202606212120_1_ffbyxx.jpg",
+                                                         "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487345/Create_a_spectacular_five-star_luxury_202606212120_1_ffbyxx.jpg",
+                                                         "width":  2752,
+                                                         "height":  1536
+                                                     },
+                                                     {
+                                                         "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487345/Create_a_spectacular_five-star_luxury_202606212120_2_cf4zdg.jpg",
+                                                         "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487345/Create_a_spectacular_five-star_luxury_202606212120_2_cf4zdg.jpg",
+                                                         "width":  2752,
+                                                         "height":  1536
+                                                     },
+                                                     {
+                                                         "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487393/Create_a_spectacular_five-star_luxury_202606212120_ngamw4.jpg",
+                                                         "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487393/Create_a_spectacular_five-star_luxury_202606212120_ngamw4.jpg",
+                                                         "width":  2752,
+                                                         "height":  1536
+                                                     },
+                                                     {
+                                                         "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487344/Create_an_extraordinary_beachfront_luxury_202606212128_1_znfqbq.jpg",
+                                                         "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487344/Create_an_extraordinary_beachfront_luxury_202606212128_1_znfqbq.jpg",
+                                                         "width":  2752,
+                                                         "height":  1536
+                                                     },
+                                                     {
+                                                         "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487344/Create_an_extraordinary_beachfront_luxury_202606212128_xckemf.jpg",
+                                                         "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487344/Create_an_extraordinary_beachfront_luxury_202606212128_xckemf.jpg",
+                                                         "width":  2752,
+                                                         "height":  1536
+                                                     }
+                                                 ]
+                                  },
+                       "retail-center":  {
+                                             "label_en":  "Retail Center",
+                                             "label_es":  "Centro Comercial",
+                                             "group":  "hospitality",
+                                             "count":  5,
+                                             "images":  [
+                                                            {
+                                                                "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487346/Create_a_flagship_luxury_fashion_202606221646_qnfvui.jpg",
+                                                                "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487346/Create_a_flagship_luxury_fashion_202606221646_qnfvui.jpg",
+                                                                "width":  2752,
+                                                                "height":  1536
+                                                            },
+                                                            {
+                                                                "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487348/Create_a_world-class_open-air_retail_202606221221_dtprgw.jpg",
+                                                                "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487348/Create_a_world-class_open-air_retail_202606221221_dtprgw.jpg",
+                                                                "width":  2752,
+                                                                "height":  1536
+                                                            },
+                                                            {
+                                                                "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487347/Create_a_world-class_open-air_retail_202606221227_laj7u0.jpg",
+                                                                "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487347/Create_a_world-class_open-air_retail_202606221227_laj7u0.jpg",
+                                                                "width":  2752,
+                                                                "height":  1536
+                                                            },
+                                                            {
+                                                                "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487345/Create_an_elegant_luxury_retail_202606212314_wojjf2.jpg",
+                                                                "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487345/Create_an_elegant_luxury_retail_202606212314_wojjf2.jpg",
+                                                                "width":  2752,
+                                                                "height":  1536
+                                                            },
+                                                            {
+                                                                "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487345/Create_an_extraordinary_mixed-use_retail_202606221228_aog9pa.jpg",
+                                                                "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487345/Create_an_extraordinary_mixed-use_retail_202606221228_aog9pa.jpg",
+                                                                "width":  2752,
+                                                                "height":  1536
+                                                            }
+                                                        ]
+                                         },
+                       "school-university":  {
+                                                 "label_en":  "School and University",
+                                                 "label_es":  "Escuela y Universidad",
+                                                 "group":  "civic",
+                                                 "count":  5,
+                                                 "images":  [
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487348/Create_a_premium_international_school_202606220017_pk7qz0.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487348/Create_a_premium_international_school_202606220017_pk7qz0.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487394/Create_a_world-class_university_campus_202606220010_sqcwdh.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487394/Create_a_world-class_university_campus_202606220010_sqcwdh.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487394/Create_a_world-class_university_campus_202606220011_1_lf8skt.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487394/Create_a_world-class_university_campus_202606220011_1_lf8skt.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487395/Create_a_world-class_university_campus_202606220011_p48sdp.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487395/Create_a_world-class_university_campus_202606220011_p48sdp.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                },
+                                                                {
+                                                                    "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487348/Create_an_iconic_educational_space_202606221036_logsrt.jpg",
+                                                                    "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487348/Create_an_iconic_educational_space_202606221036_logsrt.jpg",
+                                                                    "width":  2752,
+                                                                    "height":  1536
+                                                                }
+                                                            ]
+                                             },
+                       "showroom":  {
+                                        "label_en":  "Showroom",
+                                        "label_es":  "Showroom",
+                                        "group":  "hospitality",
+                                        "count":  4,
+                                        "images":  [
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487348/Create_an_enormous_furniture_experience_202606192134_vp4uw6.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487348/Create_an_enormous_furniture_experience_202606192134_vp4uw6.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       },
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487348/Create_an_extraordinary_luxury_furniture_202606221646_1_mnzt8d.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487348/Create_an_extraordinary_luxury_furniture_202606221646_1_mnzt8d.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       },
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487350/Create_an_extraordinary_luxury_furniture_202606221646_2_iuge6p.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487350/Create_an_extraordinary_luxury_furniture_202606221646_2_iuge6p.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       },
+                                                       {
+                                                           "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487350/Create_an_extraordinary_luxury_furniture_202606221646_hhmszb.jpg",
+                                                           "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487350/Create_an_extraordinary_luxury_furniture_202606221646_hhmszb.jpg",
+                                                           "width":  2752,
+                                                           "height":  1536
+                                                       }
+                                                   ]
+                                    },
+                       "single-family-house":  {
+                                                   "label_en":  "Single Family House",
+                                                   "label_es":  "Casa Unifamiliar",
+                                                   "group":  "residential",
+                                                   "count":  8,
+                                                   "images":  [
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487352/Create_a_contemporary_luxury_residence_202606242330_1_qdv5mn.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487352/Create_a_contemporary_luxury_residence_202606242330_1_qdv5mn.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487352/Create_a_contemporary_luxury_residence_202606242330_fu6ab8.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487352/Create_a_contemporary_luxury_residence_202606242330_fu6ab8.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487352/Create_a_contemporary_luxury_residence_202606242333_faf9pg.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487352/Create_a_contemporary_luxury_residence_202606242333_faf9pg.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487352/Create_a_luxury_single-family_home_202606242340_nt7sxg.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487352/Create_a_luxury_single-family_home_202606242340_nt7sxg.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487353/Create_a_spectacular_luxury_residence_202606242257_1_n1tcve.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487353/Create_a_spectacular_luxury_residence_202606242257_1_n1tcve.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487353/Create_a_spectacular_luxury_residence_202606242257_2_wgsyim.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487353/Create_a_spectacular_luxury_residence_202606242257_2_wgsyim.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487353/Create_a_spectacular_luxury_residence_202606242257_s8edpr.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487353/Create_a_spectacular_luxury_residence_202606242257_s8edpr.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487349/Create_an_ultra-luxury_oceanfront_villa_202606242312_mscyoj.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487349/Create_an_ultra-luxury_oceanfront_villa_202606242312_mscyoj.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  }
+                                                              ]
+                                               },
+                       "stadium":  {
+                                       "label_en":  "Stadium",
+                                       "label_es":  "Estadio",
+                                       "group":  "civic",
+                                       "count":  8,
+                                       "images":  [
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487355/Create_a_breathtaking_interior_view_202606202344_jvudmk.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487355/Create_a_breathtaking_interior_view_202606202344_jvudmk.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487355/Create_a_breathtaking_interior_view_202606212057_kdptva.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487355/Create_a_breathtaking_interior_view_202606212057_kdptva.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487356/Create_a_spectacular_football_stadium_202606212058_e6siiw.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487356/Create_a_spectacular_football_stadium_202606212058_e6siiw.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487356/Create_a_spectacular_football_stadium_202606212105_uwsuvj.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487356/Create_a_spectacular_football_stadium_202606212105_uwsuvj.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487357/Create_a_world-class_football_stadium_202606202305_bqtxrn.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487357/Create_a_world-class_football_stadium_202606202305_bqtxrn.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487357/Create_a_world-class_football_stadium_202606202306_res36k.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487357/Create_a_world-class_football_stadium_202606202306_res36k.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487354/Create_an_ultra-modern_luxury_football_202606202339_tjyxb6.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487354/Create_an_ultra-modern_luxury_football_202606202339_tjyxb6.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487354/Create_an_ultra-modern_luxury_football_202606212058_frkqqb.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487354/Create_an_ultra-modern_luxury_football_202606212058_frkqqb.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      }
+                                                  ]
+                                   },
+                       "streetscape":  {
+                                           "label_en":  "Streetscape",
+                                           "label_es":  "Paisaje Urbano",
+                                           "group":  "urban",
+                                           "count":  7,
+                                           "images":  [
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487357/Create_a_grand_contemporary_urban_202606212320_1_h47hzr.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487357/Create_a_grand_contemporary_urban_202606212320_1_h47hzr.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487357/Create_a_grand_contemporary_urban_202606212320_can2ti.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487357/Create_a_grand_contemporary_urban_202606212320_can2ti.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487358/Create_a_premium_residential_streetscape_202606212317_1_qpxl22.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487358/Create_a_premium_residential_streetscape_202606212317_1_qpxl22.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487359/Create_a_premium_residential_streetscape_202606212317_ofj0pp.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487359/Create_a_premium_residential_streetscape_202606212317_ofj0pp.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487358/Create_a_premium_residential_streetscape_202606212319_waqi4o.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487358/Create_a_premium_residential_streetscape_202606212319_waqi4o.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487360/Create_a_world-class_urban_streetscape_202606212311_1_wtzm85.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487360/Create_a_world-class_urban_streetscape_202606212311_1_wtzm85.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          },
+                                                          {
+                                                              "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487360/Create_a_world-class_urban_streetscape_202606212311_uvy97s.jpg",
+                                                              "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487360/Create_a_world-class_urban_streetscape_202606212311_uvy97s.jpg",
+                                                              "width":  2752,
+                                                              "height":  1536
+                                                          }
+                                                      ]
+                                       },
+                       "terrace":  {
+                                       "label_en":  "Terrace",
+                                       "label_es":  "Terraza",
+                                       "group":  "interiors",
+                                       "count":  9,
+                                       "images":  [
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487362/Create_a_breathtaking_rooftop_terrace_202606212359_mfep1c.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487362/Create_a_breathtaking_rooftop_terrace_202606212359_mfep1c.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487363/Create_a_high-end_residential_terrace_202606212355_1_blyps7.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487363/Create_a_high-end_residential_terrace_202606212355_1_blyps7.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487364/Create_a_high-end_residential_terrace_202606212355_wvf3z6.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487364/Create_a_high-end_residential_terrace_202606212355_wvf3z6.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487365/Create_a_spectacular_rooftop_terrace_202606212352_1_bvhsfd.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487365/Create_a_spectacular_rooftop_terrace_202606212352_1_bvhsfd.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487366/Create_a_spectacular_rooftop_terrace_202606212352_i7wlfn.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487366/Create_a_spectacular_rooftop_terrace_202606212352_i7wlfn.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487360/Create_an_extraordinary_luxury_penthouse_202606212350_1_egl6xg.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487360/Create_an_extraordinary_luxury_penthouse_202606212350_1_egl6xg.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487361/Create_an_extraordinary_luxury_penthouse_202606212350_xxwf8p.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487361/Create_an_extraordinary_luxury_penthouse_202606212350_xxwf8p.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487361/Create_an_extraordinary_luxury_penthouse_202606212351_1_vl7i9d.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487361/Create_an_extraordinary_luxury_penthouse_202606212351_1_vl7i9d.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      },
+                                                      {
+                                                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487361/Create_an_extraordinary_luxury_penthouse_202606212351_uvc874.jpg",
+                                                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487361/Create_an_extraordinary_luxury_penthouse_202606212351_uvc874.jpg",
+                                                          "width":  2752,
+                                                          "height":  1536
+                                                      }
+                                                  ]
+                                   },
+                       "urban-masterplan":  {
+                                                "label_en":  "Urban Masterplan",
+                                                "label_es":  "Masterplan Urbano",
+                                                "group":  "urban",
+                                                "count":  10,
+                                                "images":  [
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487370/Create_a_world-class_urban_masterplan_202606192246_ghn15r.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487370/Create_a_world-class_urban_masterplan_202606192246_ghn15r.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487395/Create_a_world-class_urban_masterplan_202606192317_1_jjr3nq.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487395/Create_a_world-class_urban_masterplan_202606192317_1_jjr3nq.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487396/Create_a_world-class_urban_masterplan_202606192317_kvupn0.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487396/Create_a_world-class_urban_masterplan_202606192317_kvupn0.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487395/Create_an_entirely_new_urban_202606202130_1_ojsn5w.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487395/Create_an_entirely_new_urban_202606202130_1_ojsn5w.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487396/Create_an_entirely_new_urban_202606202130_umhyvp.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487396/Create_an_entirely_new_urban_202606202130_umhyvp.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487368/Create_an_iconic_waterfront_urban_202606202101_kgnmry.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487368/Create_an_iconic_waterfront_urban_202606202101_kgnmry.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487371/Create_an_iconic_waterfront_urban_202606202124_xa5ruy.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487371/Create_an_iconic_waterfront_urban_202606202124_xa5ruy.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487397/Design_a_next-generation_financial_district_202606202129_1_x4yoky.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487397/Design_a_next-generation_financial_district_202606202129_1_x4yoky.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487373/Design_a_next-generation_financial_district_202606202129_2_eadmhl.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487373/Design_a_next-generation_financial_district_202606202129_2_eadmhl.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               },
+                                                               {
+                                                                   "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487375/Design_a_next-generation_financial_district_202606202129_vkckwz.jpg",
+                                                                   "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487375/Design_a_next-generation_financial_district_202606202129_vkckwz.jpg",
+                                                                   "width":  2752,
+                                                                   "height":  1536
+                                                               }
+                                                           ]
+                                            },
+                       "villas-luxury-homes":  {
+                                                   "label_en":  "Luxury Villas",
+                                                   "label_es":  "Villas de Lujo",
+                                                   "group":  "residential",
+                                                   "count":  4,
+                                                   "images":  [
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487386/Create_a_minimalist_luxury_villa_202606212330_1_rdwely.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487386/Create_a_minimalist_luxury_villa_202606212330_1_rdwely.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487386/Create_a_minimalist_luxury_villa_202606212330_un1bl8.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487386/Create_a_minimalist_luxury_villa_202606212330_un1bl8.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487386/Create_a_minimalist_luxury_villa_202606212331_cuhmad.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487386/Create_a_minimalist_luxury_villa_202606212331_cuhmad.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  },
+                                                                  {
+                                                                      "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,w_800/v1782487295/Ultra-premium_architectural_visualization_of_a_202606152145.jpeg_202606161054_whmrcz.jpg",
+                                                                      "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782487295/Ultra-premium_architectural_visualization_of_a_202606152145.jpeg_202606161054_whmrcz.jpg",
+                                                                      "width":  2752,
+                                                                      "height":  1536
+                                                                  }
+                                                              ]
+                                               }
+                   }
+}

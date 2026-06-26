@@ -68,16 +68,56 @@ a{color:inherit}
 .cta-text h2{font-family:var(--fd);font-size:clamp(32px,4.5vw,56px);line-height:1;letter-spacing:1px;margin-bottom:14px}
 .cta-text p{font-size:15px;color:var(--muted);max-width:480px;line-height:1.7}
 
+/* PORTFOLIO SHOWCASE */
+.showcase-section{padding:100px 48px;background:var(--surface)}
+.showcase-header{max-width:1280px;margin:0 auto 48px}
+.showcase-filters{max-width:1280px;margin:0 auto 24px;display:flex;gap:10px;flex-wrap:wrap}
+.showcase-filter{font-family:var(--fm);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:transparent;border:1px solid var(--border-b);padding:9px 18px;border-radius:2px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+.showcase-filter:hover{color:var(--white)}
+.showcase-filter.active{border-color:var(--orange);color:var(--orange);background:rgba(232,87,30,.08)}
+.showcase-filter-count{color:var(--muted2);margin-left:6px;font-size:10px;letter-spacing:.06em}
+.showcase-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border)}
+.showcase-tile{position:relative;overflow:hidden;aspect-ratio:1/1;background:var(--surface2);cursor:pointer;display:block;border:none;padding:0;width:100%}
+.showcase-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s ease,filter .4s ease}
+.showcase-tile:hover img{transform:scale(1.06);filter:brightness(.55)}
+.showcase-tile-badge{position:absolute;left:14px;bottom:14px;font-family:var(--fm);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--white);background:rgba(10,10,10,.78);padding:6px 10px;border-radius:2px;opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s;z-index:2;pointer-events:none}
+.showcase-tile:hover .showcase-tile-badge{opacity:1;transform:translateY(0)}
+.showcase-tile.is-hidden{display:none}
+.showcase-loading,.showcase-empty{max-width:1280px;margin:0 auto;padding:60px 0;text-align:center;color:var(--muted);font-size:12px;font-family:var(--fm);letter-spacing:.12em;text-transform:uppercase}
+.showcase-empty{display:none}
+
+/* LIGHTBOX */
+.lightbox{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.96);display:none;align-items:center;justify-content:center;animation:lbFade .25s ease}
+.lightbox.is-open{display:flex}
+@keyframes lbFade{from{opacity:0}to{opacity:1}}
+.lightbox-img{max-width:92vw;max-height:82vh;object-fit:contain;display:block}
+.lightbox-btn{position:absolute;width:46px;height:46px;border:1px solid var(--border-b);background:rgba(20,20,20,.6);color:var(--white);cursor:pointer;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:18px;z-index:2;transition:background .2s,border-color .2s,color .2s;line-height:1}
+.lightbox-btn:hover{background:var(--orange);border-color:var(--orange);color:#fff}
+.lightbox-close{top:24px;right:24px}
+.lightbox-prev,.lightbox-next{top:50%;transform:translateY(-50%);font-size:24px;font-family:var(--fb);font-weight:300}
+.lightbox-prev{left:24px}
+.lightbox-next{right:24px}
+.lightbox-meta{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);color:var(--muted);font-family:var(--fm);font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:flex;gap:20px;align-items:center;z-index:2;background:rgba(10,10,10,.55);padding:10px 18px;border-radius:2px;border:1px solid var(--border-b)}
+.lightbox-meta-cat{color:var(--orange)}
+.lightbox-meta-count{color:var(--muted2)}
+body.lightbox-open{overflow:hidden}
+
 @media(max-width:900px){
   .work-hero{padding:140px 20px 48px}
   .work-section{padding:32px 20px 64px}
   .work-grid{grid-template-columns:1fr 1fr}
+  .showcase-section{padding:64px 20px}
+  .showcase-grid{grid-template-columns:repeat(3,1fr)}
   .cap-section{padding:64px 20px}
   .cap-grid{grid-template-columns:1fr 1fr}
   .cta-strip{padding:56px 20px}
+  .lightbox-close{top:14px;right:14px}
+  .lightbox-prev{left:10px}
+  .lightbox-next{right:10px}
 }
 @media(max-width:560px){
   .work-grid{grid-template-columns:1fr}
+  .showcase-grid{grid-template-columns:repeat(2,1fr)}
   .cap-grid{grid-template-columns:1fr}
 }
 </style>
@@ -115,9 +155,7 @@ a{color:inherit}
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<!-- NOTE: sample projects using placeholder render assets. Swap image/name/location
-     per real project. Keep data-cat in sync with the filter buttons. -->
+<!-- FEATURED PROJECTS -->
 <section class="work-section">
   <div class="work-filters reveal" id="workFilters">
     <button class="work-filter active" data-filter="all" data-en="All" data-es="Todos">All</button>
@@ -129,69 +167,114 @@ a{color:inherit}
 
   <div class="work-grid" id="workGrid">
 
-    <article class="work-card reveal" data-cat="mixed">
-      <img src="assets/img/hero-render.jpg" alt="Red Maple Tower" width="800" height="1000" loading="lazy">
-      <div class="work-card-grad"></div>
-      <div class="work-card-body">
-        <div class="work-card-cat" data-en="Mixed-use" data-es="Usos mixtos">Mixed-use</div>
-        <div class="work-card-name">RED MAPLE TOWER</div>
-        <div class="work-card-meta"><span>New York, US</span><span class="dot"></span><span data-en="Renders · VR" data-es="Renders · VR">Renders · VR</span></div>
-      </div>
-    </article>
-
     <article class="work-card reveal" data-cat="residential">
-      <img src="assets/img/hero-bg.jpg" alt="Parque Central" width="800" height="1000" loading="lazy">
+      <img src="https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_900,ar_4:5/v1782487335/Create_an_award-winning_luxury_housing_202606212308_1_mimzni.jpg" alt="Aurora Heights" width="800" height="1000" loading="lazy">
       <div class="work-card-grad"></div>
       <div class="work-card-body">
         <div class="work-card-cat" data-en="Residential" data-es="Residencial">Residential</div>
-        <div class="work-card-name">PARQUE CENTRAL</div>
-        <div class="work-card-meta"><span>Nordelta, AR</span><span class="dot"></span><span data-en="Renders · Sales Tool" data-es="Renders · Sales Tool">Renders · Sales Tool</span></div>
+        <div class="work-card-name">AURORA HEIGHTS</div>
+        <div class="work-card-meta"><span>Tigre, AR</span><span class="dot"></span><span data-en="Renders · Sales Tool" data-es="Renders · Sales Tool">Renders · Sales Tool</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="mixed">
+      <img src="https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_900,ar_4:5/v1782487392/Create_a_next-generation_mixed-use_residential_202606212304_1_sduddt.jpg" alt="Puerto Blanco" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Mixed-use" data-es="Usos mixtos">Mixed-use</div>
+        <div class="work-card-name">PUERTO BLANCO</div>
+        <div class="work-card-meta"><span>Buenos Aires, AR</span><span class="dot"></span><span data-en="Renders · VR" data-es="Renders · VR">Renders · VR</span></div>
       </div>
     </article>
 
     <article class="work-card reveal" data-cat="commercial">
-      <img src="assets/img/service-vr.jpg" alt="Glass Pavilion" width="800" height="1000" loading="lazy">
+      <img src="https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_900,ar_4:5/v1782487388/Create_a_sophisticated_luxury_hotel_202606241858_1_yx1w22.jpg" alt="Hotel Calima" width="800" height="1000" loading="lazy">
       <div class="work-card-grad"></div>
       <div class="work-card-body">
         <div class="work-card-cat" data-en="Commercial" data-es="Comercial">Commercial</div>
-        <div class="work-card-name">GLASS PAVILION</div>
+        <div class="work-card-name">HOTEL CALIMA</div>
         <div class="work-card-meta"><span>Bariloche, AR</span><span class="dot"></span><span data-en="Renders · Animation" data-es="Renders · Animación">Renders · Animation</span></div>
       </div>
     </article>
 
-    <article class="work-card reveal" data-cat="residential">
-      <img src="assets/img/vz-hero-bg.jpg" alt="Casa Magnolia" width="800" height="1000" loading="lazy">
-      <div class="work-card-grad"></div>
-      <div class="work-card-body">
-        <div class="work-card-cat" data-en="Residential" data-es="Residencial">Residential</div>
-        <div class="work-card-name">CASA MAGNOLIA</div>
-        <div class="work-card-meta"><span>Pilar, AR</span><span class="dot"></span><span data-en="Exterior renders" data-es="Renders de exterior">Exterior renders</span></div>
-      </div>
-    </article>
-
     <article class="work-card reveal" data-cat="interiors">
-      <img src="assets/img/about-vz.jpg" alt="Loft Roble" width="800" height="1000" loading="lazy">
+      <img src="https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_900,ar_4:5/v1782487320/Create_an_elegant_luxury_coastal_202606112200_1_zbqzyl.jpg" alt="Loft Milano" width="800" height="1000" loading="lazy">
       <div class="work-card-grad"></div>
       <div class="work-card-body">
         <div class="work-card-cat" data-en="Interiors" data-es="Interiores">Interiors</div>
-        <div class="work-card-name">LOFT ROBLE</div>
-        <div class="work-card-meta"><span>Buenos Aires, AR</span><span class="dot"></span><span data-en="Interior renders · VR" data-es="Renders de interior · VR">Interior renders · VR</span></div>
+        <div class="work-card-name">LOFT MILANO</div>
+        <div class="work-card-meta"><span>Palermo, AR</span><span class="dot"></span><span data-en="Interior renders · VR" data-es="Renders de interior · VR">Interior renders · VR</span></div>
       </div>
     </article>
 
     <article class="work-card reveal" data-cat="residential">
-      <img src="assets/img/product-sales-tool.jpg" alt="Rivera Residences" width="800" height="1000" loading="lazy">
+      <img src="https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_900,ar_4:5/v1782487386/Create_a_minimalist_luxury_villa_202606212330_1_rdwely.jpg" alt="Villa Belén" width="800" height="1000" loading="lazy">
       <div class="work-card-grad"></div>
       <div class="work-card-body">
         <div class="work-card-cat" data-en="Residential" data-es="Residencial">Residential</div>
-        <div class="work-card-name">RIVERA RESIDENCES</div>
-        <div class="work-card-meta"><span>Montevideo, UY</span><span class="dot"></span><span data-en="Renders · Sales Tool" data-es="Renders · Sales Tool">Renders · Sales Tool</span></div>
+        <div class="work-card-name">VILLA BELÉN</div>
+        <div class="work-card-meta"><span>José Ignacio, UY</span><span class="dot"></span><span data-en="Exterior renders" data-es="Renders de exterior">Exterior renders</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="mixed">
+      <img src="https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_900,ar_4:5/v1782487370/Create_a_world-class_urban_masterplan_202606192246_ghn15r.jpg" alt="Distrito Norte" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Mixed-use" data-es="Usos mixtos">Mixed-use</div>
+        <div class="work-card-name">DISTRITO NORTE</div>
+        <div class="work-card-meta"><span>Montevideo, UY</span><span class="dot"></span><span data-en="Masterplan · Renders" data-es="Masterplan · Renders">Masterplan · Renders</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="commercial">
+      <img src="https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_900,ar_4:5/v1782487341/Create_an_extraordinary_executive_office_202606221037_1_pai9cn.jpg" alt="Atrium Plaza" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Commercial" data-es="Comercial">Commercial</div>
+        <div class="work-card-name">ATRIUM PLAZA</div>
+        <div class="work-card-meta"><span>Asunción, PY</span><span class="dot"></span><span data-en="Renders · Animation" data-es="Renders · Animación">Renders · Animation</span></div>
+      </div>
+    </article>
+
+    <article class="work-card reveal" data-cat="residential">
+      <img src="https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_900,ar_4:5/v1782487352/Create_a_contemporary_luxury_residence_202606242330_1_qdv5mn.jpg" alt="Casa Olivar" width="800" height="1000" loading="lazy">
+      <div class="work-card-grad"></div>
+      <div class="work-card-body">
+        <div class="work-card-cat" data-en="Residential" data-es="Residencial">Residential</div>
+        <div class="work-card-name">CASA OLIVAR</div>
+        <div class="work-card-meta"><span>Pilar, AR</span><span class="dot"></span><span data-en="Exterior renders" data-es="Renders de exterior">Exterior renders</span></div>
       </div>
     </article>
 
   </div>
   <div class="work-empty" id="workEmpty" data-en="No projects in this category yet." data-es="Todavía no hay proyectos en esta categoría.">No projects in this category yet.</div>
 </section>
+
+<!-- PORTFOLIO SHOWCASE -->
+<section class="showcase-section">
+  <div class="showcase-header reveal">
+    <div class="section-label" data-en="Portfolio" data-es="Portfolio">Portfolio</div>
+    <h2 class="section-title" data-en="EVERY SPACE,<br>ONE LANGUAGE." data-es="CADA ESPACIO,<br>UN MISMO LENGUAJE.">EVERY SPACE,<br>ONE LANGUAGE.</h2>
+    <p class="section-sub" data-en="A curated selection of spaces and concepts — from intimate interiors to full urban masterplans." data-es="Una selección curada de espacios y conceptos — desde interiores hasta masterplans urbanos.">A curated selection of spaces and concepts — from intimate interiors to full urban masterplans.</p>
+  </div>
+  <div class="showcase-filters reveal" id="showcaseFilters"></div>
+  <div class="showcase-grid" id="showcaseGrid"></div>
+  <div class="showcase-loading" id="showcaseLoading" data-en="Loading portfolio…" data-es="Cargando portfolio…">Loading portfolio…</div>
+  <div class="showcase-empty" id="showcaseEmpty" data-en="No images in this category." data-es="No hay imágenes en esta categoría.">No images in this category.</div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+  <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+  <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+  <img class="lightbox-img" id="lightboxImg" alt="">
+  <div class="lightbox-meta">
+    <span class="lightbox-meta-cat" id="lightboxMetaCat"></span>
+    <span class="lightbox-meta-count" id="lightboxMetaCount"></span>
+  </div>
+</div>
 
 <!-- CAPABILITIES -->
 <section class="cap-section">
@@ -310,7 +393,7 @@ const observer = new IntersectionObserver((entries) => {
 }, {threshold: 0.12});
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Portfolio filter
+// Featured Projects filter
 (function(){
   const filters = document.querySelectorAll('.work-filter');
   const cards = document.querySelectorAll('.work-card');
@@ -327,6 +410,159 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     });
     if(empty) empty.style.display = shown ? 'none' : 'block';
   }));
+})();
+
+// Portfolio Showcase + Lightbox (data-driven from assets/data/portfolio.json)
+(async function(){
+  const grid = document.getElementById('showcaseGrid');
+  const filtersEl = document.getElementById('showcaseFilters');
+  const loading = document.getElementById('showcaseLoading');
+  const empty = document.getElementById('showcaseEmpty');
+  if (!grid || !filtersEl) return;
+
+  const currentLang = () => (localStorage.getItem('vz-lang') || document.documentElement.lang || 'en');
+
+  let manifest;
+  try {
+    const r = await fetch('assets/data/portfolio.json', {cache: 'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    manifest = await r.json();
+  } catch (e) {
+    loading.textContent = 'Portfolio could not load.';
+    console.error('[portfolio]', e);
+    return;
+  }
+
+  // Flatten categories into a single list. idx is the global index across all.
+  const flat = [];
+  for (const [slug, cat] of Object.entries(manifest.categories)) {
+    cat.images.forEach(img => {
+      flat.push({
+        idx: flat.length,
+        url: img.url,
+        slug,
+        group: cat.group,
+        label_en: cat.label_en,
+        label_es: cat.label_es,
+      });
+    });
+  }
+
+  // Filter buttons: All + the 5 groups defined in manifest.groups
+  const groupKeys = ['all', ...Object.keys(manifest.groups)];
+  const groupCounts = {all: flat.length};
+  for (const g of Object.keys(manifest.groups)) {
+    groupCounts[g] = flat.filter(f => f.group === g).length;
+  }
+  const groupLabels = Object.fromEntries([
+    ['all', {en: 'All', es: 'Todos'}],
+    ...Object.entries(manifest.groups).map(([k, v]) => [k, {en: v.label_en, es: v.label_es}])
+  ]);
+  // Embed the count in both data-en and data-es so vizor-lang.js's innerHTML
+  // swap doesn't drop it on switch. Uses single quotes inside attrs to avoid escaping.
+  const withCount = (label, n) => `${label}<span class='showcase-filter-count'>(${n})</span>`;
+  filtersEl.innerHTML = groupKeys.map(g => {
+    const lbl = groupLabels[g];
+    const n = groupCounts[g];
+    return `<button class="showcase-filter${g === 'all' ? ' active' : ''}" data-filter="${g}" data-en="${withCount(lbl.en, n)}" data-es="${withCount(lbl.es, n)}">${withCount(lbl.en, n)}</button>`;
+  }).join('');
+
+  // Cloudinary thumb transform: square crop, 600w
+  const toThumb = (url) => url.replace('/upload/f_auto,q_auto/', '/upload/f_auto,q_auto,c_fill,g_auto,w_600,ar_1:1/');
+
+  grid.innerHTML = flat.map(f =>
+    `<button class="showcase-tile" data-idx="${f.idx}" data-group="${f.group}" aria-label="${f.label_en}">
+      <img src="${toThumb(f.url)}" alt="${f.label_en}" loading="lazy" width="600" height="600">
+      <span class="showcase-tile-badge" data-en="${f.label_en}" data-es="${f.label_es}">${f.label_en}</span>
+    </button>`
+  ).join('');
+
+  loading.style.display = 'none';
+
+  // Re-apply current language to the freshly injected nodes
+  if (typeof window.setLang === 'function') window.setLang(currentLang());
+
+  // Filter behavior
+  const tiles = grid.querySelectorAll('.showcase-tile');
+  filtersEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('.showcase-filter');
+    if (!btn) return;
+    filtersEl.querySelectorAll('.showcase-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.getAttribute('data-filter');
+    let shown = 0;
+    tiles.forEach(t => {
+      const match = f === 'all' || t.getAttribute('data-group') === f;
+      t.classList.toggle('is-hidden', !match);
+      if (match) shown++;
+    });
+    empty.style.display = shown ? 'none' : 'block';
+  });
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbCat = document.getElementById('lightboxMetaCat');
+  const lbCount = document.getElementById('lightboxMetaCount');
+  let visibleList = flat;
+  let cursor = 0;
+
+  const getVisible = () => [...tiles]
+    .filter(t => !t.classList.contains('is-hidden'))
+    .map(t => flat[parseInt(t.dataset.idx, 10)]);
+
+  const render = () => {
+    const item = visibleList[cursor];
+    if (!item) return;
+    lbImg.src = item.url;
+    lbImg.alt = item.label_en;
+    const l = currentLang();
+    lbCat.textContent = l === 'es' ? item.label_es : item.label_en;
+    lbCount.textContent = (cursor + 1) + ' / ' + visibleList.length;
+  };
+
+  const openAt = (idx) => {
+    visibleList = getVisible();
+    const pos = visibleList.findIndex(v => v.idx === idx);
+    cursor = pos >= 0 ? pos : 0;
+    render();
+    lb.classList.add('is-open');
+    lb.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+  };
+  const close = () => {
+    lb.classList.remove('is-open');
+    lb.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+  };
+  const step = (d) => {
+    if (!visibleList.length) return;
+    cursor = (cursor + d + visibleList.length) % visibleList.length;
+    render();
+  };
+
+  grid.addEventListener('click', (e) => {
+    const tile = e.target.closest('.showcase-tile');
+    if (!tile) return;
+    openAt(parseInt(tile.dataset.idx, 10));
+  });
+  document.getElementById('lightboxClose').addEventListener('click', close);
+  document.getElementById('lightboxPrev').addEventListener('click', () => step(-1));
+  document.getElementById('lightboxNext').addEventListener('click', () => step(+1));
+  lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (!lb.classList.contains('is-open')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') step(-1);
+    else if (e.key === 'ArrowRight') step(+1);
+  });
+
+  // Re-render lightbox meta when language flips
+  const prevHook = window.onLangChange;
+  window.onLangChange = function(l) {
+    if (typeof prevHook === 'function') prevHook(l);
+    if (lb.classList.contains('is-open')) render();
+  };
 })();
 </script>
 <script src="assets/js/vizor-nav.js" defer></script>
