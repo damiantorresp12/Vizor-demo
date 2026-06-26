@@ -30,3 +30,12 @@ HANDOFF.md
 # needed at runtime. Re-upload to Cloudinary if you ever need to regenerate.
 assets/img/portfolio/
 
+# Local source files for VRs and animations -- uploaded to Cloudinary, then
+# the URLs live in assets/data/{vrs,animations}.json. The originals do not
+# need to be in the repo.
+assets/img/vr-source/
+assets/video/anim-source/
+
+# Intermediate build artifact from upload-to-cloudinary.ps1 -- regenerable.
+tools/upload-results.json
+

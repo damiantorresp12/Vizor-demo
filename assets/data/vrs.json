@@ -1,0 +1,142 @@
+{
+    "generated_at":  "2026-06-26T17:21:24.1316228Z",
+    "cloud_name":  "dyxxgwmpp",
+    "total":  15,
+    "panoramas":  [
+                      {
+                          "id":  "vr-amenities-01",
+                          "label_en":  "Amenities, View 01",
+                          "label_es":  "Amenities, Vista 01",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494296/vr-amenities-01.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494296/vr-amenities-01.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-amenities-02",
+                          "label_en":  "Amenities, View 02",
+                          "label_es":  "Amenities, Vista 02",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494299/vr-amenities-02.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494299/vr-amenities-02.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-master-bathroom-1",
+                          "label_en":  "Master Bathroom",
+                          "label_es":  "Bano Habitacion Principal",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494301/vr-master-bathroom-1.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494301/vr-master-bathroom-1.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-master-bathroom-2",
+                          "label_en":  "Master Bathroom, View 2",
+                          "label_es":  "Bano Habitacion Principal, Vista 2",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494304/vr-master-bathroom-2.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494304/vr-master-bathroom-2.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-main-bathroom-1",
+                          "label_en":  "Main Bathroom",
+                          "label_es":  "Bano Principal",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494306/vr-main-bathroom-1.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494306/vr-main-bathroom-1.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-main-bathroom-2",
+                          "label_en":  "Main Bathroom, View 2",
+                          "label_es":  "Bano Principal, Vista 2",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494308/vr-main-bathroom-2.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494308/vr-main-bathroom-2.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-distributor",
+                          "label_en":  "Vestibule",
+                          "label_es":  "Distribuidor",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494311/vr-distributor.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494311/vr-distributor.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-entrance",
+                          "label_en":  "Entrance",
+                          "label_es":  "Entrada",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494313/vr-entrance.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494313/vr-entrance.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-girl-bedroom",
+                          "label_en":  "Girls\u0027 Bedroom",
+                          "label_es":  "Habitacion Nina",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494316/vr-girl-bedroom.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494316/vr-girl-bedroom.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-boy-bedroom-1",
+                          "label_en":  "Boys\u0027 Bedroom",
+                          "label_es":  "Habitacion Nino",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494318/vr-boy-bedroom-1.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494318/vr-boy-bedroom-1.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-boy-bedroom-2",
+                          "label_en":  "Boys\u0027 Bedroom, View 2",
+                          "label_es":  "Habitacion Nino, Vista 2",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494321/vr-boy-bedroom-2.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494321/vr-boy-bedroom-2.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-master-bedroom",
+                          "label_en":  "Master Bedroom",
+                          "label_es":  "Habitacion Principal",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494324/vr-master-bedroom.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494324/vr-master-bedroom.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-living-kitchen",
+                          "label_en":  "Living and Kitchen",
+                          "label_es":  "Living y Cocina",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494327/vr-living-kitchen.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494327/vr-living-kitchen.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-hallway-1",
+                          "label_en":  "Hallway",
+                          "label_es":  "Pasillo",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494329/vr-hallway-1.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494329/vr-hallway-1.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      },
+                      {
+                          "id":  "vr-hallway-2",
+                          "label_en":  "Hallway, View 2",
+                          "label_es":  "Pasillo, Vista 2",
+                          "url":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto/v1782494332/vr-hallway-2.jpg",
+                          "thumb":  "https://res.cloudinary.com/dyxxgwmpp/image/upload/f_auto,q_auto,c_fill,g_auto,w_800,ar_16:9/v1782494332/vr-hallway-2.jpg",
+                          "width":  4096,
+                          "height":  2048
+                      }
+                  ]
+}

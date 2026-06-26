@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/vizor.css">
+<link rel="stylesheet" href="vendor/pannellum/pannellum.css">
 <link rel="icon" href="assets/img/logo.png" type="image/png">
 <style>
 /* ── WORK-SPECIFIC ── */
@@ -102,12 +103,54 @@ a{color:inherit}
 .lightbox-meta-count{color:var(--muted2)}
 body.lightbox-open{overflow:hidden}
 
+/* MOTION (video reel) */
+.motion-section{padding:100px 48px;background:var(--black)}
+.motion-header{max-width:1280px;margin:0 auto 48px}
+.motion-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+.motion-card{position:relative;overflow:hidden;aspect-ratio:16/9;background:var(--surface);cursor:pointer;border:none;padding:0;display:block;width:100%}
+.motion-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease,filter .5s ease}
+.motion-card:hover img{transform:scale(1.04);filter:brightness(.55)}
+.motion-card-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;background:linear-gradient(to top,rgba(10,10,10,.75) 0%,transparent 55%);pointer-events:none}
+.motion-card-play{width:64px;height:64px;border-radius:50%;background:rgba(232,87,30,.92);display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;padding-left:5px;transition:transform .25s ease,background .2s;box-shadow:0 4px 24px rgba(232,87,30,.25)}
+.motion-card:hover .motion-card-play{transform:scale(1.12);background:var(--orange)}
+.motion-card-body{position:absolute;left:24px;right:24px;bottom:18px;z-index:2;pointer-events:none}
+.motion-card-name{font-family:var(--fd);font-size:22px;letter-spacing:.5px;color:var(--white);line-height:1}
+.motion-loading,.motion-empty{max-width:1280px;margin:0 auto;padding:60px 0;text-align:center;color:var(--muted);font-size:12px;font-family:var(--fm);letter-spacing:.12em;text-transform:uppercase}
+
+/* VIDEO MODAL */
+.video-modal{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.96);display:none;align-items:center;justify-content:center;animation:lbFade .25s ease}
+.video-modal.is-open{display:flex}
+.video-modal-player{max-width:92vw;max-height:82vh;display:block;background:#000;outline:none}
+
+/* IMMERSIVE (VR / 360°) */
+.immersive-section{padding:100px 48px;background:var(--surface)}
+.immersive-header{max-width:1280px;margin:0 auto 48px}
+.immersive-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+.immersive-card{position:relative;overflow:hidden;aspect-ratio:16/9;background:var(--surface2);cursor:pointer;border:none;padding:0;display:block;width:100%}
+.immersive-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease,filter .5s ease}
+.immersive-card:hover img{transform:scale(1.04);filter:brightness(.55)}
+.immersive-card-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;background:linear-gradient(to top,rgba(10,10,10,.72) 0%,transparent 55%);pointer-events:none}
+.immersive-card-vr-badge{width:62px;height:62px;border-radius:50%;background:rgba(244,243,239,.94);color:var(--black);display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:12px;font-weight:500;letter-spacing:.04em;transition:transform .25s ease,background .2s,color .2s;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+.immersive-card:hover .immersive-card-vr-badge{transform:scale(1.12);background:var(--orange);color:#fff}
+.immersive-card-body{position:absolute;left:24px;right:24px;bottom:18px;z-index:2;pointer-events:none}
+.immersive-card-name{font-family:var(--fd);font-size:22px;letter-spacing:.5px;color:var(--white);line-height:1}
+
+/* VR MODAL (Pannellum viewer) */
+.vr-modal{position:fixed;inset:0;z-index:10000;background:#000;display:none;animation:lbFade .25s ease}
+.vr-modal.is-open{display:block}
+.vr-modal-viewer{position:absolute;inset:0}
+.vr-modal .lightbox-btn{background:rgba(20,20,20,.7)}
+.vr-modal .lightbox-meta{background:rgba(10,10,10,.55);z-index:3}
+/* Hide Pannellum's "Loading..." text default styling, keep the bar */
+.pnlm-load-box,.pnlm-about-msg{display:none!important}
+
 @media(max-width:900px){
   .work-hero{padding:140px 20px 48px}
   .work-section{padding:32px 20px 64px}
   .work-grid{grid-template-columns:1fr 1fr}
-  .showcase-section{padding:64px 20px}
+  .showcase-section,.motion-section,.immersive-section{padding:64px 20px}
   .showcase-grid{grid-template-columns:repeat(3,1fr)}
+  .motion-grid,.immersive-grid{grid-template-columns:repeat(2,1fr)}
   .cap-section{padding:64px 20px}
   .cap-grid{grid-template-columns:1fr 1fr}
   .cta-strip{padding:56px 20px}
@@ -118,6 +161,7 @@ body.lightbox-open{overflow:hidden}
 @media(max-width:560px){
   .work-grid{grid-template-columns:1fr}
   .showcase-grid{grid-template-columns:repeat(2,1fr)}
+  .motion-grid,.immersive-grid{grid-template-columns:1fr}
   .cap-grid{grid-template-columns:1fr}
 }
 </style>
@@ -273,6 +317,46 @@ body.lightbox-open{overflow:hidden}
   <div class="lightbox-meta">
     <span class="lightbox-meta-cat" id="lightboxMetaCat"></span>
     <span class="lightbox-meta-count" id="lightboxMetaCount"></span>
+  </div>
+</div>
+
+<!-- MOTION (animations / video reel) -->
+<section class="motion-section">
+  <div class="motion-header reveal">
+    <div class="section-label" data-en="Motion" data-es="Motion">Motion</div>
+    <h2 class="section-title" data-en="FRAMES THAT<br>FEEL LIVE." data-es="CUADROS QUE<br>RESPIRAN.">FRAMES THAT<br>FEEL LIVE.</h2>
+    <p class="section-sub" data-en="Short cinematic pieces that bring renders to life for launches and presentation campaigns." data-es="Piezas cinematográficas cortas que le dan vida a los renders para lanzamientos y campañas.">Short cinematic pieces that bring renders to life for launches and presentation campaigns.</p>
+  </div>
+  <div class="motion-grid" id="motionGrid"></div>
+  <div class="motion-loading" id="motionLoading" data-en="Loading motion reel…" data-es="Cargando reel…">Loading motion reel…</div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lightbox-btn lightbox-close" id="videoModalClose" aria-label="Close">✕</button>
+  <video class="video-modal-player" id="videoModalPlayer" controls playsinline></video>
+  <div class="lightbox-meta">
+    <span class="lightbox-meta-cat" id="videoModalMetaCat"></span>
+  </div>
+</div>
+
+<!-- IMMERSIVE (VR / 360°) -->
+<section class="immersive-section">
+  <div class="immersive-header reveal">
+    <div class="section-label" data-en="Immersive" data-es="Inmersivo">Immersive</div>
+    <h2 class="section-title" data-en="STEP INSIDE,<br>BEFORE IT EXISTS." data-es="ENTRÁ A LA OBRA,<br>ANTES DE QUE EXISTA.">STEP INSIDE,<br>BEFORE IT EXISTS.</h2>
+    <p class="section-sub" data-en="360° experiences that let buyers walk through every room of a future home." data-es="Experiencias 360° para recorrer cada ambiente de un proyecto antes de que se construya.">360° experiences that let buyers walk through every room of a future home.</p>
+  </div>
+  <div class="immersive-grid" id="immersiveGrid"></div>
+  <div class="motion-loading" id="immersiveLoading" data-en="Loading 360° experiences…" data-es="Cargando experiencias 360°…">Loading 360° experiences…</div>
+</section>
+
+<!-- VR MODAL (Pannellum viewer) -->
+<div class="vr-modal" id="vrModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="lightbox-btn lightbox-close" id="vrModalClose" aria-label="Close">✕</button>
+  <div class="vr-modal-viewer" id="vrViewer"></div>
+  <div class="lightbox-meta">
+    <span class="lightbox-meta-cat" id="vrModalMetaCat"></span>
   </div>
 </div>
 
@@ -564,7 +648,143 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     if (lb.classList.contains('is-open')) render();
   };
 })();
+
+// Motion (animations) — fetches assets/data/animations.json and renders the reel + modal
+(async function(){
+  const grid = document.getElementById('motionGrid');
+  const loading = document.getElementById('motionLoading');
+  const modal = document.getElementById('videoModal');
+  const player = document.getElementById('videoModalPlayer');
+  const metaEl = document.getElementById('videoModalMetaCat');
+  if (!grid) return;
+  const currentLang = () => (localStorage.getItem('vz-lang') || document.documentElement.lang || 'en');
+
+  let manifest;
+  try {
+    const r = await fetch('assets/data/animations.json', {cache: 'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    manifest = await r.json();
+  } catch (e) {
+    loading.textContent = 'Motion reel could not load.';
+    console.error('[motion]', e);
+    return;
+  }
+
+  grid.innerHTML = manifest.videos.map((v, i) => `
+    <button class="motion-card" data-idx="${i}" aria-label="${v.label_en}">
+      <img src="${v.poster}" alt="${v.label_en}" loading="lazy" width="800" height="450">
+      <div class="motion-card-overlay"><span class="motion-card-play" aria-hidden="true">▶</span></div>
+      <div class="motion-card-body"><div class="motion-card-name" data-en="${v.label_en}" data-es="${v.label_es}">${v.label_en}</div></div>
+    </button>
+  `).join('');
+  loading.style.display = 'none';
+  if (typeof window.setLang === 'function') window.setLang(currentLang());
+
+  const close = () => {
+    player.pause();
+    player.removeAttribute('src');
+    player.load();
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+  };
+  const open = (i) => {
+    const v = manifest.videos[i];
+    player.src = v.url;
+    const l = currentLang();
+    metaEl.textContent = l === 'es' ? v.label_es : v.label_en;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    player.play().catch(() => {/* user gesture missing, will play on tap */});
+  };
+
+  grid.addEventListener('click', (e) => {
+    const card = e.target.closest('.motion-card');
+    if (!card) return;
+    open(parseInt(card.dataset.idx, 10));
+  });
+  document.getElementById('videoModalClose').addEventListener('click', close);
+  modal.addEventListener('click', (e) => { if (e.target === modal) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('is-open') && e.key === 'Escape') close();
+  });
+})();
+
+// Immersive (VR 360°) — fetches assets/data/vrs.json and renders the grid + Pannellum modal
+(async function(){
+  const grid = document.getElementById('immersiveGrid');
+  const loading = document.getElementById('immersiveLoading');
+  const modal = document.getElementById('vrModal');
+  const metaEl = document.getElementById('vrModalMetaCat');
+  if (!grid) return;
+  const currentLang = () => (localStorage.getItem('vz-lang') || document.documentElement.lang || 'en');
+
+  let manifest;
+  try {
+    const r = await fetch('assets/data/vrs.json', {cache: 'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    manifest = await r.json();
+  } catch (e) {
+    loading.textContent = '360° experiences could not load.';
+    console.error('[vrs]', e);
+    return;
+  }
+
+  grid.innerHTML = manifest.panoramas.map((p, i) => `
+    <button class="immersive-card" data-idx="${i}" aria-label="${p.label_en}">
+      <img src="${p.thumb}" alt="${p.label_en}" loading="lazy" width="800" height="450">
+      <div class="immersive-card-overlay"><span class="immersive-card-vr-badge" aria-hidden="true">360°</span></div>
+      <div class="immersive-card-body"><div class="immersive-card-name" data-en="${p.label_en}" data-es="${p.label_es}">${p.label_en}</div></div>
+    </button>
+  `).join('');
+  loading.style.display = 'none';
+  if (typeof window.setLang === 'function') window.setLang(currentLang());
+
+  let viewer = null;
+  const close = () => {
+    if (viewer) { try { viewer.destroy(); } catch (e) {} viewer = null; }
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('lightbox-open');
+  };
+  const open = (i) => {
+    const p = manifest.panoramas[i];
+    const l = currentLang();
+    metaEl.textContent = l === 'es' ? p.label_es : p.label_en;
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('lightbox-open');
+    if (typeof pannellum === 'undefined') {
+      console.error('[vrs] Pannellum library missing');
+      return;
+    }
+    if (viewer) { try { viewer.destroy(); } catch (e) {} viewer = null; }
+    viewer = pannellum.viewer('vrViewer', {
+      type: 'equirectangular',
+      panorama: p.url,
+      autoLoad: true,
+      showZoomCtrl: false,
+      showFullscreenCtrl: false,
+      compass: false,
+      hfov: 100,
+      autoRotate: -2,
+      friction: 0.15,
+    });
+  };
+
+  grid.addEventListener('click', (e) => {
+    const card = e.target.closest('.immersive-card');
+    if (!card) return;
+    open(parseInt(card.dataset.idx, 10));
+  });
+  document.getElementById('vrModalClose').addEventListener('click', close);
+  document.addEventListener('keydown', (e) => {
+    if (modal.classList.contains('is-open') && e.key === 'Escape') close();
+  });
+})();
 </script>
+<script src="vendor/pannellum/pannellum.js" defer></script>
 <script src="assets/js/vizor-nav.js" defer></script>
 <script src="assets/js/vizor-lang.js" defer></script>
 </body>

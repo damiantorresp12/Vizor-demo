@@ -1,0 +1,84 @@
+{
+    "generated_at":  "2026-06-26T17:21:24.1266210Z",
+    "cloud_name":  "dyxxgwmpp",
+    "total":  7,
+    "videos":  [
+                   {
+                       "id":  "anim-dining-room",
+                       "label_en":  "Dining Room",
+                       "label_es":  "Comedor",
+                       "url":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/v1782493861/anim-dining-room.mp4",
+                       "poster":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/so_0,f_jpg,q_auto,w_1200/v1782493861/anim-dining-room.jpg",
+                       "duration":  44.441587,
+                       "width":  720,
+                       "height":  1280,
+                       "bytes":  5924183
+                   },
+                   {
+                       "id":  "anim-porsche-house",
+                       "label_en":  "Porsche and House",
+                       "label_es":  "Porsche y Casa",
+                       "url":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/v1782493867/anim-porsche-house.mp4",
+                       "poster":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/so_0,f_jpg,q_auto,w_1200/v1782493867/anim-porsche-house.jpg",
+                       "duration":  8.0,
+                       "width":  720,
+                       "height":  1280,
+                       "bytes":  9225146
+                   },
+                   {
+                       "id":  "anim-white-villa",
+                       "label_en":  "White Villa Aerial",
+                       "label_es":  "Villa Blanca Aerea",
+                       "url":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/v1782493874/anim-white-villa.mp4",
+                       "poster":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/so_0,f_jpg,q_auto,w_1200/v1782493874/anim-white-villa.jpg",
+                       "duration":  8.0,
+                       "width":  1280,
+                       "height":  720,
+                       "bytes":  6045386
+                   },
+                   {
+                       "id":  "anim-contemporary-urban-dusk",
+                       "label_en":  "Contemporary Tower at Dusk",
+                       "label_es":  "Torre Contemporanea al Atardecer",
+                       "url":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/v1782493879/anim-contemporary-urban-dusk.mp4",
+                       "poster":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/so_0,f_jpg,q_auto,w_1200/v1782493879/anim-contemporary-urban-dusk.jpg",
+                       "duration":  5.041667,
+                       "width":  1280,
+                       "height":  720,
+                       "bytes":  4851243
+                   },
+                   {
+                       "id":  "anim-minimalist-house-timelapse",
+                       "label_en":  "Minimalist House Timelapse",
+                       "label_es":  "Casa Minimalista Timelapse",
+                       "url":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/v1782493885/anim-minimalist-house-timelapse.mp4",
+                       "poster":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/so_0,f_jpg,q_auto,w_1200/v1782493885/anim-minimalist-house-timelapse.jpg",
+                       "duration":  5.041667,
+                       "width":  1280,
+                       "height":  720,
+                       "bytes":  9369773
+                   },
+                   {
+                       "id":  "anim-suburban-house",
+                       "label_en":  "Suburban House",
+                       "label_es":  "Casa Suburbana",
+                       "url":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/v1782493891/anim-suburban-house.mp4",
+                       "poster":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/so_0,f_jpg,q_auto,w_1200/v1782493891/anim-suburban-house.jpg",
+                       "duration":  8.0,
+                       "width":  1280,
+                       "height":  720,
+                       "bytes":  9335952
+                   },
+                   {
+                       "id":  "anim-use-original-image",
+                       "label_en":  "Cinematic Render",
+                       "label_es":  "Render Cinematico",
+                       "url":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/v1782493898/anim-use-original-image.mp4",
+                       "poster":  "https://res.cloudinary.com/dyxxgwmpp/video/upload/so_0,f_jpg,q_auto,w_1200/v1782493898/anim-use-original-image.jpg",
+                       "duration":  8.0,
+                       "width":  720,
+                       "height":  1280,
+                       "bytes":  12225116
+                   }
+               ]
+}
