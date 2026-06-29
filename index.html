@@ -30,7 +30,7 @@
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,1) 0%,rgba(10,10,10,.7) 40%,rgba(10,10,10,.3) 100%)}
 .hero-grid{position:absolute;inset:0;z-index:1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px}
 .hero-content{position:relative;z-index:2;max-width:780px}
-.hero-h1{font-family:var(--fd);font-size:clamp(72px,12vw,148px);line-height:.9;letter-spacing:2px;margin-bottom:32px;animation:fadeUp .8s .2s ease both}
+.hero-h1{font-family:var(--fd);font-size:clamp(40px,11vw,148px);line-height:.92;letter-spacing:2px;margin-bottom:32px;animation:fadeUp .8s .2s ease both;overflow-wrap:break-word;hyphens:auto}
 .hero-h1 .accent{color:var(--orange)}
 .hero-sub{font-size:17px;font-weight:300;color:var(--muted);line-height:1.75;max-width:520px;margin-bottom:48px;animation:fadeUp .8s .35s ease both}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .8s .45s ease both}
@@ -80,13 +80,15 @@
 /* WORK / SERVICES STRIP */
 .services-section{padding:100px 48px;background:var(--surface)}
 .services-grid{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border)}
-.service-item{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer}
+.service-item{position:relative;overflow:hidden;aspect-ratio:3/4;cursor:pointer;display:block;text-decoration:none;color:inherit}
 .service-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease,filter .4s}
 .service-item:hover img{transform:scale(1.04);filter:brightness(.7)}
 .service-item-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.85) 0%,transparent 50%)}
 .service-item-label{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top,rgba(10,10,10,.9) 0%,transparent 100%)}
 .service-item-type{font-family:var(--fd);font-size:clamp(28px,3.5vw,48px);color:var(--orange);letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px;line-height:1}
-.service-item-name{font-size:13px;color:var(--white)}
+.service-item-name{font-size:13px;color:var(--white);line-height:1.4}
+.service-item-arrow{position:absolute;top:18px;right:18px;width:36px;height:36px;border:1px solid rgba(244,243,239,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:14px;opacity:0;transform:translate(6px,-6px);transition:opacity .25s,transform .25s,background .25s,border-color .25s}
+.service-item:hover .service-item-arrow{opacity:1;transform:translate(0,0);background:var(--orange);border-color:var(--orange)}
 .services-cta{margin-top:40px;text-align:center}
 
 /* CONNECT STRIP */
@@ -259,42 +261,42 @@ footer{background:var(--surface);border-top:1px solid var(--border)}
     <h2 class="section-title" data-en="SERVICES." data-es="SERVICIOS.">SERVICES.</h2>
   </div>
   <div class="services-grid">
-    <div class="service-item reveal">
+    <a class="service-item reveal" href="services.html#showcase">
       <img src="assets/img/service-still.jpg" alt="Still Images" width="800" height="450" loading="lazy">
       <div class="service-item-overlay"></div>
+      <span class="service-item-arrow" aria-hidden="true">↗</span>
       <div class="service-item-label">
         <div class="service-item-type" data-en="Still Images" data-es="Imágenes Fijas">Still Images</div>
         <div class="service-item-name" data-en="Architectural renders — interiors, exteriors &amp; aerial views" data-es="Renders arquitectónicos — interiores, exteriores y vistas aéreas">Architectural renders — interiors, exteriors & aerial views</div>
-        <a href="vz-credits.html" class="service-item-cta" data-en="Learn more ↗" data-es="Saber más ↗">Learn more ↗</a>
       </div>
-    </div>
-    <div class="service-item reveal">
+    </a>
+    <a class="service-item reveal" href="services.html#motion">
       <img src="assets/img/service-animation.jpg" alt="Animations" width="800" height="580" loading="lazy">
       <div class="service-item-overlay"></div>
+      <span class="service-item-arrow" aria-hidden="true">↗</span>
       <div class="service-item-label">
         <div class="service-item-type" data-en="Animations" data-es="Animaciones">Animations</div>
         <div class="service-item-name" data-en="5 to 15-second cinematic pieces for launches &amp; presentations" data-es="Piezas cinematográficas de 5 a 15 segundos para lanzamientos y presentaciones">5 to 15-second cinematic pieces for launches & presentations</div>
-        <a href="vz-credits.html" class="service-item-cta" data-en="Learn more ↗" data-es="Saber más ↗">Learn more ↗</a>
       </div>
-    </div>
-    <div class="service-item reveal">
+    </a>
+    <a class="service-item reveal" href="services.html#immersive">
       <img src="assets/img/service-vr.jpg" alt="VR Tours" width="800" height="468" loading="lazy">
       <div class="service-item-overlay"></div>
+      <span class="service-item-arrow" aria-hidden="true">↗</span>
       <div class="service-item-label">
         <div class="service-item-type" data-en="VR Tours" data-es="Tours VR">VR Tours</div>
         <div class="service-item-name" data-en="Immersive 360° experiences for projects in pre-sale" data-es="Experiencias 360° inmersivas para proyectos en pre-venta">Immersive 360° experiences for projects in pre-sale</div>
-        <a href="vz-credits.html" class="service-item-cta" data-en="Learn more ↗" data-es="Saber más ↗">Learn more ↗</a>
       </div>
-    </div>
-    <div class="service-item reveal">
+    </a>
+    <a class="service-item reveal" href="services.html#capabilities">
       <img src="assets/img/service-webapp.jpg" alt="Web App" width="800" height="447" loading="lazy">
       <div class="service-item-overlay"></div>
+      <span class="service-item-arrow" aria-hidden="true">↗</span>
       <div class="service-item-label">
         <div class="service-item-type" data-en="Web App" data-es="Web App">Web App</div>
         <div class="service-item-name" data-en="Interactive sales platform with floor plans, filters &amp; 360° tours" data-es="Plataforma de venta interactiva con plantas, filtros y tours 360°">Interactive sales platform with floor plans, filters & 360° tours</div>
-        <a href="sales-tool.html" class="service-item-cta" data-en="Learn more ↗" data-es="Saber más ↗">Learn more ↗</a>
       </div>
-    </div>
+    </a>
   </div>
   <div class="services-cta reveal">
     <a href="services.html" class="btn-ghost" data-en="Portfolio" data-es="Portfolio">Portfolio</a>

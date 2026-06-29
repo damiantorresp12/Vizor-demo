@@ -24,6 +24,7 @@
 <style>
 /* ── WORK-SPECIFIC ── */
 a{color:inherit}
+section[id]{scroll-margin-top:100px}
 
 /* HERO */
 .work-hero{position:relative;overflow:hidden;padding:170px 48px 64px;background:var(--black)}
@@ -86,6 +87,19 @@ a{color:inherit}
 .showcase-tile.is-hidden{display:none}
 .showcase-loading,.showcase-empty{max-width:1280px;margin:0 auto;padding:60px 0;text-align:center;color:var(--muted);font-size:12px;font-family:var(--fm);letter-spacing:.12em;text-transform:uppercase}
 .showcase-empty{display:none}
+
+/* PAGINATION */
+.showcase-pagination-wrap{max-width:1280px;margin:32px auto 0;display:flex;flex-direction:column;align-items:center;gap:14px}
+.showcase-pagination-wrap:empty{display:none}
+.showcase-pagination{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.page-btn{font-family:var(--fm);font-size:11px;letter-spacing:.06em;color:var(--muted);background:transparent;border:1px solid var(--border-b);min-width:36px;height:36px;padding:0 8px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:border-color .2s,color .2s,background .2s;border-radius:2px}
+.page-btn:hover:not(:disabled){color:var(--white);border-color:rgba(255,255,255,.32)}
+.page-btn.active{border-color:var(--orange);color:var(--orange);background:rgba(232,87,30,.08)}
+.page-btn:disabled{opacity:.3;cursor:not-allowed}
+.page-btn.page-nav{font-size:16px;line-height:1}
+.page-btn.page-ellipsis{border-color:transparent;cursor:default;color:var(--muted2)}
+.page-btn.page-ellipsis:hover{color:var(--muted2);border-color:transparent}
+.showcase-page-info{font-family:var(--fm);font-size:10px;color:var(--muted2);letter-spacing:.14em;text-transform:uppercase}
 
 /* LIGHTBOX */
 .lightbox{position:fixed;inset:0;z-index:10000;background:rgba(0,0,0,.96);display:none;align-items:center;justify-content:center;animation:lbFade .25s ease}
@@ -296,7 +310,7 @@ body.lightbox-open{overflow:hidden}
 </section>
 
 <!-- PORTFOLIO SHOWCASE -->
-<section class="showcase-section">
+<section class="showcase-section" id="showcase">
   <div class="showcase-header reveal">
     <div class="section-label" data-en="Portfolio" data-es="Portfolio">Portfolio</div>
     <h2 class="section-title" data-en="EVERY SPACE,<br>ONE LANGUAGE." data-es="CADA ESPACIO,<br>UN MISMO LENGUAJE.">EVERY SPACE,<br>ONE LANGUAGE.</h2>
@@ -304,6 +318,7 @@ body.lightbox-open{overflow:hidden}
   </div>
   <div class="showcase-filters reveal" id="showcaseFilters"></div>
   <div class="showcase-grid" id="showcaseGrid"></div>
+  <div class="showcase-pagination-wrap" id="showcasePagination"></div>
   <div class="showcase-loading" id="showcaseLoading" data-en="Loading portfolio…" data-es="Cargando portfolio…">Loading portfolio…</div>
   <div class="showcase-empty" id="showcaseEmpty" data-en="No images in this category." data-es="No hay imágenes en esta categoría.">No images in this category.</div>
 </section>
@@ -321,7 +336,7 @@ body.lightbox-open{overflow:hidden}
 </div>
 
 <!-- MOTION (animations / video reel) -->
-<section class="motion-section">
+<section class="motion-section" id="motion">
   <div class="motion-header reveal">
     <div class="section-label" data-en="Motion" data-es="Motion">Motion</div>
     <h2 class="section-title" data-en="FRAMES THAT<br>FEEL LIVE." data-es="CUADROS QUE<br>RESPIRAN.">FRAMES THAT<br>FEEL LIVE.</h2>
@@ -341,7 +356,7 @@ body.lightbox-open{overflow:hidden}
 </div>
 
 <!-- IMMERSIVE (VR / 360°) -->
-<section class="immersive-section">
+<section class="immersive-section" id="immersive">
   <div class="immersive-header reveal">
     <div class="section-label" data-en="Immersive" data-es="Inmersivo">Immersive</div>
     <h2 class="section-title" data-en="STEP INSIDE,<br>BEFORE IT EXISTS." data-es="ENTRÁ A LA OBRA,<br>ANTES DE QUE EXISTA.">STEP INSIDE,<br>BEFORE IT EXISTS.</h2>
@@ -361,7 +376,7 @@ body.lightbox-open{overflow:hidden}
 </div>
 
 <!-- CAPABILITIES -->
-<section class="cap-section">
+<section class="cap-section" id="capabilities">
   <div class="cap-header reveal">
     <div class="section-label" data-en="What We Deliver" data-es="Qué Entregamos">What We Deliver</div>
     <h2 class="section-title" data-en="EVERY VISUAL,<br>ONE STUDIO." data-es="TODO EL VISUAL,<br>UN SOLO ESTUDIO.">EVERY VISUAL,<br>ONE STUDIO.</h2>
@@ -566,34 +581,106 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   // Re-apply current language to the freshly injected nodes
   if (typeof window.setLang === 'function') window.setLang(currentLang());
 
-  // Filter behavior
+  // --- Showcase pagination + filter state ---
+  const PAGE_SIZE = 24;
   const tiles = grid.querySelectorAll('.showcase-tile');
+  const paginationEl = document.getElementById('showcasePagination');
+  let currentFilter = 'all';
+  let currentPage = 1;
+
+  const getFilteredItems = () => flat.filter(f => currentFilter === 'all' || f.group === currentFilter);
+
+  const buildPageList = (current, total) => {
+    if (total <= 7) return Array.from({length: total}, (_, i) => i + 1);
+    const set = new Set([1, total, current - 1, current, current + 1]);
+    if (current <= 3) { set.add(2); set.add(3); set.add(4); }
+    if (current >= total - 2) { set.add(total - 1); set.add(total - 2); set.add(total - 3); }
+    const sorted = [...set].filter(p => p >= 1 && p <= total).sort((a, b) => a - b);
+    const out = [];
+    sorted.forEach((p, i) => {
+      if (i > 0 && p - sorted[i - 1] > 1) out.push('…');
+      out.push(p);
+    });
+    return out;
+  };
+
+  const renderPagination = (totalPages, current, totalItems) => {
+    if (totalPages <= 1) { paginationEl.innerHTML = ''; return; }
+    const startN = (current - 1) * PAGE_SIZE + 1;
+    const endN = Math.min(current * PAGE_SIZE, totalItems);
+    const btns = buildPageList(current, totalPages).map(p => {
+      if (p === '…') return `<span class="page-btn page-ellipsis" aria-hidden="true">…</span>`;
+      return `<button class="page-btn ${p === current ? 'active' : ''}" data-page="${p}">${p}</button>`;
+    }).join('');
+    paginationEl.innerHTML = `
+      <div class="showcase-pagination">
+        <button class="page-btn page-nav" data-page="prev" ${current === 1 ? 'disabled' : ''} aria-label="Previous">‹</button>
+        ${btns}
+        <button class="page-btn page-nav" data-page="next" ${current === totalPages ? 'disabled' : ''} aria-label="Next">›</button>
+      </div>
+      <div class="showcase-page-info" data-en="${startN}–${endN} of ${totalItems}" data-es="${startN}–${endN} de ${totalItems}">${startN}–${endN} of ${totalItems}</div>
+    `;
+    if (typeof window.setLang === 'function') window.setLang(currentLang());
+  };
+
+  const applyFilterAndPagination = () => {
+    const totalForFilter = currentFilter === 'all' ? flat.length : groupCounts[currentFilter];
+    const totalPages = Math.max(1, Math.ceil(totalForFilter / PAGE_SIZE));
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+    const start = (currentPage - 1) * PAGE_SIZE;
+    const end = start + PAGE_SIZE;
+    let counter = 0;
+    tiles.forEach(tile => {
+      const matchesFilter = currentFilter === 'all' || tile.dataset.group === currentFilter;
+      if (matchesFilter) {
+        const inPage = counter >= start && counter < end;
+        tile.classList.toggle('is-hidden', !inPage);
+        counter++;
+      } else {
+        tile.classList.add('is-hidden');
+      }
+    });
+    renderPagination(totalPages, currentPage, totalForFilter);
+    empty.style.display = totalForFilter === 0 ? 'block' : 'none';
+  };
+
+  // Filter click -> reset to page 1
   filtersEl.addEventListener('click', (e) => {
     const btn = e.target.closest('.showcase-filter');
     if (!btn) return;
     filtersEl.querySelectorAll('.showcase-filter').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const f = btn.getAttribute('data-filter');
-    let shown = 0;
-    tiles.forEach(t => {
-      const match = f === 'all' || t.getAttribute('data-group') === f;
-      t.classList.toggle('is-hidden', !match);
-      if (match) shown++;
-    });
-    empty.style.display = shown ? 'none' : 'block';
+    currentFilter = btn.getAttribute('data-filter');
+    currentPage = 1;
+    applyFilterAndPagination();
   });
 
-  // Lightbox
+  // Pagination click -> change page + scroll to grid top
+  paginationEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('button.page-btn');
+    if (!btn || btn.disabled) return;
+    const target = btn.dataset.page;
+    if (target === 'prev') currentPage -= 1;
+    else if (target === 'next') currentPage += 1;
+    else currentPage = parseInt(target, 10);
+    applyFilterAndPagination();
+    const r = grid.getBoundingClientRect();
+    window.scrollTo({top: window.scrollY + r.top - 110, behavior: 'smooth'});
+  });
+
+  // Initial render (filter=all, page=1)
+  applyFilterAndPagination();
+
+  // --- Lightbox ---
+  // Note: visibleList holds ALL items matching the current filter (across all pages)
+  // so the lightbox lets the user browse the full filtered set, not just the visible page.
   const lb = document.getElementById('lightbox');
   const lbImg = document.getElementById('lightboxImg');
   const lbCat = document.getElementById('lightboxMetaCat');
   const lbCount = document.getElementById('lightboxMetaCount');
   let visibleList = flat;
   let cursor = 0;
-
-  const getVisible = () => [...tiles]
-    .filter(t => !t.classList.contains('is-hidden'))
-    .map(t => flat[parseInt(t.dataset.idx, 10)]);
 
   const render = () => {
     const item = visibleList[cursor];
@@ -606,7 +693,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   };
 
   const openAt = (idx) => {
-    visibleList = getVisible();
+    visibleList = getFilteredItems();
     const pos = visibleList.findIndex(v => v.idx === idx);
     cursor = pos >= 0 ? pos : 0;
     render();
