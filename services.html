@@ -492,6 +492,40 @@ const observer = new IntersectionObserver((entries) => {
 }, {threshold: 0.12});
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// Deep-link scroll coordinator: each of the three async sections (Showcase,
+// Motion, Immersive) calls window.__sectionSettled() once it finishes rendering
+// (success or failure). When all three have reported, we re-scroll to
+// location.hash so the final page layout aligns the hashed section under the
+// fixed nav. Without this, an incoming /services.html#immersive lands at a
+// stale offset because the Showcase grid pushes Immersive down after load.
+//
+// Multi-pass: layout can still shift after the initial render (fonts swapping
+// in, image decode finishing, etc.). We scroll on rAF, then again at 350ms
+// and 1200ms to correct any residual drift. The browser is forgiving of
+// repeated scrollTo calls landing on the same y, so this is cheap.
+(function(){
+  const TOTAL = 3;
+  const NAV_OFFSET = 100;
+  let done = 0;
+  let lastY = -1;
+  const scrollToHash = () => {
+    if (!location.hash || location.hash.length < 2) return;
+    const target = document.getElementById(location.hash.slice(1));
+    if (!target) return;
+    const y = Math.max(0, Math.round(target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET));
+    if (y === lastY) return;
+    lastY = y;
+    window.scrollTo({top: y, behavior: 'auto'});
+  };
+  window.__sectionSettled = function(){
+    done++;
+    if (done < TOTAL) return;
+    requestAnimationFrame(() => requestAnimationFrame(scrollToHash));
+    setTimeout(scrollToHash, 350);
+    setTimeout(scrollToHash, 1200);
+  };
+})();
+
 // Featured Projects filter
 (function(){
   const filters = document.querySelectorAll('.work-filter');
@@ -671,6 +705,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
   // Initial render (filter=all, page=1)
   applyFilterAndPagination();
+  window.__sectionSettled && window.__sectionSettled();
 
   // --- Lightbox ---
   // Note: visibleList holds ALL items matching the current filter (across all pages)
@@ -754,6 +789,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   } catch (e) {
     loading.textContent = 'Motion reel could not load.';
     console.error('[motion]', e);
+    window.__sectionSettled && window.__sectionSettled();
     return;
   }
 
@@ -766,6 +802,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   `).join('');
   loading.style.display = 'none';
   if (typeof window.setLang === 'function') window.setLang(currentLang());
+  window.__sectionSettled && window.__sectionSettled();
 
   const close = () => {
     player.pause();
@@ -815,6 +852,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   } catch (e) {
     loading.textContent = '360° experiences could not load.';
     console.error('[vrs]', e);
+    window.__sectionSettled && window.__sectionSettled();
     return;
   }
 
@@ -827,6 +865,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   `).join('');
   loading.style.display = 'none';
   if (typeof window.setLang === 'function') window.setLang(currentLang());
+  window.__sectionSettled && window.__sectionSettled();
 
   let viewer = null;
   const close = () => {
