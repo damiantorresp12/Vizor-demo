@@ -258,10 +258,24 @@ footer{
   .cg{grid-template-columns:1fr}
   .fr{grid-template-columns:1fr}
   footer{padding:48px 20px 32px}
-  
-  
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center;align-items:flex-start}
 }
-@media(max-width:540px){.sg,}
+@media(max-width:540px){
+  .sg{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr}
+  .plg{gap:2px}
+  section{padding:60px 20px}
+}
+/* Defensive: touch devices always get mobile-style layouts even if viewport detection is off */
+@media (any-pointer:coarse){
+  .hero-bar,.hero-mockup{display:none}
+  .nav-links{display:none}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .pg,.fg,.plg,.cg,.fr{grid-template-columns:1fr}
+  .vs-div{display:none}
+  #demo-cta{grid-template-columns:1fr;gap:24px}
+}
 </style>
 </head>
 <body>
